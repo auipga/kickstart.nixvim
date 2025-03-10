@@ -4,9 +4,9 @@
     #    See the README about individual language/framework/plugin snippets:
     #    https://github.com/rafamadriz/friendly-snippets
     # https://nix-community.github.io/nixvim/plugins/friendly-snippets.html
-    # plugins.friendly-snippets = {
-    #   enable = true;
-    # };
+    plugins.friendly-snippets = {
+      enable = true;
+    };
 
     # Autocompletion
     # See `:help cmp`
