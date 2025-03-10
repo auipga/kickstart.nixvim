@@ -39,9 +39,6 @@
         };
 
         # Add your own debuggers here
-        dap-go = {
-          enable = true;
-        };
       };
     };
 
