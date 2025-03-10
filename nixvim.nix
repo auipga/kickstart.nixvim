@@ -17,6 +17,7 @@
     ./plugins/lsp.nix
     ./plugins/conform.nix
     ./plugins/nvim-cmp.nix
+    ./plugins/todo-comments.nix
     ./plugins/mini.nix
     ./plugins/treesitter.nix
 
@@ -261,15 +262,6 @@
       # https://nix-community.github.io/nixvim/plugins/sleuth/index.html
       sleuth = {
         enable = true;
-      };
-
-      # Highlight todo, notes, etc in comments
-      # https://nix-community.github.io/nixvim/plugins/todo-comments/index.html
-      todo-comments = {
-        enable = true;
-        settings = {
-          signs = true;
-        };
       };
     };
 
