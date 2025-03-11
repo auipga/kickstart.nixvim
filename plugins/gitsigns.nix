@@ -226,6 +226,30 @@
           desc = "git [q]uickfix List";
         };
       }
+      { # auipga
+        mode = "n";
+        key = "<leader>hL";
+        action.__raw = ''
+          function()
+            require('gitsigns').setloclist('all')
+          end
+        '';
+        options = {
+          desc = "git [L]ocation List (all)";
+        };
+      }
+      { # auipga
+        mode = "n";
+        key = "<leader>hl";
+        action.__raw = ''
+          function()
+            require('gitsigns').setloclist()
+          end
+        '';
+        options = {
+          desc = "git [l]ocation List";
+        };
+      }
       # Toggles
       {
         mode = "n";
