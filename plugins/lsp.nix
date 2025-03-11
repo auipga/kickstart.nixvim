@@ -79,7 +79,7 @@
         #   enable = true;
         # };
         # rust_analyzer = {
-        #  enable = true;
+        #   enable = true;
         # };
         # ...etc. See `https://nix-community.github.io/nixvim/plugins/lsp` for a list of pre-configured LSPs
         #
