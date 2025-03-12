@@ -115,6 +115,16 @@
           {
             name = "nvim_lsp_signature_help";
           }
+          # Word completion from current buffer
+          # https://nix-community.github.io/nixvim/plugins/cmp-buffer.html
+          {
+            name = "buffer";
+          }
+          # Command-line completion
+          # https://nix-community.github.io/nixvim/plugins/cmp-cmdline.html
+          {
+            name = "cmdline";
+          }
         ];
       };
     };
