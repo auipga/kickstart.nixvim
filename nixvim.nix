@@ -1,16 +1,7 @@
 { pkgs, inputs, ... }: {
   imports = [
-    # NOTE: The first thing you will want to do is uncommented on of the three imports below
-    # depending on which module you chose to use to install Nixvim.
-    #
-    # Uncomment if you are using the home-manager module
     inputs.nixvim.homeManagerModules.nixvim
-    # Uncomment if you are using the nixos module
-    #inputs.nixvim.nixosModules.nixvim
-    # Uncomment if you are using the nix-darwin module
-    #inputs.nixvim.nixDarwinModules.nixvim
 
-    # Plugins
     ./plugins/gitsigns.nix
     ./plugins/which-key.nix
     ./plugins/telescope.nix
@@ -21,19 +12,12 @@
     ./plugins/mini.nix
     ./plugins/treesitter.nix
 
-    # NOTE: Add/Configure additional plugins for Kickstart.nixvim
-    #
-    #  Here are some example plugins that I've included in the Kickstart repository.
-    #  Uncomment any of the lines below to enable them (you will need to restart nvim).
-    #
     ./plugins/kickstart/plugins/debug.nix
     ./plugins/kickstart/plugins/indent-blankline.nix
     ./plugins/kickstart/plugins/lint.nix
     ./plugins/kickstart/plugins/autopairs.nix
     ./plugins/kickstart/plugins/neo-tree.nix
-    #
-    # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
-    # Add your plugins to ./plugins/custom/plugins and import them below
+
     ./plugins/custom/plugins/rust.nix
   ];
 
@@ -41,11 +25,7 @@
     enable = true;
     defaultEditor = true;
 
-    # You can easily change to a different colorscheme.
-    # Add your colorscheme here and enable it.
-    # Don't forget to disable the colorschemes you arent using
-    #
-    # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+    # List installed colorschemes with `:Telescope colorscheme`.
     colorschemes = {
       # https://nix-community.github.io/nixvim/colorschemes/catppuccin/index.html
       catppuccin = {
@@ -70,7 +50,7 @@
       have_nerd_font = true;
     };
 
-    #  See `:help 'clipboard'`
+    # See `:help 'clipboard'`
     clipboard = {
       providers = {
         wl-copy.enable = true; # For Wayland
@@ -84,7 +64,6 @@
 
     # [[ Setting options ]]
     # See `:help vim.opt`
-    # NOTE: You can change these options as you wish!
     #  For more options, you can see `:help option-list`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#opts
     opts = {
