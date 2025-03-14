@@ -149,19 +149,19 @@
           desc = "[S]earch [/] in Open Files";
         };
       }
-      # Shortcut for searching your Neovim configuration files
+      # Shortcut for searching your Nixim configuration files
       {
         mode = "n";
         key = "<leader>sn";
         action.__raw = ''
           function()
             require('telescope.builtin').find_files {
-              cwd = vim.fn.stdpath 'config'
+              cwd = "$HOME/nixos-config/kickstart.nixvim/"
             }
           end
         '';
         options = {
-          desc = "[S]earch [N]eovim files";
+          desc = "[S]earch [N]ixvim files";
         };
       }
     ];
