@@ -29,9 +29,9 @@
       # Enable Telescope extensions
       extensions = {
         # https://github.com/nvim-telescope/telescope-file-browser.nvim
-        # file-browser.enable = true;
+        file-browser.enable = true;
         # https://github.com/nvim-telescope/telescope-frecency.nvim
-        # frecency.enable = true;
+        frecency.enable = true;
         # https://github.com/nvim-telescope/telescope-fzf-native.nvim
         fzf-native.enable = true;
         # https://github.com/nvim-telescope/telescope-fzy-native.nvim
@@ -47,7 +47,7 @@
         # https://github.com/nvim-telescope/telescope-ui-select.nvim
         ui-select.enable = true;
         # https://github.com/debugloop/telescope-undo.nvim
-        # undo.enable = true;
+        undo.enable = true;
       };
 
       # You can put your default mappings / updates / etc. in here
