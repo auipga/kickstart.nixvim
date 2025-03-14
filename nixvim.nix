@@ -19,6 +19,7 @@
     ./plugins/kickstart/plugins/neo-tree.nix
 
     ./plugins/custom/plugins/rust.nix
+    ./plugins/custom/plugins/undotree.nix
   ];
 
   programs.nixvim = {
