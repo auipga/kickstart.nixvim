@@ -28,10 +28,26 @@
 
       # Enable Telescope extensions
       extensions = {
+        # https://github.com/nvim-telescope/telescope-file-browser.nvim
+        # file-browser.enable = true;
+        # https://github.com/nvim-telescope/telescope-frecency.nvim
+        # frecency.enable = true;
         # https://github.com/nvim-telescope/telescope-fzf-native.nvim
         fzf-native.enable = true;
+        # https://github.com/nvim-telescope/telescope-fzy-native.nvim
+        # fzy-native.enable = true;
+        # https://github.com/nvim-telescope/telescope-live-grep-args.nvim
+        # live-grep-args.enable = true;
+        # https://github.com/mrcjkb/telescope-manix
+        # manix.enable = true;
+        # https://github.com/nvim-telescope/telescope-media-files.nvim
+        # media-files.enable = true;
+        # https://github.com/ahmedkhalf/project.nvim
+        # project.enable = true;
         # https://github.com/nvim-telescope/telescope-ui-select.nvim
         ui-select.enable = true;
+        # https://github.com/debugloop/telescope-undo.nvim
+        # undo.enable = true;
       };
 
       # You can put your default mappings / updates / etc. in here
