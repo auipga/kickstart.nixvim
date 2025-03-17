@@ -18,6 +18,7 @@
     ./plugins/kickstart/plugins/autopairs.nix
     ./plugins/kickstart/plugins/neo-tree.nix
 
+    ./plugins/custom/plugins/chatgpt.nix
     ./plugins/custom/plugins/rust.nix
     ./plugins/custom/plugins/undotree.nix
   ];
