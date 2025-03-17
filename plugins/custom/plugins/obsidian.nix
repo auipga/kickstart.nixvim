@@ -4,7 +4,10 @@
     # https://nix-community.github.io/nixvim/plugins/obsidian/index.html
     plugins.obsidian.enable = true;
     plugins.obsidian.settings.workspaces = [
-      # TODO: define your workspaces here
+      {
+        name = "start";
+        path = "~/Documents/obsidian/start";
+      }
     ];
 
     opts.conceallevel = 1;
