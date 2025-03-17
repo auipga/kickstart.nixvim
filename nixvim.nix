@@ -25,6 +25,14 @@
     ./plugins/custom/plugins/undotree.nix
   ];
 
+  # install dependencies
+  home.packages = with pkgs; [
+    fd
+    gcc
+    ripgrep
+    unzip
+  ];
+
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
