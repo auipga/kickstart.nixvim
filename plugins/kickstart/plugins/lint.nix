@@ -1,4 +1,11 @@
+{ pkgs,  ... }:
 {
+  # install dependencies
+  home.packages = with pkgs; [
+    markdownlint-cli
+    # vale
+  ];
+
   programs.nixvim = {
     # Linting
     # https://nix-community.github.io/nixvim/plugins/lint/index.html
