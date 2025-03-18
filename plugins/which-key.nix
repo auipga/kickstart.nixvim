@@ -10,7 +10,7 @@
         spec = [
           {
             __unkeyed-1 = "<leader>c";
-            group = "[C]ode";
+            group = "[C]ode / [C]hatGPT";
           }
           {
             __unkeyed-1 = "<leader>d";
