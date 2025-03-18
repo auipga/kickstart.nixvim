@@ -10,13 +10,14 @@
 
     # https://github.com/oxalica/nil
     # https://nix-community.github.io/nixvim/plugins/lsp/servers/nil_ls/index.html
-    plugins.lsp.servers.nil_ls.enable = true;
+    # https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.txt#nil_ls
+    plugins.lsp.servers.nil_ls.enable = false;
     plugins.lsp.servers.nil_ls = {
       settings = {
         nil = {
-          formatting.command = ["nixfmt"]; # default: "nixpkgs-fmt"
+          formatting.command = [ "nixfmt" ]; # default: "nixpkgs-fmt"
         };
-        rootPatterns = ["flake.nix"];
+        rootPatterns = [ "flake.nix" ];
       };
     };
   };
