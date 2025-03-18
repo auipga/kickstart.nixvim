@@ -11,5 +11,13 @@
     # https://github.com/oxalica/nil
     # https://nix-community.github.io/nixvim/plugins/lsp/servers/nil_ls/index.html
     plugins.lsp.servers.nil_ls.enable = true;
+    plugins.lsp.servers.nil_ls = {
+      settings = {
+        nil = {
+          formatting.command = ["nixfmt"]; # default: "nixpkgs-fmt"
+        };
+        rootPatterns = ["flake.nix"];
+      };
+    };
   };
 }
