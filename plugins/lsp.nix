@@ -103,7 +103,7 @@ in
         # };
 
         lua_ls = {
-          enable = true;
+          enable = false;
 
           # cmd = {
           # };
