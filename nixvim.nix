@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, lib, inputs, ... }: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
 
@@ -129,7 +129,7 @@
       cursorline = true;
 
       # Minimal number of screen lines to keep above and below the cursor.
-      scrolloff = 10;
+      scrolloff = lib.mkDefault 10;
 
       # if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
       # instead raise a dialog asking if you wish to save the current file(s)
