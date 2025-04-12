@@ -1,7 +1,5 @@
 { pkgs, lib, inputs, ... }: {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-
     ./plugins/gitsigns.nix
     ./plugins/which-key.nix
     ./plugins/telescope.nix
@@ -17,20 +15,6 @@
     ./plugins/kickstart/plugins/lint.nix
     ./plugins/kickstart/plugins/autopairs.nix
     ./plugins/kickstart/plugins/neo-tree.nix
-
-    ./plugins/custom/plugins/chatgpt.nix
-    ./plugins/custom/plugins/nix.nix
-    ./plugins/custom/plugins/obsidian.nix
-    ./plugins/custom/plugins/rust.nix
-    ./plugins/custom/plugins/undotree.nix
-  ];
-
-  # install dependencies
-  home.packages = with pkgs; [
-    fd
-    gcc
-    ripgrep
-    unzip
   ];
 
   programs.nixvim = {
