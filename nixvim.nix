@@ -167,6 +167,10 @@ let
       (map [ "<C-l>"  "<C-w><C-l>"  "Move focus to the right window"  ])
       (map [ "<C-j>"  "<C-w><C-j>"  "Move focus to the lower window"  ])
       (map [ "<C-k>"  "<C-w><C-k>"  "Move focus to the upper window"  ])
+
+      # exit insert mode without <Esc> (https://github.com/omerxx/dotfiles/blob/c52df4/nvim/lua/config/keymaps.lua)
+      (map [ "jj"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
+      (map [ "jk"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
     ];
 
     # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
