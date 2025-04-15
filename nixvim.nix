@@ -153,13 +153,11 @@ let
       # or just use <C-\><C-n> to exit terminal mode
       (map [ "<Esc><Esc>"  "<C-\\><C-n>"  "Exit terminal mode"  "t"  ])
 
-      # TIP: Disable arrow keys in normal mode
-      /*
+      # Disable arrow keys in normal mode
       (map [ "<left>"   "<cmd>echo 'Use h to move!!'<CR>"  ])
       (map [ "<right>"  "<cmd>echo 'Use l to move!!'<CR>"  ])
       (map [ "<up>"     "<cmd>echo 'Use k to move!!'<CR>"  ])
       (map [ "<down>"   "<cmd>echo 'Use j to move!!'<CR>"  ])
-      */
 
       # Keybinds to make split navigation easier.
       #  Use CTRL+<hjkl> to switch between windows
