@@ -1,4 +1,19 @@
-{ pkgs, lib, inputs, ... }: {
+{ pkgs, lib, inputs, ... }:
+let
+  map = args: let
+    key = builtins.elemAt args 0;
+    action = builtins.elemAt args 1;
+    desc = if builtins.length args > 2 then builtins.elemAt args 2 else null;
+    mode = if builtins.length args > 3 then builtins.elemAt args 3 else "n";
+    extraOptions = if builtins.length args > 4 then builtins.elemAt args 4 else {};
+    options = extraOptions // {
+      desc = desc;
+    };
+  in {
+    inherit mode key action options;
+  };
+  in
+{
   imports = [
     ./plugins/gitsigns.nix
     ./plugins/which-key.nix
@@ -129,84 +144,31 @@
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
       # Clear highlights on search when pressing <Esc> in normal mode
-      {
-        mode = "n";
-        key = "<Esc>";
-        action = "<cmd>nohlsearch<CR>";
-      }
+      (map [ "<Esc>"  "<cmd>nohlsearch<CR>"  "Clear highlights on search"      ])
       # Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
       # for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
       # is not what someone will guess without a bit more experience.
       #
       # NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
       # or just use <C-\><C-n> to exit terminal mode
-      {
-        mode = "t";
-        key = "<Esc><Esc>";
-        action = "<C-\\><C-n>";
-        options = {
-          desc = "Exit terminal mode";
-        };
-      }
+      (map [ "<Esc><Esc>"  "<C-\\><C-n>"  "Exit terminal mode"  "t"  ])
+
       # TIP: Disable arrow keys in normal mode
       /*
-      {
-        mode = "n";
-        key = "<left>";
-        action = "<cmd>echo 'Use h to move!!'<CR>";
-      }
-      {
-        mode = "n";
-        key = "<right>";
-        action = "<cmd>echo 'Use l to move!!'<CR>";
-      }
-      {
-        mode = "n";
-        key = "<up>";
-        action = "<cmd>echo 'Use k to move!!'<CR>";
-      }
-      {
-        mode = "n";
-        key = "<down>";
-        action = "<cmd>echo 'Use j to move!!'<CR>";
-      }
+      (map [ "<left>"   "<cmd>echo 'Use h to move!!'<CR>"  ])
+      (map [ "<right>"  "<cmd>echo 'Use l to move!!'<CR>"  ])
+      (map [ "<up>"     "<cmd>echo 'Use k to move!!'<CR>"  ])
+      (map [ "<down>"   "<cmd>echo 'Use j to move!!'<CR>"  ])
       */
+
       # Keybinds to make split navigation easier.
       #  Use CTRL+<hjkl> to switch between windows
       #
       #  See `:help wincmd` for a list of all window commands
-      {
-        mode = "n";
-        key = "<C-h>";
-        action = "<C-w><C-h>";
-        options = {
-          desc = "Move focus to the left window";
-        };
-      }
-      {
-        mode = "n";
-        key = "<C-l>";
-        action = "<C-w><C-l>";
-        options = {
-          desc = "Move focus to the right window";
-        };
-      }
-      {
-        mode = "n";
-        key = "<C-j>";
-        action = "<C-w><C-j>";
-        options = {
-          desc = "Move focus to the lower window";
-        };
-      }
-      {
-        mode = "n";
-        key = "<C-k>";
-        action = "<C-w><C-k>";
-        options = {
-          desc = "Move focus to the upper window";
-        };
-      }
+      (map [ "<C-h>"  "<C-w><C-h>"  "Move focus to the left window"   ])
+      (map [ "<C-l>"  "<C-w><C-l>"  "Move focus to the right window"  ])
+      (map [ "<C-j>"  "<C-w><C-j>"  "Move focus to the lower window"  ])
+      (map [ "<C-k>"  "<C-w><C-k>"  "Move focus to the upper window"  ])
     ];
 
     # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
