@@ -17,7 +17,7 @@
         nix = ["nix"];
         markdown = [
           "markdownlint"
-          #vale
+          # "vale"
         ];
         #clojure = ["clj-kondo"];
         #dockerfile = ["hadolint"];
