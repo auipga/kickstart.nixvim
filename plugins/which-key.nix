@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   programs.nixvim = {
     # Useful plugin to show you pending keybinds.
@@ -8,42 +8,12 @@
 
       # Document existing key chains
       settings = {
-        icons = {
-          keys = if config.programs.nixvim.globals.have_nerd_font then
-            # default
-            {
-              BS = "󰁮";
-              C = "󰘴 ";
-              CR = "󰌑 ";
-              D = "󰘳 ";
-              Down = " ";
-              Esc = "󱊷 ";
-              F1 = "󱊫";
-              F10 = "󱊴";
-              F11 = "󱊵";
-              F12 = "󱊶";
-              F2 = "󱊬";
-              F3 = "󱊭";
-              F4 = "󱊮";
-              F5 = "󱊯";
-              F6 = "󱊰";
-              F7 = "󱊱";
-              F8 = "󱊲";
-              F9 = "󱊳";
-              Left = " ";
-              M = "󰘵 ";
-              NL = "󰌑 ";
-              Right = " ";
-              S = "󰘶 ";
-              ScrollWheelDown = "󱕐 ";
-              ScrollWheelUp = "󱕑 ";
-              Space = "󱁐 ";
-              Tab = "󰌒 ";
-              Up = " ";
-            }
-            else
-            # kickstart
-            {
+        icons = lib.mkMerge [
+          (if config.programs.nixvim.globals.have_nerd_font then
+          # don’t override keys, fallback to default
+            { }
+          else {
+            keys = {
               Up = "<Up> ";
               Down = "<Down> ";
               Left = "<Left> ";
@@ -73,7 +43,11 @@
               F11 = "<F11>";
               F12 = "<F12>";
             };
-        };
+          })
+          {
+            # space to merge other keys below settings.icons
+          }
+        ];
 
         spec = [
           {
