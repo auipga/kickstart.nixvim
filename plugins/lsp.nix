@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 let
   map = import ../lib/mkKeymap.nix { prefix = "LSP: "; raw = true; };
 in
@@ -157,7 +157,7 @@ in
           # Execute a code action, usually your cursor needs to be on top of an error
           # or a suggestion from your LSP for this to activate.
           "<leader>ca" = {
-            mode = ["n" "x"];
+            mode = [ "n" "x" ];
             action = "code_action";
             desc = "LSP: [C]ode [A]ction";
           };

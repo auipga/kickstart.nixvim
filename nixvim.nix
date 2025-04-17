@@ -48,7 +48,7 @@ in
         settings = {
           style = "catppuccin-mocha";
           styles = {
-            comments = []; # fixme: comments are still italic
+            comments = [ ]; # fixme: comments are still italic
           };
         };
       };
@@ -192,7 +192,7 @@ in
       #  Try it with `yap` in normal mode
       #  See `:help vim.highlight.on_yank()`
       {
-        event = ["TextYankPost"];
+        event = [ "TextYankPost" ];
         desc = "Highlight when yanking (copying) text";
         group = "kickstart-highlight-yank";
         callback.__raw = ''
