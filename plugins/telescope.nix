@@ -1,3 +1,9 @@
+let
+  map = import ../lib/mkKeymap.nix { };
+  mapP = import ../lib/mkKeymap.nix { prefix = "[S]earch "; };
+  mapR = import ../lib/mkKeymap.nix { raw = true; };
+  mapPR = import ../lib/mkKeymap.nix { prefix = "[S]earch "; raw = true; };
+in
 {
   programs.nixvim = {
     # Fuzzy Finder (files, lsp, etc)
@@ -53,76 +59,7 @@
       # You can put your default mappings / updates / etc. in here
       #  See `:help telescope.builtin`
       keymaps = {
-        "<leader>sh" = {
-          mode = "n";
-          action = "help_tags";
-          options = {
-            desc = "[S]earch [H]elp";
-          };
-        };
-        "<leader>sk" = {
-          mode = "n";
-          action = "keymaps";
-          options = {
-            desc = "[S]earch [K]eymaps";
-          };
-        };
-        "<leader>sf" = {
-          mode = "n";
-          action = "find_files";
-          options = {
-            desc = "[S]earch [F]iles";
-          };
-        };
-        "<leader>ss" = {
-          mode = "n";
-          action = "builtin";
-          options = {
-            desc = "[S]earch [S]elect Telescope";
-          };
-        };
-        "<leader>sw" = {
-          mode = "n";
-          action = "grep_string";
-          options = {
-            desc = "[S]earch current [W]ord";
-          };
-        };
-        "<leader>sg" = {
-          mode = "n";
-          action = "live_grep";
-          options = {
-            desc = "[S]earch by [G]rep";
-          };
-        };
-        "<leader>sd" = {
-          mode = "n";
-          action = "diagnostics";
-          options = {
-            desc = "[S]earch [D]iagnostics";
-          };
-        };
-        "<leader>sr" = {
-          mode = "n";
-          action = "resume";
-          options = {
-            desc = "[S]earch [R]esume";
-          };
-        };
-        "<leader>s" = {
-          mode = "n";
-          action = "oldfiles";
-          options = {
-            desc = "[S]earch Recent Files ('.' for repeat)";
-          };
-        };
-        "<leader><leader>" = {
-          mode = "n";
-          action = "buffers";
-          options = {
-            desc = "[ ] Find existing buffers";
-          };
-        };
+        # moved to keymaps below so we can use the map functions
       };
       settings = {
         extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
@@ -131,12 +68,20 @@
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
+      (mapP [ "<leader>sh"        "<cmd>Telescope help_tags<cr>"    "[H]elp"                         ])
+      (mapP [ "<leader>sk"        "<cmd>Telescope keymaps<cr>"      "[K]eymaps"                      ])
+      (mapP [ "<leader>sf"        "<cmd>Telescope find_files<cr>"   "[F]iles"                        ])
+      (mapP [ "<leader>ss"        "<cmd>Telescope builtin<cr>"      "[S]elect Telescope"             ])
+      (mapP [ "<leader>sw"        "<cmd>Telescope grep_string<cr>"  "current [W]ord"                 ])
+      (mapP [ "<leader>sg"        "<cmd>Telescope live_grep<cr>"    "by [G]rep"                      ])
+      (mapP [ "<leader>sd"        "<cmd>Telescope diagnostics<cr>"  "[D]iagnostics"                  ])
+      (mapP [ "<leader>sr"        "<cmd>Telescope resume<cr>"       "[R]esume"                       ])
+      (mapP [ "<leader>s"         "<cmd>Telescope oldfiles<cr>"     "Recent Files ('.' for repeat)"  ])
+      (map  [ "<leader><leader>"  "<cmd>Telescope buffers<cr>"      "[ ] Find existing buffers"      ])
+
       # Slightly advanced example of overriding default behavior and theme
-      {
-        mode = "n";
-        key = "<leader>/";
         # You can pass additional configuration to Telescope to change the theme, layout, etc.
-        action.__raw = ''
+      (mapR [ "<leader>/" ''
           function()
             require('telescope.builtin').current_buffer_fuzzy_find(
               require('telescope.themes').get_dropdown {
@@ -145,43 +90,26 @@
               }
             )
           end
-        '';
-        options = {
-          desc = "[/] Fuzzily search in current buffer";
-        };
-      }
-      {
-        mode = "n";
-        key = "<leader>s/";
+        ''  "[/] Fuzzily search in current buffer"  ])
         # It's also possible to pass additional configuration options.
+      (mapPR [ "<leader>s/"
         #  See `:help telescope.builtin.live_grep()` for information about particular keys
-        action.__raw = ''
+        ''
           function()
             require('telescope.builtin').live_grep {
               grep_open_files = true,
               prompt_title = 'Live Grep in Open Files'
             }
           end
-        '';
-        options = {
-          desc = "[S]earch [/] in Open Files";
-        };
-      }
+        ''  "[/] in Open Files"  ])
       # Shortcut for searching your Nixim configuration files
-      {
-        mode = "n";
-        key = "<leader>sn";
-        action.__raw = ''
+      (mapPR [ "<leader>sn" ''
           function()
             require('telescope.builtin').find_files {
               cwd = "$HOME/nixos-config/kickstart.nixvim/"
             }
           end
-        '';
-        options = {
-          desc = "[S]earch [N]ixvim files";
-        };
-      }
+        ''  "[N]ixvim files"  ])
     ];
   };
 }
