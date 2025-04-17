@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 let
   map = import ./lib/mkKeymap.nix { };
 in
@@ -205,7 +205,7 @@ in
 
     plugins = {
       # Adds icons for plugins to utilize in ui
-      web-devicons.enable = true;
+      web-devicons.enable = config.programs.nixvim.globals.have_nerd_font;
 
       # Detect tabstop and shiftwidth automatically
       # https://nix-community.github.io/nixvim/plugins/sleuth/index.html
@@ -219,14 +219,6 @@ in
       # Useful for getting pretty icons, but requires a Nerd Font.
       nvim-web-devicons # TODO: Figure out how to configure using this with telescope
     ];
-
-    # TODO: Figure out where to move this
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html#extraconfigluapre
-    extraConfigLuaPre = ''
-      if vim.g.have_nerd_font then
-        require('nvim-web-devicons').setup {}
-      end
-    '';
 
     # The line beneath this is called `modeline`. See `:help modeline`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html#extraconfigluapost
