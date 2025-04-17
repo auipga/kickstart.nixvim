@@ -49,6 +49,9 @@
           }
         ];
 
+        preset = "modern"; # bordered, bottom, wide, multi column
+        # preset = "helix"; # bordered, bottom right, single column
+
         spec = [
           {
             __unkeyed-1 = "<leader>c";
