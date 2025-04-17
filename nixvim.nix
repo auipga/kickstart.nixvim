@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, lib, ... }:
 let
   map = args: let
     key = builtins.elemAt args 0;
@@ -30,6 +30,21 @@ let
     ./plugins/kickstart/plugins/lint.nix
     ./plugins/kickstart/plugins/autopairs.nix
     ./plugins/kickstart/plugins/neo-tree.nix
+
+    ./plugins/custom/plugins/chatgpt.nix
+    ./plugins/custom/plugins/nix.nix
+    ./plugins/custom/plugins/obsidian.nix
+    ./plugins/custom/plugins/rust.nix
+    ./plugins/custom/plugins/undotree.nix
+#    ./plugins/custom/plugins/testing.nix
+  ];
+
+  # install dependencies
+  home.packages = with pkgs; [
+    fd
+    gcc
+    ripgrep
+    unzip
   ];
 
   programs.nixvim = {
