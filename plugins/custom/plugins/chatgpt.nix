@@ -1,12 +1,5 @@
 let
-  map = args: {
-    key = builtins.elemAt args 0;
-    action = builtins.elemAt args 1;
-    options = {
-      desc = "[C]hatGPT: " + builtins.elemAt args 2;
-    };
-    mode = if builtins.length args > 3 then builtins.elemAt args 3 else "n";
-  };
+  map = import ../../../lib/mkKeymap.nix { prefix = "[C]hatGPT: "; };
 in
 {
   programs.nixvim = {

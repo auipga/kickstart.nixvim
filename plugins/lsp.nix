@@ -1,13 +1,6 @@
 {pkgs, ...}:
 let
-  map = args: {
-    key = builtins.elemAt args 0;
-    action.__raw = builtins.elemAt args 1;
-    options = {
-      desc = "LSP: " + builtins.elemAt args 2;
-    };
-    mode = if builtins.length args > 3 then builtins.elemAt args 3 else "n";
-  };
+  map = import ../lib/mkKeymap.nix { prefix = "LSP: "; raw = true; };
 in
 {
   programs.nixvim = {
