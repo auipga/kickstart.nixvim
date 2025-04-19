@@ -84,9 +84,8 @@ in
     opts = {
       # Show line numbers
       number = true;
-      # You can also add relative line numbers, to help with jumping.
-      #  Experiment for yourself to see if you like it!
-      # relativenumber = true;
+      # Add relative line numbers, to help with jumping.
+      relativenumber = true;
 
       # Enable mouse mode, can be useful for resizing splits for example!
       mouse = "a";
