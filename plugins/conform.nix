@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+let
+  mapR = import ../lib/mkKeymap.nix { raw = true; };
+in
+{
   programs.nixvim = {
     # Dependencies
     #
@@ -40,18 +44,11 @@
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
-      {
-        mode = "";
-        key = "<leader>f";
-        action.__raw = ''
+      (mapR [ "<leader>f"  ''
           function()
             require('conform').format { async = true, lsp_fallback = true }
           end
-        '';
-        options = {
-          desc = "[F]ormat buffer";
-        };
-      }
+        ''  "[F]ormat buffer"  ])
     ];
   };
 }
