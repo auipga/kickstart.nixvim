@@ -1,3 +1,6 @@
+let
+  map = import ../../../lib/mkKeymap.nix { };
+in
 {
   programs.nixvim = {
     # Neo-tree is a Neovim plugin to browse the file system
@@ -16,13 +19,7 @@
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
-      {
-        key = "\\";
-        action = "<cmd>Neotree reveal<cr>";
-        options = {
-          desc = "NeoTree reveal";
-        };
-      }
+      (map [ "\\"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
     ];
   };
 }
