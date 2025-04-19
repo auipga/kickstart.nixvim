@@ -1,3 +1,6 @@
+let
+  map = import ../../../lib/mkKeymap.nix { };
+in
 {
   programs.nixvim = {
     plugins.undotree.enable = true;
@@ -10,14 +13,7 @@
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
-      {
-        mode = "n";
-        key = "<leader><F5>";
-        action = "<cmd>UndotreeToggle<CR>";
-        options = {
-          desc = "Toggle Undotree";
-        };
-      }
+      (map [ "<leader><F5>"  "<cmd>UndotreeToggle<CR>"  "Toggle Undotree"  ])
     ];
   };
 }
