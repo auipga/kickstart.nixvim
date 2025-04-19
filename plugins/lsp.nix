@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
   map = import ../lib/mkKeymap.nix { prefix = "LSP: "; };
+  mkPluginKeymaps = import ../lib/mkPluginKeymap.nix ;
 in
 {
   programs.nixvim = {
@@ -117,13 +118,9 @@ in
 
       keymaps = {
         # Diagnostic keymaps
-        diagnostic = {
-          "<leader>q" = {
-            mode = "n";
-            action = "setloclist";
-            desc = "Open diagnostic [Q]uickfix list";
-          };
-        };
+        diagnostic = mkPluginKeymaps [
+          [ "<leader>q"  "setloclist"  "Open diagnostic [Q]uickfix list"  ]
+        ];
 
         extra = [
           # Jump to the definition of the word under your cusor.
@@ -147,27 +144,17 @@ in
           (map [ "<leader>ws"  "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>"  "[W]orkspace [S]ymbols"    ])
         ];
 
-        lspBuf = {
+        lspBuf = mkPluginKeymaps [
           # Rename the variable under your cursor.
           #  Most Language Servers support renaming across files, etc.
-          "<leader>rn" = {
-            action = "rename";
-            desc = "LSP: [R]e[n]ame";
-          };
+          [ "<leader>rn"  "rename"       "LSP: [R]e[n]ame"             "n"    ]
           # Execute a code action, usually your cursor needs to be on top of an error
           # or a suggestion from your LSP for this to activate.
-          "<leader>ca" = {
-            mode = [ "n" "x" ];
-            action = "code_action";
-            desc = "LSP: [C]ode [A]ction";
-          };
+          [ "<leader>ca"  "code_action"  "LSP: [C]ode [A]ction"  [ "n" "x" ]  ]
           # WARN: This is not Goto Definition, this is Goto Declaration.
           #  For example, in C this would take you to the header.
-          "gD" = {
-            action = "declaration";
-            desc = "LSP: [G]oto [D]eclaration";
-          };
-        };
+          [ "gD"          "declaration"  "LSP: [G]oto [D]eclaration"   "n"    ]
+        ];
       };
 
       # LSP servers and clients are able to communicate to each other what features they support.
