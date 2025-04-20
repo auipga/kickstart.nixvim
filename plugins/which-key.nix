@@ -8,6 +8,9 @@
 
       # Document existing key chains
       settings = {
+        # Expand groups when <= n mappings.
+        expand = 2;
+
         icons = lib.mkMerge [
           (if config.programs.nixvim.globals.have_nerd_font then
           # don’t override keys, fallback to default
