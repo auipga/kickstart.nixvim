@@ -46,10 +46,9 @@ in
       catppuccin = {
         enable = true;
         settings = {
-          style = "catppuccin-mocha";
-          styles = {
-            comments = [ ]; # fixme: comments are still italic
-          };
+          flavour = "mocha";
+          transparent_background = true;
+          no_italic = true; # concerns comments and conditionals
         };
       };
     };
