@@ -25,6 +25,7 @@ in
     ./plugins/custom/plugins/obsidian.nix
     ./plugins/custom/plugins/rust.nix
     ./plugins/custom/plugins/treesitter-context.nix
+    ./plugins/custom/plugins/treesitter-textobjects.nix
     ./plugins/custom/plugins/undotree.nix
 #    ./plugins/custom/plugins/testing.nix
   ];
