@@ -55,6 +55,14 @@
         preset = "modern"; # bordered, bottom, wide, multi column
         # preset = "helix"; # bordered, bottom right, single column
 
+        sort = [
+#          "local"
+          "order"
+#          "group"
+          "alphanum"
+          "mod"
+        ];
+
         spec = [
           {
             __unkeyed-1 = "<leader>c";
