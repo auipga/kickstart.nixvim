@@ -6,6 +6,9 @@ in
     # https://nix-community.github.io/nixvim/plugins/treesitter-context/index.html
     plugins.treesitter-context = {
       enable = true;
+      settings = {
+        mode = "topline"; # default: "cursor"
+      };
     };
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
