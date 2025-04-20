@@ -83,6 +83,17 @@
           additional_vim_regex_highlighting = true;
         };
 
+        # see `:help nvim-treesitter-incremental-selection-mod`
+        incremental_selection = {
+          enable = true;
+            keymaps = {
+              init_selection = "gnn";
+              node_decremental = "grm"; # default: grm
+              node_incremental = "grn"; # default: grn
+              scope_incremental = "grc"; # default: grc
+            };
+        };
+
         indent = {
           enable = true;
           disable = [
