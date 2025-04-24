@@ -13,7 +13,7 @@ in
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
-      (map [ "<leader><F5>"  "<cmd>UndotreeToggle<CR>"  "Toggle Undotree"  ])
+      (map [ "<leader>tu"  "<cmd>UndotreeToggle<CR>"  "Toggle Undotree"  ])
     ];
   };
 }
