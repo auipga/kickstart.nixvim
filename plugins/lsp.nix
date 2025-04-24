@@ -1,5 +1,10 @@
 { pkgs, ... }:
 let
+  # NOTE: Remember that Nix is a real programming language, and as such it is possible
+  # to define small helper and utility functions so you don't have to repeat yourself.
+  #
+  # In this case, we create a function that lets us more easily define mappings.
+  # It sets the mode, buffer and description for us each time.
   map = import ../lib/mkKeymap.nix { prefix = "LSP: "; };
   mkPluginKeymaps = import ../lib/mkPluginKeymap.nix ;
 in
@@ -173,15 +178,6 @@ in
       #   function will be executed to configure the current buffer
       # NOTE: This is an example of an attribute that takes raw lua
       onAttach = ''
-        -- NOTE: Remember that Lua is a real programming language, and as such it is possible
-        -- to define small helper and utility functions so you don't have to repeat yourself.
-        --
-        -- In this case, we create a function that lets us more easily define mappings specific
-        -- for LSP related items. It sets the mode, buffer and description for us each time.
-        local map = function(keys, func, desc)
-          vim.keymap.set('n', keys, func, { buffer = bufnr, desc = 'LSP: ' .. desc })
-        end
-
         -- The following two autocommands are used to highlight references of the
         -- word under the cursor when your cursor rests there for a little while.
         --    See `:help CursorHold` for information about when this is executed
@@ -215,9 +211,9 @@ in
         --
         -- This may be unwanted, since they displace some of your code
         if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
-          map('<leader>th', function()
-            vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
-          end, '[T]oggle Inlay [H]ints')
+           vim.keymap.set('n', '<leader>th', function()
+               vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
+             end, { buffer = bufnr, desc = 'LSP: [T]oggle Inlay [H]ints' })
         end
       '';
     };
