@@ -22,6 +22,7 @@ in
 
     ./plugins/custom/plugins/chatgpt.nix
     ./plugins/custom/plugins/nix.nix
+    ./plugins/custom/plugins/noice.nix
     ./plugins/custom/plugins/obsidian.nix
     ./plugins/custom/plugins/rust.nix
     ./plugins/custom/plugins/treesitter-context.nix
