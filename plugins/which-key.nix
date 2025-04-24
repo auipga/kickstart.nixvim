@@ -56,9 +56,9 @@
         # preset = "helix"; # bordered, bottom right, single column
 
         sort = [
-#          "local"
+          "local"
           "order"
-#          "group"
+          "group"
           "alphanum"
           "mod"
         ];
