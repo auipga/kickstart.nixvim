@@ -49,8 +49,9 @@ in
         enable = true;
         settings = {
           flavour = "mocha";
-          transparent_background = true;
+          transparent_background = false;
           no_italic = true; # concerns comments and conditionals
+          dim_inactive.enabled = true;
         };
       };
     };
