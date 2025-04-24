@@ -142,6 +142,8 @@ in
 
       # See `:help hlsearch`
       hlsearch = true;
+
+      foldcolumn = "auto:9";
     };
 
     # [[ Basic Keymaps ]]
