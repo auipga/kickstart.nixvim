@@ -1,3 +1,4 @@
+{ config, ... }:
 let
   map = import ../lib/mkKeymap.nix { };
   mapP = import ../lib/mkKeymap.nix { prefix = "git "; };
@@ -20,6 +21,7 @@ in
           topdelete.text = "‾";
           untracked.text = "┆";
         };
+        trouble = config.programs.nixvim.plugins.trouble.enable;
       };
     };
 
