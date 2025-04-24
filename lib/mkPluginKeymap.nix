@@ -1,3 +1,4 @@
+# lib/mkPluginKeymaps.nix
 argsList:
 builtins.listToAttrs (
   builtins.map

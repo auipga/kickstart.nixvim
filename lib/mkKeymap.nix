@@ -1,3 +1,4 @@
+# lib/mkKeymap.nix
 { prefix ? "", raw ? false }:
 
 args:
