@@ -129,7 +129,7 @@ in
       # Preview substitutions live, as you type!
       inccommand = "split";
 
-      # Show which line your cursor is on
+      # Highlight line your cursor is on
       cursorline = true;
 
       # Minimal number of screen lines to keep above and below the cursor.
