@@ -1,4 +1,6 @@
 # lib/mkPluginKeymaps.nix
+{ descInOptions ? false }:
+
 argsList:
 builtins.listToAttrs (
   builtins.map
@@ -12,7 +14,13 @@ builtins.listToAttrs (
       in
       {
         name = key;
-        value = { inherit action mode desc; };
+        value = if descInOptions then
+          {
+            inherit action mode;
+            options = { inherit desc; };
+          }
+        else
+          { inherit action mode desc; };
       }
     )
     argsList

@@ -6,7 +6,7 @@ let
   # In this case, we create a function that lets us more easily define mappings.
   # It sets the mode, buffer and description for us each time.
   map = import ../lib/mkKeymap.nix { prefix = "LSP: "; };
-  mkPluginKeymaps = import ../lib/mkPluginKeymap.nix ;
+  mkPluginKeymaps = import ../lib/mkPluginKeymap.nix { };
 in
 {
   programs.nixvim = {
