@@ -13,7 +13,7 @@ in
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
-      (map [ "<leader>tc"  "<cmd>TSContextToggle<CR>"  "Toggle Context"  ])
+      (map [ "<leader>tc"  "<cmd>TSContextToggle<CR>"  "[T]oggle [C]ontext"  ])
     ];
   };
 }
