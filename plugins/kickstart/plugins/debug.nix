@@ -49,10 +49,10 @@ in
       (mapP  [ "<F1>"       "<cmd>DapStepInto<CR>"          "Step Into"          ])
       (mapP  [ "<F2>"       "<cmd>DapStepOver<CR>"          "Step Over"          ])
       (mapP  [ "<F3>"       "<cmd>DapStepOut<CR>"           "Step Out"           ])
-      (mapP  [ "<leader>b"  "<cmd>DapToggleBreakpoint<CR>"  "Toggle Breakpoint"  ])
+      (mapP  [ "<leader>b"  "<cmd>DapToggleBreakpoint<CR>"  "Toggle [b]reakpoint"  ])
       (mapPR [ "<leader>B"  ''
           function()
-            require('dap').set_breakpoint(vim.fn.input 'Breakpoint condition: ')
+            require('dap').set_breakpoint(vim.fn.input '[B]reakpoint condition: ')
           end
         ''  "Set Breakpoint" ])
       # Toggle to see last session result. Without this, you can't see session output
