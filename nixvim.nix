@@ -20,6 +20,7 @@ in
     ./plugins/kickstart/plugins/autopairs.nix
     ./plugins/kickstart/plugins/neo-tree.nix
 
+    ./plugins/custom/plugins/auto-session.nix
     ./plugins/custom/plugins/chatgpt.nix
     ./plugins/custom/plugins/nix.nix
     ./plugins/custom/plugins/noice.nix
