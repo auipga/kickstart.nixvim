@@ -100,13 +100,25 @@ in
           end
         ''  "[/] in Open Files"  ])
       # Shortcut for searching your Nixvim configuration files
-      (mapPR [ "<leader>sn" ''
+      (mapPR [ "<leader>sv" ''
           function()
             require('telescope.builtin').find_files {
               cwd = "$HOME/nixos-config/kickstart.nixvim/"
             }
           end
-        ''  "[N]ixvim files"  ])
+        ''  "Nix[v]im files"  ])
+      # Shortcut for searching your NixOS configuration files
+      (mapPR [ "<leader>sn" ''
+          function()
+            require('telescope.builtin').find_files {
+              cwd = "$HOME/nixos-config/",
+              find_command = {
+                "fd", "--type", "f",
+                "--exclude", "kickstart.nixvim"
+              }
+            }
+          end
+        ''  "[N]ixOS files"  ])
     ];
   };
 }
