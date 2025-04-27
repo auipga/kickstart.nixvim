@@ -99,7 +99,7 @@ in
             }
           end
         ''  "[/] in Open Files"  ])
-      # Shortcut for searching your Nixim configuration files
+      # Shortcut for searching your Nixvim configuration files
       (mapPR [ "<leader>sn" ''
           function()
             require('telescope.builtin').find_files {
