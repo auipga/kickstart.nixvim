@@ -23,6 +23,7 @@ in
 
     # dependencies
     plugins.telescope.enable = true; # required
+    plugins.todo-comments.enable = true; # for user_pickers
 
     # manual setup
     plugins.telescope.luaConfig.post = ''
@@ -38,6 +39,13 @@ in
               "fzf"
               "fd"
             ];
+
+            # user-defined pickers
+            user_pickers.__raw = ''
+              {
+                { "todo-comments", function() vim.cmd([[TodoTelescope theme=dropdown]]) end },
+              }
+            '';
           };
         };
       };
