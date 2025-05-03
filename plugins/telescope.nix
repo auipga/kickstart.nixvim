@@ -61,7 +61,8 @@ in
         [ "<leader>sh"        "help_tags"    "[S]earch [H]elp"                         ]
         [ "<leader>sk"        "keymaps"      "[S]earch [K]eymaps"                      ]
         [ "<leader>sf"        "find_files"   "[S]earch [F]iles"                        ]
-        [ "<leader>ss"        "builtin"      "[S]earch [S]elect Telescope"             ]
+        # replaced by telescope-picker-list:
+        # [ "<leader>ss"        "builtin"      "[S]earch [S]elect Telescope"             ]
         [ "<leader>sw"        "grep_string"  "[S]earch current [W]ord"                 ]
         [ "<leader>sg"        "live_grep"    "[S]earch by [G]rep"                      ]
         [ "<leader>sd"        "diagnostics"  "[S]earch [D]iagnostics"                  ]

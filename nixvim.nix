@@ -26,6 +26,7 @@ in
     ./plugins/custom/plugins/noice.nix
     ./plugins/custom/plugins/obsidian.nix
     ./plugins/custom/plugins/rust.nix
+    ./plugins/custom/plugins/telescope-picker-list.nix
     ./plugins/custom/plugins/treesitter-context.nix
     ./plugins/custom/plugins/treesitter-textobjects.nix
     ./plugins/custom/plugins/undotree.nix
