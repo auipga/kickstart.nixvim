@@ -38,6 +38,20 @@ in
               # suggested
               "fzf"
               "fd"
+
+              # I have a keymap for these:
+              "help_tags"
+              "keymaps"
+              "find_files"
+              "builtin"
+              "grep_string"
+              "live_grep"
+              "diagnostics"
+              "resume"
+              "oldfiles"
+              "buffers"
+              "command_history"
+              "undo"
             ];
 
             # user-defined pickers
