@@ -58,17 +58,17 @@ in
       # You can put your default mappings / updates / etc. in here
       #  See `:help telescope.builtin`
       keymaps = mkPluginKeymaps [
-        [ "<leader>sh"        "help_tags"    "[S]earch [H]elp"                         ]
-        [ "<leader>sk"        "keymaps"      "[S]earch [K]eymaps"                      ]
-        [ "<leader>sf"        "find_files"   "[S]earch [F]iles"                        ]
+        [ "<leader>sh"        "help_tags"        "[S]earch [H]elp"              ]
+        [ "<leader>sk"        "keymaps"          "[S]earch [K]eymaps"           ]
+        [ "<leader>sf"        "find_files"       "[S]earch [F]iles"             ]
         # replaced by telescope-picker-list:
-        # [ "<leader>ss"        "builtin"      "[S]earch [S]elect Telescope"             ]
-        [ "<leader>sw"        "grep_string"  "[S]earch current [W]ord"                 ]
-        [ "<leader>sg"        "live_grep"    "[S]earch by [G]rep"                      ]
-        [ "<leader>sd"        "diagnostics"  "[S]earch [D]iagnostics"                  ]
-        [ "<leader>sr"        "resume"       "[S]earch [R]esume"                       ]
-        [ "<leader>s."        "oldfiles"     "[S]earch Recent Files ('.' for repeat)"  ]
-        [ "<leader><leader>"  "buffers"      "[ ] Find existing buffers"               ]
+        # [ "<leader>ss"        "builtin"          "[S]earch [S]elect Telescope"  ]
+        [ "<leader>sw"        "grep_string"      "[S]earch current [W]ord"      ]
+        [ "<leader>sg"        "live_grep"        "[S]earch by [G]rep"           ]
+        [ "<leader>sd"        "diagnostics"      "[S]earch [D]iagnostics"       ]
+        [ "<leader>sr"        "resume"           "[S]earch [R]esume"            ]
+        [ "<leader>s."        "oldfiles"         "[S]earch Recent Files"        ]
+        [ "<leader><leader>"  "buffers"          "[ ] Find existing buffers"    ]
       ];
       settings = {
         extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
