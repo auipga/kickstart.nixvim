@@ -23,7 +23,7 @@
           # query # treesitter queries
           vim
           vimdoc
-          # lua
+          lua
           # luadoc
 
           # General Development
