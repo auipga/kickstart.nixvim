@@ -32,6 +32,7 @@ in
       enable = true;
 
       # Enable Telescope extensions
+      # https://github.com/nvim-telescope/telescope.nvim/wiki/Extensions
       extensions = {
         # https://github.com/nvim-telescope/telescope-file-browser.nvim
         file-browser.enable = true;
