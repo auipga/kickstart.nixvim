@@ -16,6 +16,8 @@
           "~/Downloads"
           "/"
         ];
+
+        use_git_branch = true;
       };
     };
   };
