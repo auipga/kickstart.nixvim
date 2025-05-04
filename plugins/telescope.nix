@@ -69,6 +69,8 @@ in
         [ "<leader>sr"        "resume"           "[S]earch [R]esume"            ]
         [ "<leader>s."        "oldfiles"         "[S]earch Recent Files"        ]
         [ "<leader><leader>"  "buffers"          "[ ] Find existing buffers"    ]
+        [ "<leader>sc"        "command_history"  "[S]earch [C]ommand History"   ]
+        [ "<leader>su"        "undo"             "[S]earch [U]ndo History"      ]
       ];
       settings = {
         extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
