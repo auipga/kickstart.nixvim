@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  map = import ../../../lib/mkKeymap.nix { };
+in
 {
   programs.nixvim = {
     # A neovim plugin that lets you easily create Telescope pickers from arbitrary console commands
@@ -61,5 +64,9 @@
         },
       })
     '';
+
+    keymaps = [
+      (map [ "<leader>se"  "<cmd>Easypick<cr>"  "[S]earch [E]asypick"  ])
+    ];
   };
 }
