@@ -22,6 +22,7 @@ in
 
     ./plugins/custom/plugins/auto-session.nix
     ./plugins/custom/plugins/chatgpt.nix
+    ./plugins/custom/plugins/easypick.nix
     ./plugins/custom/plugins/nix.nix
     ./plugins/custom/plugins/noice.nix
     ./plugins/custom/plugins/obsidian.nix
