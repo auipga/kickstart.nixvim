@@ -73,6 +73,7 @@ in
         [ "<leader>su"        "undo"             "[S]earch [U]ndo History"      ]
       ];
       settings = {
+        pickers.colorscheme.enable_preview = true;
         extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
       };
     };
