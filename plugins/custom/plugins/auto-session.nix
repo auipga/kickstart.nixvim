@@ -1,3 +1,6 @@
+let
+  mapP = import ../../../lib/mkKeymap.nix { prefix = "[S]ession "; };
+in
 {
   programs.nixvim = {
     plugins.auto-session.enable = true;
@@ -20,5 +23,20 @@
         use_git_branch = true;
       };
     };
+
+    keymaps = [
+      (mapP [ "<leader>SW"  "<cmd>SessionSave<CR>"            "Save / [W]rite"   ])
+      (mapP [ "<leader>SS"  "<cmd>SessionSearch<CR>"          "[S]earch..."      ])
+      (mapP [ "<leader>SD"  "<cmd>Autosession delete<CR>"     "[D]elete..."      ])
+      (mapP [ "<leader>S!"  "<cmd>SessionToggleAutoSave<CR>"  "Toggle autosave"  ])
+      (mapP [ "<leader>Sx"  "<cmd>SessionPurgeOrphaned<CR>"   "Remove orphaned"  ])
+    ];
+
+    plugins.which-key.settings.spec = [
+      {
+        __unkeyed-1 = "<leader>S";
+        group = "[S]ession";
+      }
+    ];
   };
 }
