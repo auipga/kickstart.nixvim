@@ -10,6 +10,12 @@
         -- set sessionoptions+=winpos,terminal,folds
       '';
       settings = {
+        suppressed_dirs = [
+          "~/"
+          "~/dev"
+          "~/Downloads"
+          "/"
+        ];
       };
     };
   };
