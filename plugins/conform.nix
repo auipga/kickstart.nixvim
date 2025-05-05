@@ -13,7 +13,7 @@ in
     ];
 
     # Autoformat
-    # https://nix-community.github.io/nixvim/plugins/conform-nvim.html
+    # https://nix-community.github.io/nixvim/plugins/conform-nvim/index.html
     plugins.conform-nvim = {
       enable = true;
       settings = {
