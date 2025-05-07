@@ -21,6 +21,7 @@ in
     ./plugins/kickstart/plugins/neo-tree.nix
 
     ./plugins/custom/plugins/ai-chatgpt.nix
+    ./plugins/custom/plugins/ai-codecompanion.nix
     ./plugins/custom/plugins/auto-session.nix
     ./plugins/custom/plugins/easypick.nix
     ./plugins/custom/plugins/nix.nix
