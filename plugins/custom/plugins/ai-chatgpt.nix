@@ -6,7 +6,7 @@ in
     # https://nix-community.github.io/nixvim/plugins/chatgpt/index.html
     # https://github.com/jackMort/ChatGPT.nvim/
     plugins.chatgpt.enable = true;
-    plugins.chatgpt.settings.api_key_cmd = "echo sk-proj--*****";
+    plugins.chatgpt.settings.api_key_cmd = "echo $OPENAI_API_KEY";
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
     # https://github.com/jackMort/ChatGPT.nvim/?tab=readme-ov-file#whichkey-plugin-mappings
