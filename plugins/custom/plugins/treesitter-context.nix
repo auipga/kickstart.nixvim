@@ -7,6 +7,7 @@ in
     plugins.treesitter-context = {
       enable = true;
       settings = {
+        enable = false; # default: true
         mode = "topline"; # default: "cursor"
       };
     };
