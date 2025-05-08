@@ -52,6 +52,7 @@ in
               "buffers"
               "command_history"
               "undo"
+              "vim_options"
             ];
 
             # user-defined pickers

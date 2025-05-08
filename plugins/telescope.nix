@@ -1,5 +1,6 @@
 let
   mapR = import ../lib/mkKeymap.nix { raw = true; };
+  mapP = import ../lib/mkKeymap.nix { prefix = "[S]earch "; };
   mapPR = import ../lib/mkKeymap.nix { prefix = "[S]earch "; raw = true; };
   mkPluginKeymaps = import ../lib/mkPluginKeymap.nix { descInOptions = true; };
 in
@@ -126,6 +127,8 @@ in
             }
           end
         ''  "[N]ixOS files"  ])
+       # Shortcut for searching vim_options
+       (mapP  [ "<leader>so"  "<cmd>Telescope vim_options<cr>"  "vim_[o]ptions"  ])
     ];
   };
 }
