@@ -24,6 +24,7 @@ in
     # https://nix-community.github.io/nixvim/plugins/fidget/index.html
     plugins.fidget = {
       enable = true;
+      settings.progress.display.done_ttl = 10; # default: 3
     };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html#extraplugins
