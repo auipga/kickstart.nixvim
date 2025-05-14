@@ -10,11 +10,11 @@ in
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
         pname = "codecompanion-history";
-        version = "dev-2025-05-07";
+        version = "dev-2025-05-14";
         src = pkgs.fetchFromGitHub {
           owner = "ravitemer";
           repo = "codecompanion-history.nvim";
-          rev = "629bdfd846709babe1a7674858c00dd3af48c281";
+          rev = "3e0a41b410d7e9a412ae8feb4561d2f626db2715";
           sha256 = "sha256-ma2nkG+fCfVGkokfu6L7L9arqJ2RfC6T+HeVuzBmg1w=";
         };
 
