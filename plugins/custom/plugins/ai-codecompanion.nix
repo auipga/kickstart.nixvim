@@ -43,8 +43,9 @@ in
 
       context = {
         providers = [
-            { name = "git_diff"; opts = { max_lines = 400; }; }
-            { name = "lsp";      opts = { diagnostics = true; definition = true; }; }
+          { name = "git_diff"; opts = { max_lines = 400; }; }
+          { name = "lsp";      opts = { diagnostics = true; definition = true; }; }
+          { name = "vectorcode"; opts = { top_k = 15; }; }
         ];
       };
 
