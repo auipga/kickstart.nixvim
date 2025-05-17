@@ -1,5 +1,6 @@
 {
   programs.nixvim = {
+    # completely replaces the UI for messages, cmdline and the popupmenu
     # https://github.com/folke/noice.nvim
     # https://nix-community.github.io/nixvim/plugins/noice/index.html
     plugins.noice.enable = true;

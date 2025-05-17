@@ -41,8 +41,6 @@ in
         frecency.enable = true;
         # https://github.com/nvim-telescope/telescope-fzf-native.nvim
         fzf-native.enable = true;
-        # https://github.com/nvim-telescope/telescope-fzy-native.nvim
-        # fzy-native.enable = true;
         # https://github.com/nvim-telescope/telescope-live-grep-args.nvim
         # live-grep-args.enable = true;
         # https://github.com/mrcjkb/telescope-manix
@@ -74,6 +72,7 @@ in
         [ "<leader>sc"        "command_history"  "[S]earch [C]ommand History"   ]
         [ "<leader>su"        "undo"             "[S]earch [U]ndo History"      ]
       ];
+
       settings = {
         pickers.colorscheme.enable_preview = true;
         extensions = {

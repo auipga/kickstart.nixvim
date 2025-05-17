@@ -97,7 +97,7 @@ in
       # Enable break indent
       breakindent = true;
 
-      # Save undo history
+      # Save undo history across sessions
       undofile = true;
 
       # Case-insensitive searching UNLESS \C or one or more capital letters in the search term
@@ -119,10 +119,7 @@ in
       splitbelow = true;
 
       # Sets how neovim will display certain whitespace characters in the editor
-      #  See `:help 'list'`
-      #  and `:help 'listchars'`
       list = true;
-      # NOTE: .__raw here means that this field is raw lua code
       listchars.__raw = "{ tab = '» ', trail = '·', nbsp = '␣' }";
 
       # Preview substitutions live, as you type!
@@ -218,10 +215,6 @@ in
         enable = true;
       };
     };
-
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html#extraplugins
-    extraPlugins = with pkgs.vimPlugins; [
-    ];
 
     # The line beneath this is called `modeline`. See `:help modeline`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html#extraconfigluapost
