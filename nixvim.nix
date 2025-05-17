@@ -34,6 +34,7 @@ in
     ./plugins/custom/plugins/telescope-picker-list.nix
     ./plugins/custom/plugins/treesitter-context.nix
     ./plugins/custom/plugins/treesitter-textobjects.nix
+    ./plugins/custom/plugins/trouble.nix
     ./plugins/custom/plugins/undotree.nix
 #    ./plugins/custom/plugins/testing.nix
   ];
