@@ -142,7 +142,10 @@ in
       # See `:help hlsearch`
       hlsearch = true;
 
+      # Show upto 9 columns of folds
       foldcolumn = "auto:9";
+      # Start with no folds closed
+      foldlevelstart = 99;
     };
 
     # [[ Basic Keymaps ]]
