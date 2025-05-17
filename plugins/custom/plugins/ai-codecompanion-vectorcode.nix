@@ -9,9 +9,6 @@ let
   '';
   in
 {
-  home.packages = [
-   pkgs.vectorcode
-  ];
   programs.nixvim = {
     # VectorCode integration
     # https://github.com/Davidyz/VectorCode/blob/main/docs/neovim.md

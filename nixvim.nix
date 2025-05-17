@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ lib, config, ... }:
 let
   map = import ./lib/mkKeymap.nix { };
 in
@@ -35,14 +35,6 @@ in
     ./plugins/custom/plugins/treesitter-textobjects.nix
     ./plugins/custom/plugins/undotree.nix
 #    ./plugins/custom/plugins/testing.nix
-  ];
-
-  # install dependencies
-  home.packages = with pkgs; [
-    fd
-    gcc
-    ripgrep
-    unzip
   ];
 
   programs.nixvim = {
