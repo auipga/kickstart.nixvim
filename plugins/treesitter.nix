@@ -20,11 +20,11 @@
 
         # Nix, Nixvim
         nix
-        # query # treesitter queries
+        query # treesitter queries
         vim
         vimdoc
         lua
-        # luadoc
+        luadoc
 
         # General Development
         csv
@@ -40,7 +40,7 @@
         markdown
         markdown_inline
         regex
-        # xml
+        xml
         yaml
 
         # Rust Development
@@ -50,18 +50,18 @@
         # Web Development
         css
         html
-        # http
+        http
         javascript
         json
-        # json5
-        # php
-        # php_only
-        # phpdoc
-        # sql
-        # scss
-        # twig
-        # tsx
-        # typescript
+        json5
+        php
+        php_only
+        phpdoc
+        sql
+        scss
+        twig
+        tsx
+        typescript
 
         # Web - other
         # astro
