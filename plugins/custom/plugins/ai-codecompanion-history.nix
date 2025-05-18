@@ -8,19 +8,7 @@ in
     # that enables saving, browsing and restoring chat sessions.
     # https://github.com/ravitemer/codecompanion-history.nvim
     extraPlugins = [
-      (pkgs.vimUtils.buildVimPlugin {
-        pname = "codecompanion-history";
-        version = "dev-2025-05-14";
-        src = pkgs.fetchFromGitHub {
-          owner = "ravitemer";
-          repo = "codecompanion-history.nvim";
-          rev = "3e0a41b410d7e9a412ae8feb4561d2f626db2715";
-          sha256 = "sha256-ma2nkG+fCfVGkokfu6L7L9arqJ2RfC6T+HeVuzBmg1w=";
-        };
-
-        # work around "Require check failed"
-        doCheck = false;
-      })
+      pkgs.vimPlugins.codecompanion-history-nvim
     ];
 
     # Requirements
