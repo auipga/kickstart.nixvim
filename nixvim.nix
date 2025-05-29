@@ -38,6 +38,7 @@ in
     ./plugins/custom/plugins/treesitter-textobjects.nix
     ./plugins/custom/plugins/trouble.nix
     ./plugins/custom/plugins/undotree.nix
+    ./plugins/custom/plugins/wakatime.nix
 #    ./plugins/custom/plugins/testing.nix
   ];
 
