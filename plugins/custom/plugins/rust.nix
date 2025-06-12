@@ -9,6 +9,8 @@
       enable = true;
     };
 
+#    plugins.neotest.adapters.rust.enable = true;
+
     plugins.dap-lldb = { # C, C++, Rust
       enable = true;
     };
