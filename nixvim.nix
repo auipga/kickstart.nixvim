@@ -31,6 +31,7 @@ in
     ./plugins/custom/plugins/nix.nix
     ./plugins/custom/plugins/noice.nix
     ./plugins/custom/plugins/obsidian.nix
+    ./plugins/custom/plugins/otter.nix
     ./plugins/custom/plugins/rust.nix
     ./plugins/custom/plugins/telescope-picker-list.nix
     ./plugins/custom/plugins/terminal.nix
