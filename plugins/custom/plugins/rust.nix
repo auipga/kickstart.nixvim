@@ -15,8 +15,13 @@
       enable = true;
     };
 
+    # https://github.com/mrcjkb/rustaceanvim
+    # https://nix-community.github.io/nixvim/plugins/rustaceanvim/index.html
+    plugins.rustaceanvim.enable = false;
+
     plugins.lsp = {
       enable = true;
+      ## servers OR rustaceanvim !
       servers = {
         rust_analyzer = {
           enable = true;
