@@ -112,18 +112,18 @@
             name = "luasnip";
           }
           # https://nix-community.github.io/nixvim/plugins/cmp-path.html
-          {
-            name = "path";
-          }
+#          {
+#            name = "path";
+#          }
           # https://nix-community.github.io/nixvim/plugins/cmp-nvim-lsp-signature-help.html
           {
             name = "nvim_lsp_signature_help";
           }
           # Word completion from current buffer
           # https://nix-community.github.io/nixvim/plugins/cmp-buffer.html
-          {
-            name = "buffer";
-          }
+#          {
+#            name = "buffer";
+#          }
           # Command-line completion
           # https://nix-community.github.io/nixvim/plugins/cmp-cmdline.html
           {
