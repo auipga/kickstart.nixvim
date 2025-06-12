@@ -112,9 +112,6 @@ in
       # Keep signcolumn on by default
       signcolumn = "yes";
 
-      # Decrease update time
-      updatetime = 250;
-
       # Decrease mapped sequence wait time
       # Displays which-key popup sooner
       timeoutlen = 300;
