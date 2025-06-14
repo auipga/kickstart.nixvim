@@ -39,7 +39,7 @@ in
     ./plugins/custom/plugins/trouble.nix
     ./plugins/custom/plugins/undotree.nix
     ./plugins/custom/plugins/wakatime.nix
-#    ./plugins/custom/plugins/testing.nix
+    ./plugins/custom/plugins/testing.nix
   ];
 
   programs.nixvim = {
