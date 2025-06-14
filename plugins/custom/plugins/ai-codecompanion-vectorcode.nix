@@ -17,12 +17,12 @@ let
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
         pname = "VectorCode";
-        version = "0.6.7";
+        version = "0.6.10";
         src = pkgs.fetchFromGitHub {
           owner = "Davidyz";
           repo = "VectorCode";
-          rev = "2815496b98d9002c83d721c71412062196d73b85";
-          sha256 = "sha256-rGSdXKeknJ56yVtcJ6gxrEE4kVlTWeUqTSemT5JGxCg=";
+          tag = "0.6.10";
+          sha256 = "sha256-k9YpsVFV1HkIIIFPB7Iz7Jar+lY5vK6gpzNIlX55ZDY=";
         };
 
         # work around "Require check failed"
