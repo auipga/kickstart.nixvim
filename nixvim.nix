@@ -55,7 +55,7 @@ in
           flavour = "mocha";
           transparent_background = false;
           no_italic = true; # concerns comments and conditionals
-          dim_inactive.enabled = true;
+          dim_inactive.enabled = false;
         };
       };
     };
