@@ -22,7 +22,7 @@ let
           owner = "Davidyz";
           repo = "VectorCode";
           rev = "2815496b98d9002c83d721c71412062196d73b85";
-          sha256 = "sha256-yad8ChKEwSy1yFa8v+pGIKBoDxqbvr800wrhyMfedOM=";
+          sha256 = "sha256-rGSdXKeknJ56yVtcJ6gxrEE4kVlTWeUqTSemT5JGxCg=";
         };
 
         # work around "Require check failed"
