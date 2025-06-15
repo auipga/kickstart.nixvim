@@ -1,6 +1,6 @@
 { pkgs, ... } :
 let
-  mapP = import ../../../lib/mkKeymap.nix { prefix = "[C]odecompanion: "; extraOpts = { noremap = true; silent = true; }; };
+  mapP = import ../../../lib/mkKeymap.nix { prefix = "AI: "; extraOpts = { noremap = true; }; };
 in
 {
   programs.nixvim = {
@@ -67,9 +67,22 @@ in
       };
     };
 
-   keymaps = [
-      (mapP [ "<leader>cc" "<cmd>CodeCompanionChat Toggle<cr>"   "[C]hat window"          [ "n" "v" ]      ])
-      (mapP [ "<leader>ce" "<cmd>CodeCompanion<cr>"              "Inline [e]dit with AI"  [ "n" "v" ]      ])
+    keymaps = [
+      (mapP [ "<leader>aa"  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"                       ])
+      (mapP [ "<C-a>"       "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"          [ "n" "i" ]  ])
+      (mapP [ "<leader>aa"  "<cmd>CodeCompanionChat Add<cr>"      "[A]dd selection to Chat"  [ "v" ]  ])
+      (mapP [ "<C-a>"       "<cmd>CodeCompanionChat Add<cr>"      "[A]dd selection to Chat"  [ "v" ]  ])
+      (mapP [ "<leader>an"  "<cmd>CodeCompanionChat<cr>"          "[N]ew Chat"                        ])
+      (mapP [ "<leader>ae"  "<cmd>CodeCompanion<cr>"              "Inline [e]dit"                     ])
+      (mapP [ "<leader>aA"  "<cmd>CodeCompanionActions<cr>"       "[A]ctions"                         ])
+      (mapP [ "<leader>ac"  "<cmd>CodeCompanionCmd<cr>"           "[C]md"                             ])
+    ];
+
+    plugins.which-key.settings.spec = [
+      {
+        __unkeyed-1 = "<leader>a";
+        group = "AI";
+      }
     ];
   };
 }
