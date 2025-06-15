@@ -13,6 +13,12 @@ in
     plugins.gitsigns = {
       enable = true;
       settings = {
+        diff_opts = {
+#          algorithm = "myers";     # the default algorithm
+#          algorithm = "minimal";   # spend extra time to generate the smallest possible diff
+#          algorithm = "patience";  # patience diff algorithm
+#          algorithm = "histogram"; # histogram diff algorithm
+        };
         signs = {
           add.text = "+";
           change.text = "~";
