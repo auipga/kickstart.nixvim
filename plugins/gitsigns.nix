@@ -96,5 +96,22 @@ in
       # official gitsigns
       (map [ "<leader>hh"  "<cmd>Gitsigns select_hunk<CR>"  "Select hunks as a text object"  [ "o" "x" ]  ]) # changed from: <leader>ih
     ];
+
+    plugins.which-key.settings.spec = [
+      {
+        __unkeyed-1 = "<leader>t";
+        group = "[T]oggle";
+      }
+      {
+        __unkeyed-1 = "<leader>h";
+        group = "Git [H]unk";
+        mode = [
+          "n"
+          "v"
+          "o"
+          "x"
+        ];
+      }
+    ];
   };
 }
