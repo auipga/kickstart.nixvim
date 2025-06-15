@@ -73,6 +73,7 @@
         # Installing tree-sitter grammars from nvim-treesitter
         # (can be combined with grammarPackages from Nixpkgs)
         # https://nix-community.github.io/nixvim/plugins/treesitter/index.html#installing-tree-sitter-grammars-from-nvim-treesitter
+#        ensureInstalled = "all"; # should make them available but not really install them all
         ensureInstalled = [
         ];
 

@@ -34,6 +34,7 @@
 
         # ... and there is more!
         # Check out: https://github.com/echasnovski/mini.nvim
+        # https://github.com/echasnovski/mini.nvim/blob/main/README.md
       };
     };
 
