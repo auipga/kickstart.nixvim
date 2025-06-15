@@ -50,6 +50,18 @@ in
             require('conform').format { async = true, lsp_fallback = true }
           end
         ''  "[F]ormat buffer"  ])
+      # TODO: make it work
+      (mapR [ "<leader>f"  ''
+          function()
+            require("conform").format {
+              range = {
+                start = vim.api.nvim_buf_get_mark(0, "<"),
+                ["end"] = vim.api.nvim_buf_get_mark(0, ">"),
+              },
+              lsp_fallback = true,
+            }
+          end
+      ''  "[F]ormat selection XXX" "v" ])
     ];
   };
 }
