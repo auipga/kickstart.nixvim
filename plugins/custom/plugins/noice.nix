@@ -14,5 +14,12 @@
         lsp_doc_border = !false; # add a border to hover docs and signature help
       };
     };
+
+    # Optional dependencies:
+    # plugins.nui.enable = true;
+    # plugins.notify.enable = true;
+    # plugins.telescope.enable = true;
+    # plugins.cmp.enable = true;
+    # plugins.lsp.enable = true;
   };
 }
