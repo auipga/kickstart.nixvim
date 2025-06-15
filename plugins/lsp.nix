@@ -173,5 +173,20 @@ in
         end
       '';
     };
+
+    plugins.which-key.settings.spec = [
+      {
+        __unkeyed-1 = "<leader>w";
+        group = "[W]orkspace";
+      }
+      {
+        __unkeyed-1 = "<leader>d";
+        group = "[D]ocument";
+      }
+      {
+        __unkeyed-1 = "<leader>r";
+        group = "[R]ename";
+      }
+    ];
   };
 }
