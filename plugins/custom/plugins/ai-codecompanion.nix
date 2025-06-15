@@ -24,6 +24,7 @@ in
     plugins.codecompanion.settings = {
       adapters = {
         opts = {
+#          show_defaults = false;
         };
         openai_gpt4o.__raw = ''
           function()
@@ -50,6 +51,11 @@ in
       };
 
       display = {
+        action_palette = {
+#           provider = "telescope";
+#           provider = "mini_pick";
+#           provider = "snacks"; # broken
+        };
         chat = {
           window = {
             layout = "float";
@@ -57,13 +63,31 @@ in
         };
       };
 
+      # prompt_library = {};
+
+      # UI tweaks: cost widget
+      # TODO: key cost does not exist! find another way to apply this.
+#      cost = {
+#        enable = true;
+#        position = "statusline";
+#      };
+
       strategies = {
         chat = {
           adapter = "openai_gpt4o";
+#          tools = {
+#            vectorcode = {
+#              description = "Run VectorCode to retrieve the project context.";
+#              callback.__raw = "require('vectorcode.integrations').codecompanion.chat.make_tool({})";
+#            };
+#          };
         };
         inline = {
           adapter = "openai_gpt4o";
         };
+#        agent = {
+#          adapter = "openai_gpt4o"; # optional
+#        };
       };
     };
 
