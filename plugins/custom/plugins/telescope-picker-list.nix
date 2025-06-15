@@ -34,6 +34,14 @@ in
       settings = {
         extensions = {
           picker_list = {
+            # picker-specific options
+            opts = {
+#              project = { display_type = "full"; };
+#              emoji.__raw   = "require('telescope.themes').get_dropdown({})";
+#              luasnip.__raw = "require('telescope.themes').get_dropdown({})";
+#              notify.__raw  = "require('telescope.themes').get_dropdown({})";
+            };
+
             excluded_pickers = [
               # suggested
               "fzf"
