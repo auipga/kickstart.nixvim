@@ -66,7 +66,16 @@ in
     '';
 
     keymaps = [
-      (map [ "<leader>se"  "<cmd>Easypick<cr>"  "[S]earch [E]asypick"  ])
+      (map [ "<leader>se"  "<cmd>Easypick<cr>"            "[S]earch [E]asypick"      ])
+      (map [ "<leader>el"  "<cmd>Easypick ls<cr>"         "[E]asypick [l]s"          ])
+      (map [ "<leader>ec"  "<cmd>Easypick conflicts<cr>"  "[E]asypick [c]onflicts"   ])
+    ];
+
+    plugins.which-key.settings.spec = [
+      {
+        __unkeyed-1 = "<leader>e";
+        group = "[E]asypick";
+      }
     ];
   };
 }
