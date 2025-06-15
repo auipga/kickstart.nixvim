@@ -68,10 +68,6 @@
             __unkeyed-1 = "<leader>c";
             group = "[C]ode / [C]hatGPT";
           }
-          {
-            __unkeyed-1 = "<leader>s";
-            group = "[S]earch";
-          }
         ];
       };
     };
