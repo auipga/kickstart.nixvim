@@ -102,10 +102,10 @@
       swap = {
         enable = true;
         swapNext = {
-          "<leader>a" = "@parameter.inner";
+          # "<leader>a" = "@parameter.inner";
         };
         swapPrevious = {
-          "<leader>A" = "@parameter.inner";
+          # "<leader>A" = "@parameter.inner";
         };
       };
     };
