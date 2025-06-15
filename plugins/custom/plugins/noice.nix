@@ -17,7 +17,7 @@
 
     # Optional dependencies:
     # plugins.nui.enable = true;
-    # plugins.notify.enable = true;
+    plugins.notify.enable = true;
     # plugins.telescope.enable = true;
     # plugins.cmp.enable = true;
     # plugins.lsp.enable = true;
