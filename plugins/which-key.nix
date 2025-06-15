@@ -64,6 +64,8 @@
         ];
 
         spec = [
+          # definitions can be found in the specific plugins by searching for ...
+          #   ... plugins.which-key.settings.spec = [
         ];
       };
     };
