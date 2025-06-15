@@ -26,5 +26,12 @@ in
       (map [ "<leader>cr"  "<cmd>ChatGPTRun roxygen_edit<CR>"               "[R]oxygen Edit"               [ "n" "v" ]  ])
       (map [ "<leader>cl"  "<cmd>ChatGPTRun code_readability_analysis<CR>"  "Code Readability Analysis"    [ "n" "v" ]  ])
     ];
+
+    plugins.which-key.settings.spec = [
+      {
+        __unkeyed-1 = "<leader>c";
+        group = "[C]hatGPT";
+      }
+    ];
   };
 }

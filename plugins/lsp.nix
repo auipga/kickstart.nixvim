@@ -187,6 +187,11 @@ in
         __unkeyed-1 = "<leader>r";
         group = "[R]ename";
       }
+      {
+        __unkeyed-1 = "<leader>c";
+        group = "[C]ode";
+        # This is overridden by ai-chatgpt.nix. I'm ok with that.
+      }
     ];
   };
 }

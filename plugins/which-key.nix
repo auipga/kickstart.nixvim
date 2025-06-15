@@ -64,10 +64,6 @@
         ];
 
         spec = [
-          {
-            __unkeyed-1 = "<leader>c";
-            group = "[C]ode / [C]hatGPT";
-          }
         ];
       };
     };
