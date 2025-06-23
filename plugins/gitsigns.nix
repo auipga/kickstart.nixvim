@@ -112,10 +112,10 @@ in
         __unkeyed-1 = "<leader>h";
         group = "Git [H]unk";
         mode = [
-          "n"
-          "v"
-          "o"
-          "x"
+          "n" # normal mode
+          "v" # visual mode
+          "o" # operator-pending mode
+          # "x" # visual mode after an operator is executed
         ];
       }
     ];
