@@ -24,7 +24,7 @@ in
     # https://nix-community.github.io/nixvim/plugins/fidget/index.html
     plugins.fidget = {
       enable = true;
-      settings.progress.display.done_ttl = 10; # default: 3
+      settings.progress.display.done_ttl = 6; # default: 3
       settings.progress.display.skip_history = false; # default: true
     };
 
