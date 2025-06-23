@@ -67,6 +67,10 @@
           # definitions can be found in the specific plugins by searching for ...
           #   ... plugins.which-key.settings.spec = [
         ];
+
+        win = {
+          no_overlap = false; # default: true
+        };
       };
     };
   };
