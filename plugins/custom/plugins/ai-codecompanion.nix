@@ -58,7 +58,7 @@ in
         };
         chat = {
           window = {
-            layout = "float";
+            layout = "vertical";
           };
         };
       };
