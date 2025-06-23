@@ -106,6 +106,7 @@ in
       {
         __unkeyed-1 = "<leader>a";
         group = "AI";
+        mode = [ "n" "v" ];
       }
     ];
   };
