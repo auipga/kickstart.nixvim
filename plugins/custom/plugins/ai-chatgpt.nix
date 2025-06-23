@@ -31,6 +31,7 @@ in
       {
         __unkeyed-1 = "<leader>c";
         group = "[C]hatGPT";
+        mode = [ "n" "v" ];
       }
     ];
   };
