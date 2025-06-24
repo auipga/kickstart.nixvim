@@ -14,6 +14,7 @@ in
     # to be replaced with overseer
     # see https://github.com/stevearc/overseer.nvim
     keymaps = [
+      (map [ "<leader>rl" "<cmd>ToggleTermSendCurrentLine<CR>"  "ToggleTermSendCurrentLine"  ])
       (map [ "<leader>."  "<cmd>ToolPicker<CR>"  "Tool Picker"  ])
     ];
     extraConfigLua = ''
