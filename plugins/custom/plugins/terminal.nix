@@ -23,6 +23,8 @@ in
         local cwd = vim.fn.getcwd()
         if vim.fn.filereadable(cwd .. "/Cargo.toml") == 1 then
           return "rust"
+        elseif vim.fn.filereadable(cwd .. "/composer.json") == 1 then
+          return "php"
         elseif vim.fn.filereadable(cwd .. "/flake.nix") == 1 then
           return "nix"
         elseif cwd:match("zmk") then
@@ -55,6 +57,14 @@ in
                 vim.cmd("TermExec cmd='nh os switch'")
               end)
               vim.notify("Auto nh os switch enabled.")
+            end,
+          },
+          php = {
+            ["Enable: Symfony Clear Cache"] = function()
+              register_autorun("sfcl", function()
+                vim.cmd("TermExec cmd='time sfcl -e=prod; date'")
+              end)
+              vim.notify("Auto sfcl enabled.")
             end,
           },
           rust = {
