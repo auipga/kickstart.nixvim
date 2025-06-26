@@ -7,6 +7,7 @@ in
     plugins.toggleterm = {
       settings = {
         open_mapping = "{ [[<C-t>]] }"; # default: "[[<c-\\>]]";
+        auto_scroll = false;
       };
     };
 
