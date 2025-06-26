@@ -9,7 +9,6 @@
       Copilot Chat, cmp, lua, vim
     */
 
-    plugins.vim-be-good.enable = true;
     #    plugins.alpha = {
     #      enable = true;
     #      theme = "dashboard";
