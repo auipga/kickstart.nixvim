@@ -90,14 +90,23 @@ let
   };
 
   # configure the program
-#  home.file.".vectorcode/config.json".text = ''
-#    {
-#      "embedding_params": {
-#        "backend": "torch",
-#        "device": "cuda"
-#      },
-#    }
-#  '';
+  # for intel:
+  # home.file.".vectorcode/config.json".text = ''
+  #   {
+  #     "embedding_params": {
+  #       "backend": "openvino"
+  #     }
+  #   }
+  # '';
+  # for nvidia:
+  # home.file.".vectorcode/config.json".text = ''
+  #   {
+  #     "embedding_params": {
+  #       "backend": "torch",
+  #       "device": "cuda"
+  #     }
+  #   }
+  # '';
 
   # zsh completions
   xdg.configFile."zsh/completions/_vectorcode".source = "${vectorcodeCompletion}/_vectorcode";
