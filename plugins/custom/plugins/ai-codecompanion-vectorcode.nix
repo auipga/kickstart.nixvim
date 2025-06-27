@@ -15,13 +15,14 @@ let
     # https://github.com/Davidyz/VectorCode/wiki/Neovim-Integrations#olimorriscodecompanionnvim
     # https://github.com/olimorris/codecompanion.nvim/blob/main/doc/extensions/vectorcode.md
     extraPlugins = [
+      # pkgs.vimPlugins.vectorcode-nvim # only 0.6.12 for now (26.06.2025) see https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vectorcode-nvim
       (pkgs.vimUtils.buildVimPlugin {
-        pname = "VectorCode";
-        version = "0.6.10";
+        pname = "vectorcode-nvim";
+        version = "0.7.3";
         src = pkgs.fetchFromGitHub {
           owner = "Davidyz";
           repo = "VectorCode";
-          tag = "0.6.10";
+          tag = "0.7.3";
           sha256 = "sha256-k9YpsVFV1HkIIIFPB7Iz7Jar+lY5vK6gpzNIlX55ZDY=";
         };
 
