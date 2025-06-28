@@ -192,7 +192,6 @@ in
     # https://nix-community.github.io/nixvim/NeovimOptions/autoCmd/index.html
     autoCmd = [
       # Highlight when yanking (copying) text
-      #  Try it with `yap` in normal mode
       #  See `:help vim.highlight.on_yank()`
       {
         event = [ "TextYankPost" ];
