@@ -4,6 +4,7 @@
     # https://nix-community.github.io/nixvim/plugins/lualine/settings/index.html
     plugins.lualine.enable = true;
     plugins.lualine.settings = {
+      options.theme = "ayu_dark";
       extensions = [
         # "aerial"
         # "assistant"
@@ -12,21 +13,21 @@
         # "ctrlspace"
         # "fern"
         # "fugitive"
-        # "fzf"
+        "fzf"
         # "lazy"
         # "man"
         # "mason"
         # "mundo"
-        # "neo-tree"
+        "neo-tree"
         # "nerdtree"
         # "nvim-dap-ui"
         # "nvim-tree"
         # "oil"
         # "overseer"
-        # "quickfix"
+        "quickfix"
         # "symbols-outline"
-        # "toggleterm"
-        # "trouble"
+        "toggleterm"
+        "trouble"
       ];
     };
   };
