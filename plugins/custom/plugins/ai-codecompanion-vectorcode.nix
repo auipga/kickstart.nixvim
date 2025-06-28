@@ -1,65 +1,8 @@
-{ pkgs, lib, ... } :
-let
-  # generate zsh completions
-  vectorcodeCompletion = pkgs.runCommand "vectorcode-zsh-completion" {
-    nativeBuildInputs = [ pkgs.vectorcode ];
-  } ''
-    mkdir -p $out
-    vectorcode --print-completion zsh > $out/_vectorcode
-  '';
-  in
 {
   programs.nixvim = {
-    # VectorCode integration
-    # https://github.com/Davidyz/VectorCode/blob/main/docs/neovim.md
+    # Integrate VectorCode into CodeCompanion
     # https://github.com/Davidyz/VectorCode/wiki/Neovim-Integrations#olimorriscodecompanionnvim
     # https://github.com/olimorris/codecompanion.nvim/blob/main/doc/extensions/vectorcode.md
-    extraPlugins = [
-      # pkgs.vimPlugins.vectorcode-nvim # only 0.6.12 for now (26.06.2025) see https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vectorcode-nvim
-      (pkgs.vimUtils.buildVimPlugin {
-        pname = "vectorcode-nvim";
-        version = "0.7.3";
-        src = pkgs.fetchFromGitHub {
-          owner = "Davidyz";
-          repo = "VectorCode";
-          tag = "0.7.3";
-          sha256 = "sha256-k9YpsVFV1HkIIIFPB7Iz7Jar+lY5vK6gpzNIlX55ZDY=";
-        };
-
-        # work around "Require check failed"
-        doCheck = false;
-      })
-      # Dependencies
-      pkgs.vimPlugins.plenary-nvim
-    ];
-
-    # these are the defaults from https://github.com/Davidyz/VectorCode/blob/main/docs/neovim.md#configuration
-    plugins.codecompanion.luaConfig.post = lib.mkAfter ''
-      require("vectorcode").setup({
-        async_opts = {
-          debounce = 10,
-          events = { "BufWritePost", "InsertEnter", "BufReadPost" },
-          exclude_this = true,
-          n_query = 1,
-          notify = false,
-          query_cb = require("vectorcode.utils").make_surrounding_lines_cb(-1),
-          run_on_register = false,
-        },
-        async_backend = "default", -- or "lsp"
-        exclude_this = true,
-        n_query = 1,
-        notify = true,
-        timeout_ms = 5000,
-        on_setup = {
-          update = false, -- set to true to enable update when `setup` is called.
-          lsp = false,
-        },
-        sync_log_env_var = false,
-      })
-    '';
-
-    # Requirements
-    plugins.codecompanion.enable = true;
 
     # Configure the extension
     plugins.codecompanion.settings = {
@@ -88,31 +31,5 @@ let
         '';
       };
     };
-
-    plugins.lsp.servers.vectorcode_server = {
-      enable = true;
-    };
   };
-
-  # configure the program
-  # for intel:
-  # home.file.".vectorcode/config.json".text = ''
-  #   {
-  #     "embedding_params": {
-  #       "backend": "openvino"
-  #     }
-  #   }
-  # '';
-  # for nvidia:
-  # home.file.".vectorcode/config.json".text = ''
-  #   {
-  #     "embedding_params": {
-  #       "backend": "torch",
-  #       "device": "cuda"
-  #     }
-  #   }
-  # '';
-
-  # zsh completions
-  xdg.configFile."zsh/completions/_vectorcode".source = "${vectorcodeCompletion}/_vectorcode";
 }
