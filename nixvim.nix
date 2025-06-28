@@ -36,6 +36,7 @@ in
     # ./plugins/custom/plugins/rust.nix
     ./plugins/custom/plugins/telescope-picker-list.nix
     ./plugins/custom/plugins/terminal.nix
+    ./plugins/custom/plugins/terminal.tool-picker.nix
     ./plugins/custom/plugins/treesitter-context.nix
     ./plugins/custom/plugins/treesitter-textobjects.nix
     ./plugins/custom/plugins/trouble.nix
