@@ -6,8 +6,10 @@ in
     plugins.toggleterm.enable = true;
     plugins.toggleterm = {
       settings = {
-        open_mapping = "{ [[<C-t>]] }"; # default: "[[<c-\\>]]";
+        open_mapping = "[[<C-t>]]"; # default: "[[<c-\\>]]";
         auto_scroll = false;
+        direction = "horizontal"; # vertical|horizontal*|tab|float
+        start_in_insert = false;
       };
     };
 
@@ -15,7 +17,8 @@ in
     # to be replaced with overseer
     # see https://github.com/stevearc/overseer.nvim
     keymaps = [
-      (map [ "<leader>rl" "<cmd>ToggleTermSendCurrentLine<CR>"  "ToggleTermSendCurrentLine"  ])
+      (map [ "<leader>rr" "<cmd>ToggleTermSendCurrentLine<CR>"      "ToggleTermSendCurrentLine"      "n"  ])
+      (map [ "<leader>rr" "<cmd>ToggleTermSendVisualSelection<CR>"  "ToggleTermSendVisualSelection"  "v"  ])
       (map [ "<leader>."  "<cmd>ToolPicker<CR>"  "Tool Picker"  ])
     ];
     extraConfigLua = ''
