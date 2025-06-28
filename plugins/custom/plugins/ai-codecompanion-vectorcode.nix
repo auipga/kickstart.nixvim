@@ -33,6 +33,7 @@ let
       pkgs.vimPlugins.plenary-nvim
     ];
 
+    # these are the defaults from https://github.com/Davidyz/VectorCode/blob/main/docs/neovim.md#configuration
     plugins.codecompanion.luaConfig.post = lib.mkAfter ''
       require("vectorcode").setup({
         async_opts = {
