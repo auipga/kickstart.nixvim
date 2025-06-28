@@ -3,6 +3,8 @@ let
 in
 {
   programs.nixvim = {
+    # https://github.com/akinsho/toggleterm.nvim
+    # https://nix-community.github.io/nixvim/plugins/toggleterm/settings/index.html
     plugins.toggleterm.enable = true;
     plugins.toggleterm = {
       settings = {
