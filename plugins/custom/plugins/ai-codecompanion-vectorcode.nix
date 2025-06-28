@@ -87,6 +87,10 @@ let
         '';
       };
     };
+
+    plugins.lsp.servers.vectorcode_server = {
+      enable = true;
+    };
   };
 
   # configure the program
