@@ -89,6 +89,17 @@ in
 #          adapter = "openai_gpt4o"; # optional
 #        };
       };
+
+      hooks = {
+        on_pre_send.__raw = ''
+          function(payload)
+            if payload.dollar_cost and payload.dollar_cost > 1.00 then
+              vim.notify("Request aborted: cost ≥ $1", vim.log.levels.WARN)
+              return false   -- cancel
+            end
+          end,
+        '';
+      };
     };
 
     keymaps = [

@@ -19,17 +19,6 @@
 #      context.providers = [ ] ++ [
 #        { name = "vectorcode"; opts = { top_k = 15; }; }
 #      ];
-
-      hooks = {
-        on_pre_send.__raw = ''
-          function(payload)
-            if payload.dollar_cost and payload.dollar_cost > 1.00 then
-              vim.notify("Request aborted: cost ≥ $1", vim.log.levels.WARN)
-              return false   -- cancel
-            end
-          end,
-        '';
-      };
     };
   };
 }
