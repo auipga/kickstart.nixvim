@@ -31,7 +31,7 @@ in
           tool = {
             name = "sfcl",
             cmd = "time sfcl -e=prod; date",
-            pattern = "*.html.twig,*.php",*.yaml
+            pattern = "*.html.twig,*.php,*.yaml"
           }
         elseif cwd:match("nixos") then
           tool = {
