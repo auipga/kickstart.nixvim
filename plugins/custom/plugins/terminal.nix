@@ -27,7 +27,7 @@ in
       (map [ "<C-j>"      "<Cmd>wincmd j<CR>"   "Move focus to the left window"   "t"  ])
       (map [ "<C-k>"      "<Cmd>wincmd k<CR>"   "Move focus to the lower window"  "t"  ])
       (map [ "<C-l>"      "<Cmd>wincmd l<CR>"   "Move focus to the upper window"  "t"  ])
-      (map [ "<C-w>"      "<C-\\><C-n><C-w>"    null                              "t"  ])
+      # (map [ "<C-w>"      "<C-\\><C-n><C-w>"    null                              "t"  ])
     ];
   };
 }
