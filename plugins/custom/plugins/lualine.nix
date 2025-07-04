@@ -26,7 +26,7 @@
         # "overseer"
         "quickfix"
         # "symbols-outline"
-        "toggleterm"
+        # "toggleterm"
         "trouble"
       ];
     };
