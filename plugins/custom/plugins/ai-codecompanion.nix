@@ -107,7 +107,7 @@ in
           adapter = "openai_ccc";
           roles.llm.__raw = ''function(adapter) return adapter.formatted_name end'';
           opts = {
-            completion_provider = "blink"; # blink*|cmp|coc|default
+            completion_provider = "cmp"; # blink*|cmp|coc|default
           };
           keymaps = {
             regenerate.modes.n = "g,"; # default: gr (overlaps gr_ for lsp stuff)
