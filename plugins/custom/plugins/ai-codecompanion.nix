@@ -107,6 +107,11 @@ in
           opts = {
             completion_provider = "blink"; # blink*|cmp|coc|default
           };
+          keymaps = {
+            regenerate.modes.n = "g,"; # default: gr (overlaps gr_ for lsp stuff)
+            codeblock.modes.n = "gC"; # default: gc (overlaps gcc for 'toggle comment')
+            auto_tool_mode.modes.n = "g."; # default: gta (overlaps gt for 'next tab')
+          };
         };
         inline = {
           adapter = "gemini_ccc";
