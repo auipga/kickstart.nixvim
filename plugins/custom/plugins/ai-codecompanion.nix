@@ -27,10 +27,12 @@ in
           show_defaults = false; # default: true; show all available adapters?
           show_model_choices = true; # default: true; show all available model choices for the selected adapter?
         };
+        # TODO: use GPG instead env var (https://github.com/olimorris/codecompanion.nvim/discussions/601)
+        # TODO: use pass?
         openai_ccc.__raw = ''
           function()
             return require("codecompanion.adapters").extend("openai", {
-              env = { api_key = vim.env.OPENAI_API_KEY or "cmd:pass show openai/api-key" },
+              env = { api_key = vim.env.OPENAI_API_KEY_CCC or "cmd:pass show openai/api-key" },
               schema = {
                 model       = { default = "gpt-4o" },
                 max_tokens  = { default = 2048 },
@@ -43,7 +45,7 @@ in
         gemini_ccc.__raw = ''
           function()
             return require("codecompanion.adapters").extend("gemini", {
-              env = { api_key = vim.env.GEMINI_API_KEY },
+              env = { api_key = vim.env.GEMINI_API_KEY_CCC },
               schema = {
                 model       = { default = "gemini-2.5-pro" },
                 max_tokens  = { default = 2048 },
@@ -57,7 +59,7 @@ in
         gemini.__raw = ''
           function()
             return require("codecompanion.adapters").extend("gemini", {
-              env = { api_key = "" },
+              env = { api_key = "vim.env.GEMINI_API_KEY" },
               schema = {
                 model       = { default = "gemini-2.5-flash" },
                 max_tokens  = { default = 2048 },
