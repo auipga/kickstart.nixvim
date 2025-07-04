@@ -116,7 +116,10 @@ in
           };
         };
         inline = {
-          adapter = "gemini_ccc";
+          adapter = {
+            name = "gemini_ccc";
+            # model = "";
+          };
           keymaps = {
             # accept_change.modes.n = ""; # default: ga
             # reject_change.modes.n = ""; # default: gr
@@ -125,6 +128,7 @@ in
         cmd = {
           adapter = {
             name = "gemini_ccc";
+            # model = "";
           };
         };
       };
