@@ -28,8 +28,7 @@ in
         };
         openai_gpt4o.__raw = ''
           function()
-            local adapters = require("codecompanion.adapters")
-            return adapters.extend("openai", {
+            return require("codecompanion.adapters").extend("openai", {
               env = { api_key = vim.env.OPENAI_API_KEY or "cmd:pass show openai/api-key" },
               schema = {
                 model       = { default = "gpt-4o" },
@@ -52,9 +51,7 @@ in
 
       display = {
         action_palette = {
-#           provider = "telescope";
-#           provider = "mini_pick";
-#           provider = "snacks"; # broken
+          provider = "default";
         };
         chat = {
           window = {
@@ -63,51 +60,13 @@ in
         };
       };
 
-      # prompt_library = {};
-
-      # UI tweaks: cost widget
-      # TODO: key cost does not exist! find another way to apply this.
-#      cost = {
-#        enable = true;
-#        position = "statusline";
-#      };
-
       strategies = {
         chat = {
           adapter = "openai_gpt4o";
-#          tools = {
-#            vectorcode = {
-#              description = "Run VectorCode to retrieve the project context.";
-#              callback.__raw = "require('vectorcode.integrations').codecompanion.chat.make_tool({})";
-#            };
-#          };
-
-          ## User Interface (UI)
-          # User and LLM Roles
-          roles = {
-            # The header name for the LLM's messages
-            # @type string|fun(adapter: CodeCompanion.Adapter): string
-            llm.__raw = ''function(adapter)
-              return "CodeCompanion - (" .. adapter.formatted_name .. ")"
-            end
-            '';
-            # The header name for your messages
-            # @type string
-            user = "Me";
-          };
+          roles.llm.__raw = ''function(adapter) return adapter.formatted_name end'';
           opts = {
             completion_provider = "blink"; # blink*|cmp|coc|default
           };
-          auto_scroll = false;
-
-          # Additional Options
-          intro_message = "Welcome to CodeCompanion ✨! Press ? for options";
-          show_header_separator = false; # Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
-          separator = "─"; # The separator between the different messages in the chat buffer
-          show_references = true; # Show references (from slash commands and variables) in the chat buffer?
-          show_settings = false; # Show LLM settings at the top of the chat buffer?
-          show_token_count = true; # Show the token count for each response?
-          start_in_insert_mode = false; # Open the chat buffer in insert mode?
         };
         inline = {
           adapter = "openai_gpt4o";
@@ -117,16 +76,6 @@ in
 #        };
       };
 
-      hooks = {
-        on_pre_send.__raw = ''
-          function(payload)
-            if payload.dollar_cost and payload.dollar_cost > 1.00 then
-              vim.notify("Request aborted: cost ≥ $1", vim.log.levels.WARN)
-              return false   -- cancel
-            end
-          end,
-        '';
-      };
     };
 
     keymaps = [
