@@ -2,7 +2,6 @@
   programs.nixvim = {
     # Integrate VectorCode into CodeCompanion
     # https://github.com/Davidyz/VectorCode/wiki/Neovim-Integrations#olimorriscodecompanionnvim
-    # https://github.com/olimorris/codecompanion.nvim/blob/main/doc/extensions/vectorcode.md
 
     # Configure the extension
     plugins.codecompanion.settings = {
