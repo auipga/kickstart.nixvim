@@ -9,9 +9,9 @@ in
     plugins.toggleterm = {
       settings = {
         open_mapping = "[[<C-t>]]"; # default: "[[<c-\\>]]";
-        auto_scroll = false;
+        auto_scroll = false; # default: true
         direction = "horizontal"; # vertical|horizontal*|tab|float
-        start_in_insert = false;
+        start_in_insert = false; # default: true
       };
     };
 
