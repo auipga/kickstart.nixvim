@@ -109,11 +109,13 @@ in
           };
         };
         inline = {
-          adapter = "openai_ccc";
+          adapter = "gemini_ccc";
         };
-#        agent = {
-#          adapter = "openai_gpt4o"; # optional
-#        };
+        cmd = {
+          adapter = {
+            name = "gemini_ccc";
+          };
+        };
       };
 
       # prompt_library = {
