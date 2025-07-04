@@ -38,7 +38,6 @@ in
 
     keymaps = [
      (mapP [ "<leader>ah"  "<cmd>CodeCompanionHistory<cr>"  "[H]istory"  ])
-     (map  [ "<leader>sa"  "<cmd>CodeCompanionHistory<cr>"  "Search: [A]I History"  ])
     ];
   };
 }
