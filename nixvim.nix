@@ -22,6 +22,7 @@ in
 
     ./plugins/custom/plugins/_.nix
     ./plugins/custom/plugins/ai-chatgpt.nix
+    ./plugins/custom/plugins/ai-copilot.nix
     ./plugins/custom/plugins/ai-codecompanion.nix
     ./plugins/custom/plugins/ai-codecompanion-history.nix
     ./plugins/custom/plugins/ai-codecompanion-vectorcode.nix
