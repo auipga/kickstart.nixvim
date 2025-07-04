@@ -16,12 +16,12 @@ let
       # pkgs.vimPlugins.vectorcode-nvim # only 0.6.12 for now (26.06.2025) see https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vectorcode-nvim
       (pkgs.vimUtils.buildVimPlugin {
         pname = "vectorcode-nvim";
-        version = "0.7.3";
+        version = "0.7.6";
         src = pkgs.fetchFromGitHub {
           owner = "Davidyz";
           repo = "VectorCode";
-          tag = "0.7.3";
-          sha256 = "sha256-k9YpsVFV1HkIIIFPB7Iz7Jar+lY5vK6gpzNIlX55ZDY=";
+          tag = "0.7.6";
+          sha256 = "sha256-PnvzTEUHFioAdn2RFtnNw+8ZbQMHOU1Jz2o20KLVmQQ=";
         };
 
         # work around "Require check failed"
