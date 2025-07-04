@@ -24,7 +24,8 @@ in
     plugins.codecompanion.settings = {
       adapters = {
         opts = {
-#          show_defaults = false;
+          show_defaults = false; # default: true; show all available adapters?
+          show_model_choices = true; # default: true; show all available model choices for the selected adapter?
         };
         openai_ccc.__raw = ''
           function()
@@ -84,7 +85,12 @@ in
         chat = {
           window = {
             layout = "vertical";
+            opts = {
+              cursorline = true; # default: false
+            };
           };
+          auto_scroll = false; # default: true
+          intro_message = ""; # default: "Welcome to CodeCompanion ✨! Press ? for options"
         };
       };
 
