@@ -115,6 +115,10 @@ in
         };
         inline = {
           adapter = "gemini_ccc";
+          keymaps = {
+            # accept_change.modes.n = ""; # default: ga
+            # reject_change.modes.n = ""; # default: gr
+          };
         };
         cmd = {
           adapter = {
