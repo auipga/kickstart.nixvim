@@ -34,6 +34,7 @@ in
     ./plugins/custom/plugins/noice.nix
     # ./plugins/custom/plugins/obsidian.nix
     # ./plugins/custom/plugins/rust.nix
+    ./plugins/custom/plugins/snacks.nix
     ./plugins/custom/plugins/telescope-picker-list.nix
     ./plugins/custom/plugins/terminal.nix
     ./plugins/custom/plugins/terminal.autorun-project-tool.nix
