@@ -26,7 +26,7 @@ in
         opts = {
 #          show_defaults = false;
         };
-        openai_gpt4o.__raw = ''
+        openai_ccc.__raw = ''
           function()
             return require("codecompanion.adapters").extend("openai", {
               env = { api_key = vim.env.OPENAI_API_KEY or "cmd:pass show openai/api-key" },
@@ -35,6 +35,34 @@ in
                 max_tokens  = { default = 2048 },
                 temperature = { default = 0.2 },
                 top_p       = { default = 0.95 },
+              },
+            })
+          end
+        '';
+        gemini_ccc.__raw = ''
+          function()
+            return require("codecompanion.adapters").extend("gemini", {
+              env = { api_key = vim.env.GEMINI_API_KEY },
+              schema = {
+                model       = { default = "gemini-2.5-pro" },
+                max_tokens  = { default = 2048 },
+                temperature = { default = 0.2 },
+                top_p       = { default = 0.95 },
+                reasoning_effort = { default = "medium" }, -- high|medium*|low|none
+              },
+            })
+          end
+        '';
+        gemini.__raw = ''
+          function()
+            return require("codecompanion.adapters").extend("gemini", {
+              env = { api_key = "" },
+              schema = {
+                model       = { default = "gemini-2.5-flash" },
+                max_tokens  = { default = 2048 },
+                temperature = { default = 0.2 },
+                top_p       = { default = 0.95 },
+                reasoning_effort = { default = "medium" }, -- high|medium*|low|none
               },
             })
           end
@@ -62,14 +90,14 @@ in
 
       strategies = {
         chat = {
-          adapter = "openai_gpt4o";
+          adapter = "openai_ccc";
           roles.llm.__raw = ''function(adapter) return adapter.formatted_name end'';
           opts = {
             completion_provider = "blink"; # blink*|cmp|coc|default
           };
         };
         inline = {
-          adapter = "openai_gpt4o";
+          adapter = "openai_ccc";
         };
 #        agent = {
 #          adapter = "openai_gpt4o"; # optional
