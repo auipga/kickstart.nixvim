@@ -35,8 +35,8 @@ in
           }
         elseif cwd:match("nixos") then
           tool = {
-            name = "switch",
-            cmd = "nh os switch",
+            name = "build",
+            cmd = "nh os test",
             pattern = "*.nix"
           }
         else
