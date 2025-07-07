@@ -14,7 +14,7 @@ in
     ./plugins/mini.nix
     ./plugins/treesitter.nix
 
-    # ./plugins/kickstart/plugins/debug.nix
+    # ./plugins/kickstart/plugins/debug.nix # directly imported by home-manager/modules/rust.nix
     ./plugins/kickstart/plugins/indent-blankline.nix
     ./plugins/kickstart/plugins/lint.nix
     ./plugins/kickstart/plugins/autopairs.nix
@@ -34,7 +34,7 @@ in
     ./plugins/custom/plugins/nix.nix
     ./plugins/custom/plugins/noice.nix
     # ./plugins/custom/plugins/obsidian.nix
-    # ./plugins/custom/plugins/rust.nix
+    # ./plugins/custom/plugins/rust.nix # directly imported by home-manager/modules/rust.nix
     ./plugins/custom/plugins/snacks.nix
     ./plugins/custom/plugins/telescope-picker-list.nix
     ./plugins/custom/plugins/terminal.nix
