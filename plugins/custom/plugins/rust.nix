@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 {
   programs.nixvim = {
     plugins.dap = {
@@ -22,6 +22,13 @@
           installRustc = true;
         };
       };
+    };
+
+    plugins.treesitter = {
+      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+        rust
+        toml
+      ];
     };
 
     plugins.crates.enable = true;

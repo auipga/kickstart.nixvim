@@ -43,10 +43,6 @@
         xml
         yaml
 
-        # Rust Development
-        rust
-        toml # Also for ZMK `keymap.toml`
-
         # Web Development
         css
         html
