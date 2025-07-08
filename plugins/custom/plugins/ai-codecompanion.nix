@@ -1,6 +1,6 @@
 { pkgs, config, ... } :
 let
-  mapP = import ../../../lib/mkKeymap.nix { prefix = "AI: "; extraOpts = { noremap = true; }; };
+  mapP = import ../../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
 in
 {
   programs.nixvim = {
@@ -182,32 +182,14 @@ When given a task:
       prompt_library = import ./ai-codecompanion-prompts.nix;
     };
 
-    keymaps = [
-      (mapP [ "<leader>aa"  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"                       ])
-      (mapP [ "<C-a>"       "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"      [ "n" "i" "t" ]  ])
-      (mapP [ "<leader>aa"  "<cmd>CodeCompanionChat Add<cr>"      "[A]dd selection to Chat"  [ "v" ]  ])
-      (mapP [ "<C-a>"       "<cmd>CodeCompanionChat Add<cr>"      "[A]dd selection to Chat"  [ "v" ]  ])
-      (mapP [ "<leader>an"  "<cmd>CodeCompanionChat<cr>"          "[N]ew Chat"                        ])
-      (mapP [ "<leader>ae"  "<cmd>CodeCompanion<cr>"              "Inline [e]dit"                     ])
-      (mapP [ "<leader>aA"  "<cmd>CodeCompanionActions<cr>"       "[A]ctions"            [ "n" "v" ]  ])
-      (mapP [ "<leader>ac"  "<cmd>CodeCompanionCmd<cr>"           "[C]md"                             ])
-    ];
-
     # Suggested Plugin Workflow
     # https://codecompanion.olimorris.dev/getting-started.html#suggested-plugin-workflow
-    # TODO:
     # Expand 'cc' into 'CodeCompanion' in the command line
-    # vim.cmd([[cab cc CodeCompanion]])
-      # (mapP [ "<leader>a"   "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"          [ "n" "v" ]  ])
-      # (mapP [ "<C-a>"       "<cmd>CodeCompanionActions<cr>"       "[A]ctions"            [ "n" "v" ]  ])
-      # (mapP [ "ga"          "<cmd>CodeCompanionChat Add<cr>"      "[A]dd selection to Chat"  [ "v" ]  ])
-
-    plugins.which-key.settings.spec = [
-      {
-        __unkeyed-1 = "<leader>a";
-        group = "AI";
-        mode = [ "n" "v" ];
-      }
+    extraConfigLua = "vim.cmd([[cab cc CodeCompanion]])";
+    keymaps = [
+      (mapP [ "<leader>a"  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" ]  ])
+      (mapP [ "<C-a>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" ]  ])
+      (mapP [ "ga"         "<cmd>CodeCompanionChat Add<cr>"      "Add selection to Chat"  [ "v" ]  ])
     ];
   };
 }
