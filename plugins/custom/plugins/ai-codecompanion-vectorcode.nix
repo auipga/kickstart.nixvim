@@ -11,10 +11,8 @@
         };
       };
 
-#      TODO: make this work
-#      context.providers = [ ] ++ [
-#        { name = "vectorcode"; opts = { top_k = 15; }; }
-#      ];
+      # Setup: add to context.providers in ./ai-codecompanion.nix
+      # { name = "vectorcode"; opts = { top_k = 15; }; }
     };
   };
 }
