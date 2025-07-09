@@ -59,7 +59,7 @@ in
         gemini.__raw = ''
           function()
             return require("codecompanion.adapters").extend("gemini", {
-              env = { api_key = "vim.env.GEMINI_API_KEY" },
+              env = { api_key = vim.env.GEMINI_API_KEY },
               schema = {
                 model       = { default = "gemini-2.5-flash" },
                 max_tokens  = { default = 2048 },
