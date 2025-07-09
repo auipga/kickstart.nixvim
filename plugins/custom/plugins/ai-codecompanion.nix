@@ -102,8 +102,8 @@ in
         };
       };
 
-/*
       opts = {
+/*
         system_prompt.__raw = ''
           function(opts)
             local language = opts.language or "English"
@@ -147,8 +147,8 @@ When given a task:
             )
           end
         '';
-      };
 */
+      };
 
       strategies = {
         chat = {
