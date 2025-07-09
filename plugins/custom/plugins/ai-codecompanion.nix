@@ -165,7 +165,7 @@ When given a task:
         };
         inline = {
           adapter = {
-            name = "gemini_ccc";
+            name = "openai_ccc";
             # model = "";
           };
           keymaps = {
@@ -175,7 +175,7 @@ When given a task:
         };
         cmd = {
           adapter = {
-            name = "gemini_ccc";
+            name = "openai_ccc";
             # model = "";
           };
         };
