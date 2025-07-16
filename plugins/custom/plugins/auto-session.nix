@@ -8,9 +8,9 @@ in
       luaConfig.pre = ''
         -- Recommended sessionoptions config
         -- https://github.com/rmagatti/auto-session/#recommended-sessionoptions-config
-        vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+        vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
         -- which is equivalent to (VimL):
-        -- set sessionoptions+=winpos,terminal,folds
+        -- set sessionoptions+=winpos,folds
       '';
       settings = {
         suppressed_dirs = [
