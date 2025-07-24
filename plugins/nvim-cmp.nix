@@ -5,7 +5,6 @@
       enable = true;
     };
 
-    plugins.lazydev.enable = true; # autoEnableSources not enough
     plugins.luasnip.enable = true; # autoEnableSources not enough
 
     # Autocompletion
@@ -93,12 +92,6 @@
         # See list of most cmp source plugins that are autoloaded by defining the source:
         # https://github.com/nix-community/nixvim/blob/main/plugins/cmp/sources/default.nix
         sources = [
-          # https://nix-community.github.io/nixvim/plugins/lazydev/index.html
-          {
-            name = "lazydev";
-            # set group index to 0 to skip loading LuaLS completions as lazydev recommends it
-            group_index = 0;
-          }
           # Adds other completion capabilites.
           #  nvim-cmp does not ship with all sources by default. They are split
           #  into multiple repos for maintenance purposes.
