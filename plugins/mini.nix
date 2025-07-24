@@ -5,9 +5,10 @@
     plugins.mini = {
       enable = true;
 
+      # https://nix-community.github.io/nixvim/plugins/mini/index.html#pluginsminimodules
       modules = {
         # Better Around/Inside textobjects
-        #
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-ai.md
         # Examples:
         #  - va)  - [V]isually select [A]round [)]paren
         #  - yinq - [Y]ank [I]nside [N]ext [Q]uote
@@ -17,6 +18,7 @@
         };
 
         # Add/delete/replace surroundings (brackets, quotes, etc.)
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
         #
         # Examples:
         #  - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
@@ -28,6 +30,7 @@
         # Simple and easy statusline.
         #  You could remove this setup call if you don't like it,
         #  and try some other statusline plugin
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-statusline.md
         # statusline = {
         #   use_icons.__raw = "vim.g.have_nerd_font";
         # };
