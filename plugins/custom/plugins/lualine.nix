@@ -32,7 +32,7 @@
       sections = {
         lualine_y.__raw = ''
           {
-            -- see https://github.com/Davidyz/VectorCode/wiki/Neovim-Integrations#nvim-lualinelualinenvim
+            -- see https://github.com/Davidyz/VectorCode/blob/main/docs/neovim/README.md#status-line-component
             require("vectorcode.integrations").lualine({
               show_job_count = true, -- default: false
             })
