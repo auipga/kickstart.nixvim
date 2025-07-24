@@ -126,25 +126,34 @@ in
           end
         ''  "[/] in Open Files"  ])
       # Shortcut for searching your Nixvim configuration files
-      (mapPR [ "<leader>sv" ''
+      (mapPR [ "<leader>snv" ''
           function()
             require('telescope.builtin').find_files {
               cwd = "$HOME/nixos-config/kickstart.nixvim/"
             }
           end
-        ''  "Nix[v]im files"  ])
+        ''  "[N]ix[v]im files"  ])
       # Shortcut for searching your NixOS configuration files
-      (mapPR [ "<leader>sn" ''
+      (mapPR [ "<leader>sno" ''
           function()
             require('telescope.builtin').find_files {
               cwd = "$HOME/nixos-config/",
               find_command = {
                 "fd", "--type", "f",
-                "--exclude", "kickstart.nixvim"
-              }
+                "--exclude", "home-manager",
+                "--exclude", "kickstart.nixvim",
+              },
             }
           end
-        ''  "[N]ixOS files"  ])
+      ''  "[N]ix[O]S files"  ])
+      # Shortcut for searching your home-manager configuration files
+      (mapPR [ "<leader>snh" ''
+          function()
+            require('telescope.builtin').find_files {
+              cwd = "$HOME/nixos-config/home-manager",
+            }
+          end
+        ''  "[N]ixOS [h]ome-manager files"  ])
        # Shortcut for searching vim_options
        (mapP  [ "<leader>so"  "<cmd>Telescope vim_options<cr>"  "vim_[o]ptions"  ])
     ];
@@ -153,6 +162,10 @@ in
       {
         __unkeyed-1 = "<leader>s";
         group = "[S]earch";
+      }
+      {
+        __unkeyed-1 = "<leader>sn";
+        group = "[S]earch [N]ix config";
       }
     ];
   };
