@@ -42,6 +42,7 @@
         #     textobject = "<leader>/";
         #   };
         # };
+        # INFO: I use the built-in commenting for now (:h commenting)
 
         # Automatic highlighting of word under cursor
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
@@ -89,6 +90,7 @@
         # Minimal and fast autopairs
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
         # pairs = {};
+        # INFO: replaced by ../plugins/kickstart/plugins/autopairs.nix
 
         # Pick anything
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pick.md
@@ -96,12 +98,16 @@
 
         # Manage and expand snippets
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-snippets.md
+        # TODO: checkout, needed at all?
         # snippets = {};
 
         # Split and join arguments
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-splitjoin.md
         # Default keymap: gS to toggle
         splitjoin = {};
+        # INFO:
+        # for Rust maybe use https://github.com/AndrewRadev/splitjoin.vim
+        # it can expand ? to match Ok/Err :+1:
 
         # Add/delete/replace surroundings (brackets, quotes, etc.)
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
@@ -110,10 +116,12 @@
         #  - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
         #  - sd'   - [S]urround [D]elete [']quotes
         #  - sr)'  - [S]urround [R]eplace [)] [']
+        #  - s[add|delete|find|Find_left|highlight|replace]
         surround = {
           highlight_duration = 1500;
           n_lines = 100; # 20
         };
+        # replaces surround.nvim # see ./custom/plugins/testing.nix
 
         # Simple and easy statusline.
         #  You could remove this setup call if you don't like it,
