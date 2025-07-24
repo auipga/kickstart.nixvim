@@ -14,7 +14,8 @@
         #  - yinq - [Y]ank [I]nside [N]ext [Q]uote
         #  - ci'  - [C]hange [I]nside [']quote
         ai = {
-          n_lines = 500;
+          n_lines = 100; # 50
+          search_method = "cover_or_next";
         };
 
         # Add/delete/replace surroundings (brackets, quotes, etc.)
@@ -25,6 +26,8 @@
         #  - sd'   - [S]urround [D]elete [']quotes
         #  - sr)'  - [S]urround [R]eplace [)] [']
         surround = {
+          highlight_duration = 1500;
+          n_lines = 100; # 20
         };
 
         # Simple and easy statusline.
