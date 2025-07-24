@@ -73,7 +73,6 @@ in
       ];
 
       settings = {
-#        file_ignore_patterns = [ "node%_modules/.*" ];
         pickers.colorscheme.enable_preview = true;
         extensions = {
           ui-select.__raw = "{ require('telescope.themes').get_dropdown() }";
