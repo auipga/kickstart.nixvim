@@ -1,3 +1,4 @@
+{ lib, ... }:
 let
   map = import ../../../lib/mkKeymap.nix { };
 in
@@ -21,5 +22,11 @@ in
     keymaps = [
       (map [ "\\"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
     ];
+
+    # Integrations
+    plugins.lualine.settings = {
+      extensions           = lib.mkAfter [ "neo-tree" ];
+      options.ignore_focus = lib.mkAfter [ "neo-tree" ];
+    };
   };
 }

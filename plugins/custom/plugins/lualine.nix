@@ -18,7 +18,7 @@
         # "man"
         # "mason"
         # "mundo"
-        "neo-tree"
+        # "neo-tree"       # see ../../kickstart/plugins/neo-tree.nix
         # "nerdtree"
         # "nvim-dap-ui"
         # "nvim-tree"
@@ -26,8 +26,8 @@
         # "overseer"
         "quickfix"
         # "symbols-outline"
-        # "toggleterm"
-        "trouble"
+        # "toggleterm"      # see ./terminal.nix
+        # "trouble"         # see ./trouble.nix
       ];
       sections = {
         lualine_y.__raw = ''

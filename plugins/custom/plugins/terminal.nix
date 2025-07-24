@@ -1,3 +1,4 @@
+{ lib, ... }:
 let
   map = import ../../../lib/mkKeymap.nix { };
 in
@@ -29,5 +30,10 @@ in
       (map [ "<C-l>"      "<Cmd>wincmd l<CR>"   "Move focus to the upper window"  "t"  ])
       # (map [ "<C-w>"      "<C-\\><C-n><C-w>"    null                              "t"  ])
     ];
+
+    # Integrations
+    plugins.lualine.settings = {
+      extensions = lib.mkAfter [ "toggleterm" ];
+    };
   };
 }

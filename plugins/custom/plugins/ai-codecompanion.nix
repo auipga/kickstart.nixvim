@@ -1,4 +1,4 @@
-{ pkgs, config, ... } :
+{ config, lib, pkgs, ... } :
 let
   mapP = import ../../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
 in
@@ -195,5 +195,10 @@ When given a task:
       (mapP [ "<C-a>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" ]  ])
       (mapP [ "ga"         "<cmd>CodeCompanionChat Add<cr>"      "Add selection to Chat"  [ "v" ]  ])
     ];
+
+    # Integrations
+    plugins.lualine.settings = {
+      options.ignore_focus = lib.mkAfter [ "codecompanion" ];
+    };
   };
 }
