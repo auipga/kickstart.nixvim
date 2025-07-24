@@ -4,7 +4,7 @@
     # https://nix-community.github.io/nixvim/plugins/lualine/settings/index.html
     plugins.lualine.enable = true;
     plugins.lualine.settings = {
-      options.theme = "ayu_dark";
+      options.theme = "auto";
       extensions = [
         # "aerial"
         # "assistant"
