@@ -17,8 +17,8 @@
     plugins.lsp.servers.nixd.enable = true;
 
     # https://github.com/oxalica/nil
-    # https://nix-community.github.io/nixvim/plugins/lsp/servers/nil_ls/index.html
     # https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.txt#nil_ls
+    # https://nix-community.github.io/nixvim/plugins/lsp/servers/nil_ls/index.html
     plugins.lsp.servers.nil_ls.enable = false;
     plugins.lsp.servers.nil_ls = {
       settings = {

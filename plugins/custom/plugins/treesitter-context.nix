@@ -3,6 +3,8 @@ let
 in
 {
   programs.nixvim = {
+    # Show code context
+    # https://github.com/nvim-treesitter/nvim-treesitter-context/
     # https://nix-community.github.io/nixvim/plugins/treesitter-context/index.html
     plugins.treesitter-context = {
       enable = true;
@@ -12,7 +14,6 @@ in
       };
     };
 
-    # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
       (map [ "<leader>tc"  "<cmd>TSContextToggle<CR>"  "[T]oggle [C]ontext"  ])
     ];

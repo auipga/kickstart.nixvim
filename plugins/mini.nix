@@ -1,7 +1,7 @@
 {
   programs.nixvim = {
     # Collection of various small independent plugins/modules
-    # https://nix-community.github.io/nixvim/plugins/mini.html
+    # https://nix-community.github.io/nixvim/plugins/mini/index.html
     plugins.mini = {
       enable = true;
 

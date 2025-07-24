@@ -3,13 +3,13 @@ let
 in
 {
   programs.nixvim = {
-    # https://nix-community.github.io/nixvim/plugins/chatgpt/index.html
     # https://github.com/jackMort/ChatGPT.nvim/
+    # https://nix-community.github.io/nixvim/plugins/chatgpt/index.html
     plugins.chatgpt.enable = true;
     plugins.chatgpt.settings.api_key_cmd = "echo $OPENAI_API_KEY";
 
+    # https://github.com/jackMort/ChatGPT.nvim/#whichkey-plugin-mappings
     # https://nix-community.github.io/nixvim/keymaps/index.html
-    # https://github.com/jackMort/ChatGPT.nvim/?tab=readme-ov-file#whichkey-plugin-mappings
     # Add these to your whichkey plugin mappings for convenient binds
     keymaps = [
       (map [ "<leader>cc"  "<cmd>ChatGPT<CR>"                               "[C]hatGPT"                                 ])

@@ -1,7 +1,7 @@
 {
   programs.nixvim = {
-    # https://nix-community.github.io/nixvim/plugins/treesitter-textobjects/index.html
     # https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    # https://nix-community.github.io/nixvim/plugins/treesitter-textobjects/index.html
     plugins.treesitter-textobjects = {
       enable = true;
 
