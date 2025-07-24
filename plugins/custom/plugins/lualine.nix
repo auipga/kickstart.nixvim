@@ -39,8 +39,9 @@
         lualine_c = [ "filename" ];
         lualine_x.__raw = ''
           {
-            "encoding",
-            "fileformat",
+            "lsp_status",
+            -- "encoding",
+            -- "fileformat",
             "filetype",
           }
         '';
