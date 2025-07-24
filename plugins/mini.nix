@@ -18,6 +18,56 @@
           search_method = "cover_or_next";
         };
 
+        # Align text interactively
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-align.md
+        align = {
+          # :h MiniAlign-modifiers-builtin
+          # :h MiniAlign-examples
+        };
+
+        # Automatic highlighting of word under cursor
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
+        cursorword = {
+          delay = 100;
+        };
+
+        # Highlight patterns in text
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-hipatterns.md
+        hipatterns = {
+          highlighters = {
+            # Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
+            fixme = { pattern = "%f[%w]()FIXME()%f[%W]"; group = "MiniHipatternsFixme"; };
+            todo  = { pattern = "%f[%w]()TODO()%f[%W]";  group = "MiniHipatternsTodo";  };
+            hack  = { pattern = "%f[%w]()HACK()%f[%W]";  group = "MiniHipatternsHack";  };
+            note  = { pattern = "%f[%w]()NOTE()%f[%W]";  group = "MiniHipatternsNote";  };
+
+            # Highlight hex color strings (`#rrggbb`) using that color
+            hex_color.__raw = ''
+              require('mini.hipatterns').gen_highlighter.hex_color()
+            '';
+          };
+        };
+
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-icons.md#demo
+        icons = {};
+
+        # Extend f, F, t, T to work on multiple lines + repeat + highlight + dot
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-jump.md
+        jump = {};
+
+        # Jump to exact location on screen using abc
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-jump2d.md
+        jump2d = {
+          view.dim = true;
+          allowed_windows.not_current = false;
+        };
+
+        # Move any selection in any direction
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-move.md
+        move = {
+          # Default keymaps: Alt (Meta) + hjkl
+        };
+
         # Add/delete/replace surroundings (brackets, quotes, etc.)
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
         #
