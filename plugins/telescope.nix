@@ -42,7 +42,24 @@ in
         # https://github.com/nvim-telescope/telescope-fzf-native.nvim
         fzf-native.enable = true;
         # https://github.com/nvim-telescope/telescope-live-grep-args.nvim
-        # live-grep-args.enable = true;
+        live-grep-args.enable = true;
+        live-grep-args.settings = {
+          auto_quoting = true;
+          mappings = {
+            i = {
+              "<C-k>".__raw = ''
+                require("telescope-live-grep-args.actions").quote_prompt()
+              '';
+              "<C-i>".__raw = ''
+                require("telescope-live-grep-args.actions").quote_prompt({ postfix = " --iglob " })
+              '';
+              # freeze the current list and start a fuzzy search in the frozen list
+              "<C-space>".__raw = ''
+                require("telescope.actions").to_fuzzy_refine
+              '';
+            };
+          };
+        };
         # https://github.com/mrcjkb/telescope-manix
         # manix.enable = true;
         # https://github.com/nvim-telescope/telescope-media-files.nvim
@@ -65,6 +82,7 @@ in
         # [ "<leader>ss"        "builtin"          "[S]earch [S]elect Telescope"  ]
         [ "<leader>sw"        "grep_string"      "[S]earch current [W]ord"      ]
         [ "<leader>sg"        "live_grep"        "[S]earch by [G]rep"           ]
+        [ "<leader>sG"        "live_grep_args"   "[S]earch by [G]rep + Args"    ]
         [ "<leader>sd"        "diagnostics"      "[S]earch [D]iagnostics"       ]
         [ "<leader>sr"        "resume"           "[S]earch [R]esume"            ]
         [ "<leader>s."        "oldfiles"         "[S]earch Recent Files"        ]
