@@ -1,26 +1,16 @@
 { lib, pkgs, ... }:
 {
   programs.nixvim = {
-    plugins.dap = {
-      enable = true;
-    };
+    plugins.dap.enable = true;
+    plugins.dap-ui.enable = true;
+    plugins.dap-lldb.enable = true;
+    plugins.lsp.enable = true;
 
-    plugins.dap-ui = {
-      enable = true;
-    };
-
-    plugins.dap-lldb = { # C, C++, Rust
-      enable = true;
-    };
-
-    plugins.lsp = {
-      enable = true;
-      servers = {
-        rust_analyzer = {
-          enable = true;
-          installCargo = true;
-          installRustc = true;
-        };
+    plugins.lsp.servers = {
+      rust_analyzer = {
+        enable = true;
+        installCargo = true;
+        installRustc = true;
       };
     };
 
