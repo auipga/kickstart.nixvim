@@ -38,6 +38,7 @@ in
     ./plugins/custom/plugins/repeat.nix
     # ./plugins/custom/plugins/rust.nix # directly imported by home-manager/modules/rust.nix
     ./plugins/custom/plugins/snacks.nix
+    ./plugins/custom/plugins/surround.nix
     ./plugins/custom/plugins/telescope-picker-list.nix
     ./plugins/custom/plugins/terminal.nix
     ./plugins/custom/plugins/terminal.autorun-project-tool.nix

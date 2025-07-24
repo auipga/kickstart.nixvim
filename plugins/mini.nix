@@ -117,10 +117,10 @@
         #  - sd'   - [S]urround [D]elete [']quotes
         #  - sr)'  - [S]urround [R]eplace [)] [']
         #  - s[add|delete|find|Find_left|highlight|replace]
-        surround = {
-          highlight_duration = 1500;
-          n_lines = 100; # 20
-        };
+        # surround = {
+        #   highlight_duration = 1500;
+        #   n_lines = 100; # 20
+        # };
         # replaces surround.nvim # see ./custom/plugins/testing.nix
 
         # Simple and easy statusline.

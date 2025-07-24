@@ -3,7 +3,7 @@
     # https://github.com/tpope/vim-repeat/
     # https://nix-community.github.io/nixvim/plugins/repeat.html
     # The following plugins support repeat.vim:
-    # - surround.vim
+    # - surround.vim     # see ./surround.nix
     # - speeddating.vim
     # - unimpaired.vim
     # - vim-easyclip
