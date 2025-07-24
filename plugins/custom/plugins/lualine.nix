@@ -45,6 +45,10 @@
         lualine_y = [ "progress" ];
         lualine_z = [ "location" ];
       };
+      inactive_sections = {
+        lualine_c = [ "filename" ];
+        lualine_x = [ "location" ];
+      };
     };
   };
 }
