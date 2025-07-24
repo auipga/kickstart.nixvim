@@ -25,6 +25,24 @@
           # :h MiniAlign-examples
         };
 
+        # Tweak and save any color scheme
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-colors.md
+        colors = {
+          # Run with:
+          # :lua require('mini.colors').interactive()
+        };
+
+        # Comment lines
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
+        # comment = {
+        #   mappings = {
+        #     comment = "<leader>/";
+        #     comment_line = "<leader>/";
+        #     comment_visual = "<leader>/";
+        #     textobject = "<leader>/";
+        #   };
+        # };
+
         # Automatic highlighting of word under cursor
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-cursorword.md
         cursorword = {
@@ -67,6 +85,23 @@
         move = {
           # Default keymaps: Alt (Meta) + hjkl
         };
+
+        # Minimal and fast autopairs
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pairs.md
+        # pairs = {};
+
+        # Pick anything
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-pick.md
+        pick = {};
+
+        # Manage and expand snippets
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-snippets.md
+        # snippets = {};
+
+        # Split and join arguments
+        # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-splitjoin.md
+        # Default keymap: gS to toggle
+        splitjoin = {};
 
         # Add/delete/replace surroundings (brackets, quotes, etc.)
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-surround.md
