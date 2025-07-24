@@ -39,6 +39,7 @@ in
     ./plugins/custom/plugins/telescope-picker-list.nix
     ./plugins/custom/plugins/terminal.nix
     ./plugins/custom/plugins/terminal.autorun-project-tool.nix
+    ./plugins/custom/plugins/treesitter-autotag.nix
     ./plugins/custom/plugins/treesitter-context.nix
     ./plugins/custom/plugins/treesitter-textobjects.nix
     ./plugins/custom/plugins/trouble.nix
@@ -178,8 +179,9 @@ in
       (map [ "jk"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
 
       # for convenience:
-      (map [ "<C-s>"  "<Cmd>w<CR>"   "Save file"  [ "n" "i" ]  { noremap = true; silent = true; }  ])
-      (map [ "<m-q>"  "<Cmd>qa<CR>"  "Quit"       [ "n" "i" ]  { noremap = true; silent = true; }  ])
+      (map [ "<C-s>"       "<Cmd>w<CR>"   "Save file"  [ "n" "i" ]  { noremap = true; silent = true; }  ])
+      (map [ "<C-s><C-s>"  "<Cmd>wa<CR>"  "Save all"   [ "n" "i" ]  { noremap = true; silent = true; }  ])
+      (map [ "<m-q>"       "<Cmd>qa<CR>"  "Quit"       [ "n" "i" ]  { noremap = true; silent = true; }  ])
     ];
 
     # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
