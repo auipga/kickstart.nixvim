@@ -7,6 +7,7 @@ in
 {
   programs.nixvim = {
     # Fuzzy Finder (files, lsp, etc)
+    # https://github.com/nvim-telescope/telescope.nvim
     # https://nix-community.github.io/nixvim/plugins/telescope/index.html
     plugins.telescope = {
       enable = true;

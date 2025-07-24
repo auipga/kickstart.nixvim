@@ -13,7 +13,7 @@
         # "ctrlspace"
         # "fern"
         # "fugitive"
-        "fzf"
+        # "fzf"
         # "lazy"
         # "man"
         # "mason"
