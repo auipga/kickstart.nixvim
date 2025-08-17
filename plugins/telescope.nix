@@ -74,7 +74,10 @@ in
       ];
 
       settings = {
-        pickers.colorscheme.enable_preview = true;
+        pickers.colorscheme = {
+          enable_preview = true;
+          ignore_builtins = true;
+        };
         extensions = {
           ui-select.__raw = "{ require('telescope.themes').get_dropdown() }";
         };
