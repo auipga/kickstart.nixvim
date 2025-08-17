@@ -142,6 +142,11 @@ in
 
       # Minimal number of screen lines to keep above and below the cursor.
       scrolloff = lib.mkDefault 0;
+      # Minimal number of screen lines to keep left and right the cursor.
+      sidescrolloff = 8;
+
+      # Text wrapping
+      wrap = false;
 
       # if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
       # instead raise a dialog asking if you wish to save the current file(s)
@@ -154,6 +159,9 @@ in
       foldcolumn = "auto:9";
       # Start with no folds closed
       foldlevelstart = 99;
+
+      # show filename as window title
+      title = true;
     };
 
     # [[ Basic Keymaps ]]
