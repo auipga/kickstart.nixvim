@@ -26,11 +26,10 @@
         };
 
         # Tweak and save any color scheme
+        # (also installs colorschemes mini[spring|summer|autumn|winter], minicyan, minischeme, randomhue)
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-colors.md
-        colors = {
-          # Run with:
-          # :lua require('mini.colors').interactive()
-        };
+        # colors = {}
+        # Run with :lua require('mini.colors').interactive()
 
         # Comment lines
         # https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-comment.md
