@@ -79,7 +79,7 @@ in
           ignore_builtins = true;
         };
         extensions = {
-          ui-select.__raw = "{ require('telescope.themes').get_dropdown() }";
+          # ui-select.__raw = "{ require('telescope.themes').get_dropdown() }";
         };
       };
     };
