@@ -190,8 +190,8 @@ in
       (map [ "jk"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
 
       # for convenience:
-      (map [ "<C-s>"       "<Cmd>w<CR>"   "Save file"  [ "n" "i" ]  { noremap = true; silent = true; }  ])
-      (map [ "<C-s><C-s>"  "<Cmd>wa<CR>"  "Save all"   [ "n" "i" ]  { noremap = true; silent = true; }  ])
+      (map [ "<C-s>"       "<Esc><Cmd>w<CR>"   "Save file"  [ "n" "i" ]  { noremap = true; silent = true; }  ])
+      (map [ "<C-s><C-s>"  "<Esc><Cmd>wa<CR>"  "Save all"   [ "n" "i" ]  { noremap = true; silent = true; }  ])
       (map [ "<m-q>"       "<Cmd>qa<CR>"  "Quit"       [ "n" "i" ]  { noremap = true; silent = true; }  ])
     ];
 
