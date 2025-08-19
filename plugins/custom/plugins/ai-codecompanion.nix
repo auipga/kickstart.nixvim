@@ -200,5 +200,22 @@ When given a task:
     plugins.lualine.settings = {
       options.ignore_focus = lib.mkAfter [ "codecompanion" ];
     };
+    plugins.render-markdown.settings = {
+      # Replace tags with icons:
+      html.tag = {
+        file = {
+          icon = "󰈙 ";
+          highlight = "Normal";
+        };
+        tool = {
+          icon = " ";
+          highlight = "Normal";
+        };
+        buf = {
+          icon = " ";
+          highlight = "Normal";
+        };
+      };
+    };
   };
 }
