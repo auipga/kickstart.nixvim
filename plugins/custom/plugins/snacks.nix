@@ -13,8 +13,8 @@
         };
         picker = {
           # https://github.com/folke/snacks.nvim/blob/main/docs/picker.md
-          enabled = true;
-          ui_select = true;
+          # enabled = true;
+          # ui_select = true;
         };
         # enabled by default:
         # - bigfile
