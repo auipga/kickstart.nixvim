@@ -103,12 +103,12 @@ in
       };
 
       opts = {
-/*
         system_prompt.__raw = ''
           function(opts)
             local language = opts.language or "English"
             return string.format(
               [[You are an AI programming assistant named "CodeCompanion". You are currently plugged into the Neovim text editor on a user's machine.
+The machine runs NixOS unstable with Home-Manager. The configuration for Neovim is built using Nixvim.
 
 Your core tasks include:
 - Answering general programming questions.
@@ -147,7 +147,6 @@ When given a task:
             )
           end
         '';
-*/
       };
 
       strategies = {
