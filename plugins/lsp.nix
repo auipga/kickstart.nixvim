@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 let
   # NOTE: Remember that Nix is a real programming language, and as such it is possible
   # to define small helper and utility functions so you don't have to repeat yourself.
@@ -27,10 +26,6 @@ in
       settings.progress.display.done_ttl = 6; # default: 3
       settings.progress.display.skip_history = false; # default: true
     };
-
-    extraPlugins = with pkgs.vimPlugins; [
-      # TODO: Add luvit-meta when Nixos package is added
-    ];
 
     # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
     autoGroups = {

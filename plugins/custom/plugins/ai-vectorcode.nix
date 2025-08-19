@@ -56,9 +56,7 @@ let
       })
     '';
 
-    plugins.lsp.servers.vectorcode_server = {
-      enable = true;
-    };
+    plugins.lsp.servers.vectorcode_server.enable = true;
   };
 
   # configure the program
