@@ -41,9 +41,9 @@
           {
             -- TODO: make vectorcode lualine work
             -- see https://github.com/Davidyz/VectorCode/blob/main/docs/neovim/README.md#status-line-component
-            require("vectorcode.integrations").lualine({
-              show_job_count = true, -- default: false
-            }),
+            -- require("vectorcode.integrations").lualine({
+            --   show_job_count = true, -- default: false
+            -- }),
             "lsp_status",
             -- "encoding",
             -- "fileformat",

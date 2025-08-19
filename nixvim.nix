@@ -25,8 +25,8 @@ in
     ./plugins/custom/plugins/ai-copilot.nix
     ./plugins/custom/plugins/ai-codecompanion.nix
     ./plugins/custom/plugins/ai-codecompanion-history.nix
-    ./plugins/custom/plugins/ai-codecompanion-vectorcode.nix
-    ./plugins/custom/plugins/ai-vectorcode.nix
+    # ./plugins/custom/plugins/ai-codecompanion-vectorcode.nix # startup time +4 sec
+    # ./plugins/custom/plugins/ai-vectorcode.nix
     ./plugins/custom/plugins/auto-session.nix
     # ./plugins/custom/plugins/easypick.nix
     ./plugins/custom/plugins/lazygit.nix
