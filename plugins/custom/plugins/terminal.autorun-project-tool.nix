@@ -6,40 +6,55 @@ in
     # run a command on each save while the tool is enabled
     # to be replaced with overseer? See https://github.com/stevearc/overseer.nvim
     keymaps = [
-      (map [ "<leader>tt"  ":lua toggle_autorun_project_tool()<CR>"  "[T]oggle autorun project [t]ool"  ])
+      (map [ "<leader>ta"  ":lua project_tool_toggle_autorun()<CR>"  "[T]oggle [a]utorun project tool"  ])
+      (map [ "<leader>tr"  ":lua project_tool_run_once()<CR>"        "[T]ool [r]un once" ])
     ];
 
     extraConfigLua = ''
-      function toggle_autorun_project_tool()
+      local function project_tool_detect()
         local cwd = vim.fn.getcwd()
-        local tool
-
-        -- detect project type and define its tool
         if cwd:match("zmk") then
-          tool = {
+          return {
             name = "just build",
             cmd = "just build hillside52",
             pattern = "*.keymap,*.dtsi,*.conf,*.yml"
           }
         elseif vim.fn.filereadable(cwd .. "/Cargo.toml") == 1 then
-          tool = {
+          return {
             name = "check",
             cmd = "cargo check",
             pattern = "*.toml,*.rs"
           }
         elseif vim.fn.filereadable(cwd .. "/composer.json") == 1 then
-          tool = {
+          return {
             name = "sfcl",
             cmd = "time sfcl -e=prod; date",
             pattern = "*.html.twig,*.php,*.yaml"
           }
         elseif cwd:match("nixos") then
-          tool = {
+          return {
             name = "build",
             cmd = "nh os test",
             pattern = "*.nix"
           }
         else
+          return nil
+        end
+      end
+
+      function project_tool_run_once()
+        local tool = project_tool_detect()
+        if not tool then
+          vim.notify("No matching project tool detected.")
+          return
+        end
+        vim.cmd("TermExec cmd='" .. tool.cmd .. "'")
+        vim.notify("Running " .. tool.name .. "...")
+      end
+
+      function project_tool_toggle_autorun()
+        local tool = project_tool_detect()
+        if not tool then
           vim.notify("No matching project tool detected.")
           return
         end
