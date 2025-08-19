@@ -5,7 +5,8 @@ in
 {
   programs.nixvim = {
     # Neo-tree is a Neovim plugin to browse the file system
-    # https://nix-community.github.io/nixvim/plugins/neo-tree/index.html?highlight=neo-tree#pluginsneo-treepackage
+    # https://github.com/nvim-neo-tree/neo-tree.nvim
+    # https://nix-community.github.io/nixvim/plugins/neo-tree/index.html
     plugins.neo-tree = {
       enable = true;
 

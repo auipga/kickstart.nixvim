@@ -3,6 +3,8 @@ let
 in
 {
   programs.nixvim = {
+    # https://github.com/rmagatti/auto-session
+    # https://nix-community.github.io/nixvim/plugins/auto-session/index.html
     plugins.auto-session.enable = true;
     plugins.auto-session = {
       luaConfig.pre = ''
