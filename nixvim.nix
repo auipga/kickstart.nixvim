@@ -34,6 +34,7 @@ in
     ./plugins/custom/plugins/nix.nix
     ./plugins/custom/plugins/noice.nix
     # ./plugins/custom/plugins/obsidian.nix
+    # ./plugins/custom/plugins/php.nix # directly imported by home-manager/modules/coding-php.nix
     ./plugins/custom/plugins/render-markdown.nix
     ./plugins/custom/plugins/repeat.nix
     # ./plugins/custom/plugins/rust.nix # directly imported by home-manager/modules/rust.nix
