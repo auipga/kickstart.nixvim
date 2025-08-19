@@ -100,6 +100,9 @@ in
           show_settings = false; # Show LLM settings at the top of the chat buffer?
           start_in_insert_mode = false; # Open the chat buffer in insert mode?
         };
+        diff = {
+          close_chat_at = 200; # default: 240, Close an open chat buffer if the total columns of your display are less than...
+        };
       };
 
       opts = {
