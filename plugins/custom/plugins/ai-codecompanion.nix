@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... } :
+{ lib, pkgs, ... } :
 let
   mapP = import ../../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
 in
