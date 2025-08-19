@@ -190,8 +190,8 @@ When given a task:
     # Expand 'cc' into 'CodeCompanion' in the command line
     extraConfigLua = "vim.cmd([[cab cc CodeCompanion]])";
     keymaps = [
-      (mapP [ "<leader>a"  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" ]  ])
-      (mapP [ "<C-a>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" ]  ])
+      (mapP [ "<leader>."  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" ]  ])
+      (mapP [ "<C-.>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" ]  ])
       (mapP [ "ga"         "<cmd>CodeCompanionChat Add<cr>"      "Add selection to Chat"  [ "v" ]  ])
     ];
 
