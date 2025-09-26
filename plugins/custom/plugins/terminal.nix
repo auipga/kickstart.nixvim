@@ -9,7 +9,7 @@ in
     plugins.toggleterm.enable = true;
     plugins.toggleterm = {
       settings = {
-        open_mapping = "[[<C-,>]]"; # default: "[[<c-\\>]]";
+        open_mapping = "{ [[<C-t>]], [[<C-,>]] }"; # default: "[[<c-\\>]]";
         auto_scroll = false; # default: true
         direction = "horizontal"; # vertical|horizontal*|tab|float
         start_in_insert = false; # default: true
