@@ -15,7 +15,7 @@ in
     };
 
     keymaps = [
-      (map [ "<leader>tc"  "<cmd>TSContextToggle<CR>"  "[T]oggle [C]ontext"  ])
+      (map [ "<leader>tc"  "<cmd>TSContext toggle<CR>"  "[T]oggle [C]ontext"  ])
     ];
   };
 }
