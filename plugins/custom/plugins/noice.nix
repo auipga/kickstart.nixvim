@@ -20,6 +20,10 @@
     # https://github.com/rcarriga/nvim-notify/
     # https://nix-community.github.io/nixvim/plugins/notify/index.html
     plugins.notify.enable = true;
+    plugins.notify.settings = {
+      render = "wrapped-default"; # default: default
+      stages = "fade"; # default: fade_in_slide_out
+    };
     # plugins.telescope.enable = true;
     # plugins.cmp.enable = true;
     # plugins.lsp.enable = true;
