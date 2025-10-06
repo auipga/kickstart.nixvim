@@ -2,6 +2,7 @@
 {
   programs.nixvim = {
     # Highlight, edit, and navigate code
+    # https://github.com/nvim-treesitter/nvim-treesitter
     # https://nix-community.github.io/nixvim/plugins/treesitter/index.html
     plugins.treesitter = {
       enable = true;

@@ -34,6 +34,7 @@ in
       };
     };
 
+    # https://github.com/neovim/nvim-lspconfig/
     # https://nix-community.github.io/nixvim/plugins/lsp/index.html
     plugins.lsp = {
       enable = true;

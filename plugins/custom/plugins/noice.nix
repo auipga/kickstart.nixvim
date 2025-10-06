@@ -17,6 +17,8 @@
 
     # Optional dependencies:
     # plugins.nui.enable = true;
+    # https://github.com/rcarriga/nvim-notify/
+    # https://nix-community.github.io/nixvim/plugins/notify/index.html
     plugins.notify.enable = true;
     # plugins.telescope.enable = true;
     # plugins.cmp.enable = true;
