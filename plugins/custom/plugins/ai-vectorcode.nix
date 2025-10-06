@@ -11,17 +11,17 @@ let
 {
   programs.nixvim = {
     # With VectorCode, you can easily (and programmatically) inject task-relevant context from the project into the prompt
-    # https://github.com/Davidyz/VectorCode/blob/main/docs/neovim.md
+    # https://github.com/Davidyz/VectorCode/tree/main/docs/neovim
     extraPlugins = [
-      # pkgs.vimPlugins.vectorcode-nvim # only 0.6.12 for now (26.06.2025) see https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vectorcode-nvim
+      # pkgs.vimPlugins.vectorcode-nvim # only 0.7.15 for now (05.10.2025) see https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vectorcode-nvim
       (pkgs.vimUtils.buildVimPlugin {
         pname = "vectorcode-nvim";
-        version = "0.7.6";
+        version = "0.7.18";
         src = pkgs.fetchFromGitHub {
           owner = "Davidyz";
           repo = "VectorCode";
-          tag = "0.7.6";
-          sha256 = "sha256-PnvzTEUHFioAdn2RFtnNw+8ZbQMHOU1Jz2o20KLVmQQ=";
+          tag = "0.7.18";
+          sha256 = "sha256-xtFSERuXivdqY5XT/JJ4lZ1HgGTAE+DGV7pxH1163ZQ=";
         };
 
         # work around "Require check failed"
