@@ -22,7 +22,15 @@ in
     ];
 
     plugins.codecompanion.settings = {
-      adapters = {
+      adapters.http = {
+        memory = {
+          opts = {
+            chat = {
+              enabled = true;
+            };
+          };
+        };
+
         opts = {
           show_defaults = false; # default: true; show all available adapters?
           show_model_choices = true; # default: true; show all available model choices for the selected adapter?
