@@ -50,7 +50,6 @@ in
     ./plugins/custom/plugins/undotree.nix
     ./plugins/custom/plugins/wakatime.nix
     ./plugins/custom/plugins/testing.nix
-    ./overrides.nix
   ];
 
   programs.nixvim = {

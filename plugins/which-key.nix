@@ -34,5 +34,12 @@
         };
       };
     };
+
+    extraConfigLuaPost = ''
+      require("which-key").add({
+        -- shorten the original description "Opens filepath or URI under the cursor with the system handler (file explorer, web browser, ...)"
+        { "gx", mode = "nv", desc = "Open URI with application" },
+      })
+    '';
   };
 }
