@@ -10,7 +10,7 @@ in
     plugins.undotree = {
       settings = {
         ShortIndicators = true; # default: 0
-        WindowLayout = 3; # default: 1
+        WindowLayout = 2; # default: 1
         SplitWidth = 40; # default: 30 or 24 (with ShortIndicators)
         DiffpanelHeight = 20;
         SetFocusWhenToggle = true; # default 0
