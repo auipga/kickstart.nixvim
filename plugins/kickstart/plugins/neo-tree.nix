@@ -21,7 +21,6 @@ in
       };
     };
 
-    # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
       (map [ "\\"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
     ];
