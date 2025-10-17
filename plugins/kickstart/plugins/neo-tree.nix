@@ -15,6 +15,7 @@ in
           window = {
             mappings = {
               "\\" = "close_window";
+              "<F4>" = "close_window";
             };
           };
         };
@@ -23,6 +24,7 @@ in
 
     keymaps = [
       (map [ "\\"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
+      (map [ "<F4>"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
     ];
 
     # Integrations
