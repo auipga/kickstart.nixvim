@@ -39,6 +39,9 @@
         lualine_c = [ "filename" ];
         lualine_x.__raw = ''
           {
+            function()
+              return require("auto-session.lib").current_session_name(true)
+            end,
             -- TODO: make vectorcode lualine work
             -- see https://github.com/Davidyz/VectorCode/blob/main/docs/neovim/README.md#status-line-component
             -- require("vectorcode.integrations").lualine({
