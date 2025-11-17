@@ -2,9 +2,8 @@
   programs.nixvim = {
     # https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     # https://nix-community.github.io/nixvim/plugins/treesitter-textobjects/index.html
-    plugins.treesitter-textobjects = {
-      enable = true;
-
+    plugins.treesitter-textobjects.enable = true;
+    plugins.treesitter-textobjects.settings = {
       lspInterop = {
         enable = true;
 
