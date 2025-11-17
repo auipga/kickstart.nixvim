@@ -22,6 +22,12 @@ in
           "/"
         ];
 
+        session_lens = {
+          mappings = {
+            delete_session = [ "i" "<M-d>" ]; # default: <C-d>
+          };
+        };
+
         use_git_branch = true;
       };
     };
