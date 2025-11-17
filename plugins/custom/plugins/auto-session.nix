@@ -29,7 +29,6 @@ in
     keymaps = [
       (mapP [ "<leader>SW"  "<cmd>AutoSession save<CR>"           "Save / [W]rite"   ])
       (mapP [ "<leader>SS"  "<cmd>AutoSession search<CR>"         "[S]earch..."      ])
-      (mapP [ "<leader>SD"  "<cmd>Autosession delete<CR>"         "[D]elete..."      ])
       (mapP [ "<leader>S!"  "<cmd>AutoSession toggle<CR>"         "Toggle autosave"  ])
       (mapP [ "<leader>Sx"  "<cmd>AutoSession purgeOrphaned<CR>"  "Remove orphaned"  ])
     ];
