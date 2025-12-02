@@ -161,7 +161,7 @@ in
     extraConfigLua = "vim.cmd([[cab cc CodeCompanion]])";
     keymaps = [
       (mapP [ "<leader>."  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" ]  ])
-      (mapP [ "<C-.>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" ]  ])
+      (mapP [ "<M-.>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" "i" ]  ])
       (mapP [ "ga"         "<cmd>CodeCompanionChat Add<cr>"      "Add selection to Chat"  [ "v" ]  ])
     ];
 
