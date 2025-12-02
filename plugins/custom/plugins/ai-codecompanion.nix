@@ -22,6 +22,7 @@ in
     ];
 
     plugins.codecompanion.settings = {
+      adapters.acp.opts.show_defaults = false;
       adapters.http = {
         memory = {
           opts = {
