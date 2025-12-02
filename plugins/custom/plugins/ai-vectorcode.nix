@@ -1,4 +1,4 @@
-{ pkgs, lib, ... } :
+{ config, pkgs, lib, ... } :
 let
   # generate zsh completions
   vectorcodeCompletion = pkgs.runCommand "vectorcode-zsh-completion" {
@@ -63,6 +63,13 @@ let
 
     plugins.lsp.servers.vectorcode_server.enable = true;
   };
+
+  programs.zsh.shellAliases.vc = "vectorcode";
+
+  programs.zsh.initContent = ''
+    # vectorcode completion
+    fpath=(${config.xdg.configHome}/zsh/completions $fpath)
+  '';
 
   # configure the program
   # for intel:
