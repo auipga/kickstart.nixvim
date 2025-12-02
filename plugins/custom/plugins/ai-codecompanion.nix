@@ -38,10 +38,10 @@ in
         };
         # TODO: use GPG instead env var (https://github.com/olimorris/codecompanion.nvim/discussions/601)
         # TODO: use pass?
-        openai_ccc.__raw = ''
+        openai.__raw = ''
           function()
             return require("codecompanion.adapters").extend("openai", {
-              env = { api_key = vim.env.OPENAI_API_KEY_CCC or "cmd:pass show openai/api-key" },
+              env = { api_key = vim.env.OPENAI_API_KEY },
               schema = {
                 model       = { default = "gpt-4o" },
                 max_tokens  = { default = 2048 },
