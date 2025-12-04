@@ -14,7 +14,7 @@ in
     ./plugins/mini.nix
     ./plugins/treesitter.nix
 
-    # ./plugins/kickstart/plugins/debug.nix # directly imported by home-manager/modules/rust.nix
+    # ./plugins/kickstart/plugins/debug.nix # directly imported by home-manager/modules/coding-rust.nix and coding-php.nix
     ./plugins/kickstart/plugins/indent-blankline.nix
     ./plugins/kickstart/plugins/lint.nix
     ./plugins/kickstart/plugins/autopairs.nix
