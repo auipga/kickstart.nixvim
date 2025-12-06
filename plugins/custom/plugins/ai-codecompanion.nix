@@ -41,7 +41,7 @@ in
         openai.__raw = ''
           function()
             return require("codecompanion.adapters").extend("openai", {
-              env = { api_key = vim.env.OPENAI_API_KEY },
+              env = { api_key = "cmd:echo $OPENAI_API_KEY" },
               schema = {
                 model       = { default = "gpt-4o" },
                 max_tokens  = { default = 2048 },
@@ -54,7 +54,7 @@ in
         gemini_ccc.__raw = ''
           function()
             return require("codecompanion.adapters").extend("gemini", {
-              env = { api_key = vim.env.GEMINI_API_KEY_CCC },
+              env = { api_key = "cmd:echo $GEMINI_API_KEY_CCC" },
               schema = {
                 model       = { default = "gemini-2.5-pro" },
                 max_tokens  = { default = 2048 },
@@ -68,7 +68,7 @@ in
         gemini.__raw = ''
           function()
             return require("codecompanion.adapters").extend("gemini", {
-              env = { api_key = vim.env.GEMINI_API_KEY },
+              env = { api_key = "cmd:echo $GEMINI_API_KEY" },
               schema = {
                 model       = { default = "gemini-2.5-flash" },
                 max_tokens  = { default = 2048 },
