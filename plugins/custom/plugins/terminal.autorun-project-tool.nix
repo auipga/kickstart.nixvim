@@ -31,7 +31,13 @@ in
             cmd = "time sfcl -e=prod; date",
             pattern = "*.html.twig,*.php,*.yaml"
           }
-        elseif cwd:match("nixos") then
+        elseif cwd:match("deck/nixos") then
+          return {
+            name = "build",
+            cmd = "nh home switch",
+            pattern = "*.nix"
+          }
+        elseif cwd:match("me/nixos") then
           return {
             name = "build",
             cmd = "nh os test",
