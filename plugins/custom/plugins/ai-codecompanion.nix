@@ -125,6 +125,7 @@ in
             completion_provider = "cmp"; # blink*|cmp|coc|default
           };
           keymaps = {
+            send.modes.i = [ "<C-CR>" "<C-s>" ];
             # regenerate.modes.n = "g,"; # default: gr (overlaps gr_ for lsp stuff)
             # codeblock.modes.n = "gC"; # default: gc (overlaps gcc for 'toggle comment')
             # auto_tool_mode.modes.n = "g."; # default: gta (overlaps gt for 'next tab')
