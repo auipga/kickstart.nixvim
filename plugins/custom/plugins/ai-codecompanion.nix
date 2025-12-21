@@ -24,7 +24,7 @@ in
         rules = {
           opts = {
             chat = {
-              enabled = true;
+              enabled = true; # Automatically add memory to new chat buffers?
             };
           };
         };
