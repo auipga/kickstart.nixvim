@@ -22,9 +22,9 @@ in
     ];
 
     plugins.codecompanion.settings = {
-      adapters.acp.opts.show_defaults = false;
+      adapters.acp.opts.show_presets = false;
       adapters.http = {
-        memory = {
+        rules = {
           opts = {
             chat = {
               enabled = true;
@@ -33,7 +33,7 @@ in
         };
 
         opts = {
-          show_defaults = false; # default: true; show all available adapters?
+          show_presets = false; # default: true; show all available adapters?
           show_model_choices = true; # default: true; show all available model choices for the selected adapter?
         };
         # TODO: use GPG instead env var (https://github.com/olimorris/codecompanion.nvim/discussions/601)
@@ -93,8 +93,8 @@ in
         action_palette = {
           provider = "default";
           opts = {
-            show_default_actions = true; # Show the default actions in the action palette?
-            show_default_prompt_library = true; # Show the default prompt library in the action palette?
+            show_preset_actions = true; # Show the default actions in the action palette?
+            show_preset_prompts = true; # Show the default prompt library in the action palette?
           };
         };
         chat = {
@@ -119,11 +119,12 @@ in
         };
       };
 
-      strategies = {
+      interactions = {
         chat = {
           adapter = "openai_ccc";
           roles.llm.__raw = ''function(adapter) return adapter.formatted_name end'';
           opts = {
+            # system_prompt = ""; moved here
             completion_provider = "cmp"; # blink*|cmp|coc|default
           };
           keymaps = {

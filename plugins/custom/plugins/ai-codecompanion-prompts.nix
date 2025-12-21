@@ -6,7 +6,7 @@ let
 in
 {
   "Custom Prompt" = {
-    strategy = "inline";
+    interaction = "inline";
     description = "Prompt the LLM from Neovim";
     opts = {
       index = 3;
@@ -30,12 +30,13 @@ in
   };
 
   "Code workflow" = {
-    strategy = "workflow";
+    interaction = "chat";
     description = "Use a workflow to guide an LLM in writing code";
     opts = {
       index = 4;
       is_default = true;
-      short_name = "cw";
+      is_workflow = true;
+      alias = "cw";
     };
     prompts = [
       [
@@ -84,12 +85,13 @@ in
   };
 
   "Edit<->Test workflow" = {
-    strategy = "workflow";
+    interaction = "chat";
     description = "Use a workflow to repeatedly edit then test code";
     opts = {
       index = 5;
       is_default = true;
-      short_name = "et";
+      is_workflow = true;
+      alias = "et";
     };
     prompts = [
       [
@@ -148,14 +150,14 @@ We'll repeat this cycle until the tests pass. Ensure no deviations from these st
   };
 
   "Explain" = {
-    strategy = "chat";
+    interaction = "chat";
     description = "Explain how code in a buffer works";
     opts = {
       index = 6;
       is_default = true;
       is_slash_cmd = false;
       modes = [ "v" ];
-      short_name = "explain";
+      alias = "explain";
       auto_submit = true;
       user_prompt = false;
       stop_context_insertion = true;
@@ -198,14 +200,14 @@ We'll repeat this cycle until the tests pass. Ensure no deviations from these st
   };
 
   "Unit Tests" = {
-    strategy = "inline";
+    interaction = "inline";
     description = "Generate unit tests for the selected code";
     opts = {
       index = 7;
       is_default = true;
       is_slash_cmd = false;
       modes = [ "v" ];
-      short_name = "tests";
+      alias = "tests";
       auto_submit = true;
       user_prompt = false;
       placement = "new";
@@ -256,14 +258,14 @@ Please generate unit tests for this code from buffer %d:
   };
 
   "Fix code" = {
-    strategy = "chat";
+    interaction = "chat";
     description = "Fix the selected code";
     opts = {
       index = 8;
       is_default = true;
       is_slash_cmd = false;
       modes = [ "v" ];
-      short_name = "fix";
+      alias = "fix";
       auto_submit = true;
       user_prompt = false;
       stop_context_insertion = true;
@@ -315,14 +317,14 @@ Use Markdown formatting and include the programming language name at the start o
   };
 
   "Explain LSP Diagnostics" = {
-    strategy = "chat";
+    interaction = "chat";
     description = "Explain the LSP diagnostics for the selected code";
     opts = {
       index = 9;
       is_default = true;
       is_slash_cmd = false;
       modes = [ "v" ];
-      short_name = "lsp";
+      alias = "lsp";
       auto_submit = true;
       user_prompt = false;
       stop_context_insertion = true;
@@ -402,13 +404,13 @@ This is the code, for context:
   };
 
   "Generate a Commit Message" = {
-    strategy = "chat";
+    interaction = "chat";
     description = "Generate a commit message";
     opts = {
       index = 10;
       is_default = true;
       is_slash_cmd = true;
-      short_name = "commit";
+      alias = "commit";
       auto_submit = true;
     };
     prompts = [
@@ -435,13 +437,13 @@ This is the code, for context:
   };
 
   "Workspace File" = {
-    strategy = "chat";
+    interaction = "chat";
     description = "Generate a Workspace file/group";
     opts = {
       index = 11;
       ignore_system_prompt = true;
       is_default = true;
-      short_name = "workspace";
+      alias = "workspace";
     };
     references = [
       {

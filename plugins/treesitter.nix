@@ -7,7 +7,7 @@
     plugins.treesitter = {
       enable = true;
 
-      folding = true;
+      folding.enable = true;
 
       # Installing tree-sitter grammars from Nixpkgs (recommended)
       # https://nix-community.github.io/nixvim/plugins/treesitter/index.html#installing-tree-sitter-grammars-from-nixpkgs
