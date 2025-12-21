@@ -13,9 +13,6 @@ in
     plugins.treesitter.enable = true;
     plugins.telescope.enable = true; # for slash-command pickers
     plugins.cmp.enable = true; # if you’d like to complete slash commands
-    extraPlugins = with pkgs.vimPlugins; [
-      plenary-nvim # async helpers
-    ];
 
     plugins.cmp.settings.sources = [
       { name = "codecompanion"; }

@@ -31,9 +31,6 @@ let
         doCheck = false;
       })
       */
-
-      # Dependencies
-      pkgs.vimPlugins.plenary-nvim
     ];
 
     # these are the defaults from https://github.com/Davidyz/VectorCode/blob/main/docs/neovim.md#configuration
