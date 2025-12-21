@@ -41,7 +41,7 @@ in
         openai.__raw = ''
           function()
             return require("codecompanion.adapters").extend("openai", {
-              env = { api_key = "cmd:echo $OPENAI_API_KEY" },
+              env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/OPENAI_API_KEY" },
               schema = {
                 model       = { default = "gpt-4o" },
                 max_tokens  = { default = 2048 },
