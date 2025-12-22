@@ -8,8 +8,12 @@
       ui.enable = false;
       workspaces = [
         {
-          name = "start";
-          path = "~/Documents/obsidian/start";
+          name = "default";
+          path = "~/Documents/obsidian/default";
+        }
+        {
+          name = "GIN";
+          path = "~/Documents/obsidian/GIN";
         }
       ];
     };
