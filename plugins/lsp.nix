@@ -94,9 +94,9 @@ in
           # Jump to the definition of the word under your cusor.
           #  This is where a variable was first declared, or where a function is defined, etc.
           #  To jump back, press <C-t>.
-          (map [ "gd"          "<cmd>Telescope lsp_definitions<cr>"                "[G]oto [D]efinition"      ])
+          (map [ "gD"          "<cmd>Telescope lsp_definitions<cr>"                "[G]oto [D]efinition"      ])
           # Find references for the word under your cursor.
-          (map [ "gr"          "<cmd>Telescope lsp_references<cr>"                 "[G]oto [R]eferences"      ])
+          (map [ "gR"          "<cmd>Telescope lsp_references<cr>"                 "[G]oto [R]eferences"      ])
           # Jump to the implementation of the word under your cursor.
           #  Useful when your language has ways of declaring types without an actual implementation.
           (map [ "gI"          "<cmd>Telescope lsp_implementations<cr>"            "[G]oto [I]mplementation"  ])
