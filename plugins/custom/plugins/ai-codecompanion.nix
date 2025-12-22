@@ -48,20 +48,6 @@ in
             })
           end
         '';
-        gemini_ccc.__raw = ''
-          function()
-            return require("codecompanion.adapters").extend("gemini", {
-              env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/GEMINI_API_KEY_CCC" },
-              schema = {
-                model       = { default = "gemini-2.5-pro" },
-                max_tokens  = { default = 2048 },
-                temperature = { default = 0.2 },
-                top_p       = { default = 0.95 },
-                reasoning_effort = { default = "medium" }, -- high|medium*|low|none
-              },
-            })
-          end
-        '';
         gemini.__raw = ''
           function()
             return require("codecompanion.adapters").extend("gemini", {
@@ -118,7 +104,7 @@ in
 
       interactions = {
         chat = {
-          adapter = "openai_ccc";
+          adapter = "openai";
           roles.llm.__raw = ''function(adapter) return adapter.formatted_name end'';
           opts = {
             # system_prompt = ""; moved here
@@ -133,7 +119,7 @@ in
         };
         inline = {
           adapter = {
-            name = "openai_ccc";
+            name = "openai";
             # model = "";
           };
           keymaps = {
@@ -143,7 +129,7 @@ in
         };
         cmd = {
           adapter = {
-            name = "openai_ccc";
+            name = "openai";
             # model = "";
           };
         };
