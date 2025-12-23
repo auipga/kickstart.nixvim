@@ -79,6 +79,8 @@
         jump2d = {
           view.dim = true;
           allowed_windows.not_current = false;
+          mappings.start_jumping = "<leader><CR>";
+          silent = true;
         };
 
         # Move any selection in any direction
