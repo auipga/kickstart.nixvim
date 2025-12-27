@@ -38,7 +38,7 @@ in
         openai.__raw = ''
           function()
             return require("codecompanion.adapters").extend("openai", {
-              env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/OPENAI_API_KEY" },
+              env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/api-keys/work/OPENAI" },
               schema = {
                 model       = { default = "gpt-5" },
                 max_tokens  = { default = 2048 },
@@ -51,7 +51,7 @@ in
         gemini.__raw = ''
           function()
             return require("codecompanion.adapters").extend("gemini", {
-              env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/GEMINI_API_KEY" },
+              env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/api-keys/work/GEMINI" },
               schema = {
                 model       = { default = "gemini-2.5-flash" },
                 max_tokens  = { default = 2048 },
