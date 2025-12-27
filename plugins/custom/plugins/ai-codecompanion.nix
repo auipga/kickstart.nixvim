@@ -80,7 +80,7 @@ in
             };
           };
           auto_scroll = false; # default: true
-          # intro_message = ""; # default: "Welcome to CodeCompanion ✨! Press ? for options"
+          intro_message = ""; # default: "Welcome to CodeCompanion ✨! Press ? for options"
           show_settings = false; # Show LLM settings at the top of the chat buffer?
           start_in_insert_mode = false; # Open the chat buffer in insert mode?
         };
