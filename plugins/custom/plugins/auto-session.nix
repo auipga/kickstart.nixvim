@@ -1,5 +1,5 @@
 let
-  mapP = import ../../../lib/mkKeymap.nix { prefix = "[S]ession "; };
+  mapP = import ../../../lib/mkKeymap.nix { prefix = "Session "; };
 in
 {
   programs.nixvim = {
@@ -35,16 +35,16 @@ in
     };
 
     keymaps = [
-      (mapP [ "<leader>SW"  "<cmd>AutoSession save<CR>"           "Save / [W]rite"   ])
-      (mapP [ "<leader>SS"  "<cmd>AutoSession search<CR>"         "[S]earch..."      ])
-      (mapP [ "<leader>S!"  "<cmd>AutoSession toggle<CR>"         "Toggle autosave"  ])
-      (mapP [ "<leader>Sx"  "<cmd>AutoSession purgeOrphaned<CR>"  "Remove orphaned"  ])
+      (mapP [ "<leader>ww"  "<cmd>AutoSession search<CR>"         "Search..."          ])
+      (mapP [ "<leader>wW"  "<cmd>AutoSession save<CR>"           "Save / [W]rite"     ])
+      (mapP [ "<leader>wa"  "<cmd>AutoSession toggle<CR>"         "Toggle [a]utosave"  ])
+      (mapP [ "<leader>wx"  "<cmd>AutoSession purgeOrphaned<CR>"  "Remove orphaned"    ])
     ];
 
     plugins.which-key.settings.spec = [
       {
-        __unkeyed-1 = "<leader>S";
-        group = "[S]ession";
+        __unkeyed-1 = "<leader>w";
+        group = "Session";
       }
     ];
   };
