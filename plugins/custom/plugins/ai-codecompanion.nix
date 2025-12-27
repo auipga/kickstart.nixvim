@@ -21,14 +21,6 @@ in
     plugins.codecompanion.settings = {
       adapters.acp.opts.show_presets = false;
       adapters.http = {
-        rules = {
-          opts = {
-            chat = {
-              enabled = true; # Automatically add memory to new chat buffers?
-            };
-          };
-        };
-
         opts = {
           show_presets = false; # default: true; show all available adapters?
           show_model_choices = true; # default: true; show all available model choices for the selected adapter?
@@ -138,6 +130,14 @@ in
 /*
       prompt_library = import ./ai-codecompanion-prompts.nix;
 */
+
+      rules = {
+        opts = {
+          chat = {
+            enabled = true; # Automatically add memory to new chat buffers?
+          };
+        };
+      };
     };
 
     # Suggested Plugin Workflow
