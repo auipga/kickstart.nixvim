@@ -209,9 +209,14 @@ in
     };
     plugins.render-markdown.settings = {
       # Replace tags with icons:
+      # Nerdfont icons:  󰈔   󰈤 󰘓  󰈙   󰈠 󰈞 󱝴 󱅷 
       html.tag = {
         file = {
           icon = "󰈙 ";
+          highlight = "Normal";
+        };
+        rules = {
+          icon = "󰘓 ";
           highlight = "Normal";
         };
         tool = {
@@ -219,7 +224,7 @@ in
           highlight = "Normal";
         };
         buf = {
-          icon = " ";
+          icon = "󰷊 ";
           highlight = "Normal";
         };
       };
