@@ -172,6 +172,17 @@ in
             enabled = true; # Automatically add memory to new chat buffers?
           };
         };
+
+        nix = {
+          description = "nixos-config and nixvim";
+          enabled = true;
+          parser = "CodeCompanion";
+          files = [
+            ".codecompanion/rules/nix.md"
+            ".codecompanion/rules/nixvim.md"
+          ];
+          is_preset = true;
+        };
       };
     };
 
