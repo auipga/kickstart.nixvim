@@ -28,6 +28,7 @@ in
     ./plugins/custom/plugins/ai-codecompanion-vectorcode.nix
     ./plugins/custom/plugins/ai-vectorcode.nix
     ./plugins/custom/plugins/auto-session.nix
+    ./plugins/custom/plugins/dial.nix
     # ./plugins/custom/plugins/easypick.nix
     ./plugins/custom/plugins/lazygit.nix
     ./plugins/custom/plugins/lualine.nix
