@@ -54,7 +54,7 @@ in
             })
           end
         '';
-        lmstudio.__raw = ''
+        lms.__raw = ''
           function()
             return require("codecompanion.adapters").extend("openai_compatible", {
               name = "lmstudio",
