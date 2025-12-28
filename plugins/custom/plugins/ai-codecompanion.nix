@@ -160,7 +160,23 @@ in
             # model = "";
           };
         };
+        # background = { # like olimorris
+        #   chat = {
+        #     opts = {
+        #       enabled = true;
+        #     };
+        #   };
+        # };
       };
+
+      # prompt_library = {
+      #   markdown = {
+      #     dirs.__raw = ''{
+      #       vim.fn.getcwd() .. "/.prompts",
+      #       "~/.dotfiles/.config/prompts",
+      #     }'';
+      #   };
+      # };
 
 /*
       prompt_library = import ./ai-codecompanion-prompts.nix;
@@ -170,6 +186,24 @@ in
         opts = {
           chat = {
             enabled = true; # Automatically add memory to new chat buffers?
+            # autoload.__raw = ''
+            #   function()
+            #     local cwd = vim.fn.getcwd()
+            #     if cwd:match("zmk") then
+            #       return { "default", "zmk" }
+            #     elseif vim.fn.filereadable(cwd .. "/Cargo.toml") == 1 then
+            #       return { "default", "rust" }
+            #     elseif vim.fn.filereadable(cwd .. "/composer.json") == 1 then
+            #       return { "default", "symfony" }
+            #     elseif cwd:match("deck/nixos") then
+            #       return { "default", "nix", "steamdeck" }
+            #     elseif cwd:match("me/nixos") then
+            #       return { "default", "nix" }
+            #     else
+            #       return "default"
+            #     end
+            #   end,
+            # '';
           };
         };
 
