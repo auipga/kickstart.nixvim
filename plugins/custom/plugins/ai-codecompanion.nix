@@ -128,7 +128,10 @@ in
 
       interactions = {
         chat = {
-          adapter = "openai";
+          adapter = {
+            name = "openai";
+            # model = "";
+          };
           roles.llm.__raw = ''function(adapter) return adapter.formatted_name end'';
           opts = {
             # system_prompt = ""; moved here
