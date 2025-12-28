@@ -235,6 +235,9 @@ in
       (mapP [ "<leader>."  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" ]  ])
       (mapP [ "<M-.>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" "i" ]  ])
       (mapP [ "ga"         "<cmd>CodeCompanionChat Add<cr>"      "Add selection to Chat"  [ "v" ]  ])
+
+      (mapP [ "<C-A>"  ''require("codecompanion").inline_accept_word()''  "Accept Word"   [ "i" ]  ])
+      (mapP [ "<C-L>"  ''require("codecompanion").inline_accept_line()''  "Accept Line"   [ "i" ]  ])
     ];
 
     # Integrations
