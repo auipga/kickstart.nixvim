@@ -129,7 +129,7 @@ in
       interactions = {
         chat = {
           adapter = {
-            name = "openai";
+            name = "lms";
             # model = "";
           };
           roles.llm.__raw = ''function(adapter) return adapter.formatted_name end'';
@@ -146,7 +146,7 @@ in
         };
         inline = {
           adapter = {
-            name = "openai";
+            name = "lms";
             # model = "";
           };
           keymaps = {
@@ -156,7 +156,7 @@ in
         };
         cmd = {
           adapter = {
-            name = "openai";
+            name = "lms";
             # model = "";
           };
         };
