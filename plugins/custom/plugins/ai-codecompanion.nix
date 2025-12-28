@@ -176,6 +176,13 @@ in
         nix = {
           description = "nixos-config and nixvim";
           enabled = true;
+          # enabled.__raw = ''
+          #   function()
+          #     -- Don't show this group unless in a specific dir
+          #     -- TODO: make it work
+          #     return vim.fn.getcwd():match("nixos-config")
+          #   end
+          # '';
           parser = "CodeCompanion";
           files = [
             ".codecompanion/rules/nix.md"
