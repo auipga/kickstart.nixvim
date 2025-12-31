@@ -38,12 +38,11 @@ in
           -- augend.paren.alias.rust_str_literal,   -- r##"foo"##
 
           augend.hexcolor.new{                   -- #1A1A1A, #eeFEFE, #55Ff00 #1fF0a0 #909090
-            case = "prefer_upper",
+            case = "prefer_upper", -- upper|prefer_upper|prefer_lower|lower
           },
-          -- augend.constant.new{                   -- try on hexcolor case above
-          --   elements = { "upper", "prefer_upper", "prefer_lower", "lower" },
-          --   cyclic = false,
-          -- },
+          require("dial_comment_enum").new({ cyclic = false }),
+          -- cp ../../../lua/dial_comment_enum.lua
+          -- to ~/.config/nvim/lua/dial_comment_enum.lua
         },
       }
     '';
