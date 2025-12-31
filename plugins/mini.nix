@@ -14,6 +14,8 @@
         #  - va)  - [V]isually select [A]round [)]paren
         #  - yinq - [Y]ank [I]nside [N]ext [Q]uote
         #  - ci'  - [C]hange [I]nside [']quote
+        # TODO: switch to single plugin instead of the whole mini?
+        # e.g. https://nix-community.github.io/nixvim/plugins/mini-ai/index.html
         ai = {
           n_lines = 100; # 50
           search_method = "cover_or_next";

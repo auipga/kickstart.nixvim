@@ -192,6 +192,9 @@ in
 
       # for convenience:
       (map [ "<C-s>"       "<Esc><Cmd>w<CR>"   "Save file"  [ "n" "i" ]  { noremap = true; silent = true; }  ])
+      # Allow saving of files as sudo when I forgot to start vim using sudo
+      # see https://stackoverflow.com/a/7078429/816362
+      #(map [ "w!!"         "w !sudo tee > /dev/null %"   "Save file as root"  [ "c" ]  { noremap = false; silent = true; }  ])
       (map [ "<C-s><C-s>"  "<Esc><Cmd>wa<CR>"  "Save all"   [ "n" "i" ]  { noremap = true; silent = true; }  ])
       (map [ "<m-q>"       "<Cmd>qa<CR>"  "Quit"       [ "n" "i" ]  { noremap = true; silent = true; }  ])
     ];
