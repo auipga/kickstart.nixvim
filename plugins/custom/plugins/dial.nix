@@ -6,12 +6,6 @@ in
     # Extended increment/decrement
     # https://github.com/monaqa/dial.nvim
     # https://nix-community.github.io/nixvim/plugins/dial/index.html
-    # Alternatives:
-    # 1k  https://github.com/monaqa/dial.nvim
-    # 756 https://github.com/AndrewRadev/switch.vim
-    # 72  https://github.com/rmagatti/alternate-toggler
-    # 20  https://github.com/gerazov/toggle-bool.nvim (2 https://github.com/gerazov/vim-toggle-bool)
-    # 5   https://github.com/johmsalas/shake.nvim
     plugins.dial.enable = true;
     plugins.dial.luaConfig.post = ''
       -- https://github.com/monaqa/dial.nvim#list-of-augends
