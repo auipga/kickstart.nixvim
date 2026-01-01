@@ -40,6 +40,10 @@ in
       };
     };
 
+    # virtual text support
+    # https://nix-community.github.io/nixvim/plugins/dap-virtual-text/index.html
+    plugins.dap-virtual-text.enable = false;
+
     # Add your own debuggers here
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
