@@ -10,7 +10,7 @@ in
       enable = true;
       settings = {
         enable = false; # default: true
-        mode = "topline"; # default: "cursor"
+        mode = "cursor"; # cursor*|topline
       };
     };
 
