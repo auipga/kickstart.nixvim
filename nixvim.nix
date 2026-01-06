@@ -102,7 +102,7 @@ in
       # Show line numbers
       number = true;
       # Add relative line numbers, to help with jumping.
-      relativenumber = true;
+      relativenumber = false;
 
       # Enable mouse mode, can be useful for resizing splits for example!
       mouse = "a";
