@@ -1,3 +1,7 @@
+{ lib, ...}:
+let
+  map = import ../../../lib/mkKeymap.nix { prefix = "[N]oice "; };
+in
 {
   programs.nixvim = {
     # completely replaces the UI for messages, cmdline and the popupmenu
@@ -18,6 +22,23 @@
           lsp_doc_border = true;
         };
     };
+
+    keymaps = [
+      (map [ "<leader>nn" "<cmd>Noice<CR>"            ""    ]) # same as 'history'
+      (map [ "<leader>nh" "<cmd>Noice history<CR>"    "[H]istory"    ])
+      (map [ "<leader>nl" "<cmd>Noice last<CR>"       "[L]ast"       ])
+      (map [ "<leader>nd" "<cmd>Noice dismiss<CR>"    "[D]ismiss"    ])
+      (map [ "<leader>nt" "<cmd>Noice telescope<CR>"  "[T]elescope"  ])
+      (map [ "<leader>ne" "<cmd>Noice errors<CR>"     "[E]rrors"     ])
+    ];
+
+    plugins.which-key.settings.spec = [
+      {
+        __unkeyed-1 = "<leader>n";
+        group = "[N]oice";
+        mode = [ "n" ];
+      }
+    ];
 
     # Optional dependencies:
     # plugins.nui.enable = true;
