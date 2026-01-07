@@ -193,6 +193,10 @@ in
             };
           };
         };
+        inline = {
+          # If the inline prompt creates a new buffer, how should we display this?
+          layout = "vertical"; # vertical*|horizontal|buffer
+        };
       };
     };
 
