@@ -180,7 +180,7 @@ in
         };
         diff = {
           enabled = true;
-          # provider = "default"; # default*|mini_diff
+          provider = "inline"; # mini_diff|split|inline*
           provider_opts = {
             inline = {
               layout = "float"; # default: non_float
