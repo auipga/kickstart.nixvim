@@ -33,65 +33,10 @@ in
         };
         # TODO: use GPG instead env var (https://github.com/olimorris/codecompanion.nvim/discussions/601)
         # TODO: use pass?
-        openai.__raw = ''
-          function()
-            return require("codecompanion.adapters").extend("openai", {
-              env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/api-keys/work/OPENAI" },
-              schema = {
-                model       = { default = "gpt-5" },
-                -- max_tokens  = { default = 2048 },
-                -- temperature = { default = 0.2 },
-                -- top_p       = { default = 0.95 },
-              },
-            })
-          end
-        '';
-        gemini.__raw = ''
-          function()
-            return require("codecompanion.adapters").extend("gemini", {
-              env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/api-keys/work/GEMINI" },
-              schema = {
-                model       = { default = "gemini-2.5-flash" },
-                max_tokens  = { default = 2048 },
-                temperature = { default = 0.2 },
-                top_p       = { default = 0.95 },
-                reasoning_effort = { default = "medium" }, -- high|medium*|low|none
-              },
-            })
-          end
-        '';
-        lms.__raw = ''
-          function()
-            return require("codecompanion.adapters").extend("openai_compatible", {
-              name = "lmstudio",
-              formatted_name = "LM Studio",
-              env = {
-                url = "http://localhost:1234",
-              },
-            })
-          end
-        '';
-        ollama_test.__raw = ''
-          -- TODO: https://codecompanion.olimorris.dev/extending/adapters#function-calling-tool-use
-          function()
-            return require("codecompanion.adapters").extend("ollama", {
-              name = "ollama_test",
-              formatted_name = "ollama",
-              schema = {
-                model       = { default = "mistral:7b-instruct-v0.3-q4_K_M" },
-                num_ctx     = { default = 16384 },
-                think       = { default = false },
-                keep_alive  = { default = "5m" },
-                max_tokens  = { default = 2000 },
-                temperature = { default = 0.2 },
-                top_p       = { default = 0.95 },
-              },
-              tools = {
-                enabled = true,
-              },
-            })
-          end
-        '';
+        openai.__raw  = builtins.readFile ./codecompanion/adapters/http/openai.lua;
+        gemini.__raw  = builtins.readFile ./codecompanion/adapters/http/gemini.lua;
+        lms.__raw     = builtins.readFile ./codecompanion/adapters/http/lmstudio.lua;
+        ollama.__raw  = builtins.readFile ./codecompanion/adapters/http/ollama.lua;
       };
 
       context = {
