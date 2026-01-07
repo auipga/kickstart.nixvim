@@ -48,6 +48,13 @@ in
       };
 
       interactions = {
+        # background = { # like olimorris
+        #   chat = {
+        #     opts = {
+        #       enabled = true;
+        #     };
+        #   };
+        # };
         chat = {
           adapter = "lms";
           # adapter = {
@@ -84,13 +91,6 @@ in
           #   model = "[must not be unset]";
           # };
         };
-        # background = { # like olimorris
-        #   chat = {
-        #     opts = {
-        #       enabled = true;
-        #     };
-        #   };
-        # };
       };
 
       prompt_library = {
