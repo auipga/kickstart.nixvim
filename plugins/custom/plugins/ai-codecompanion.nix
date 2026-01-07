@@ -49,14 +49,14 @@ in
 
       interactions = {
         # BACKGROUND INTERACTION -------------------------------------------------
-        # background = { # like olimorris
-        #   chat = {
-        #     opts = {
-        #       # Enable ALL background chat interactions?
-        #       enabled = true; # default: false
-        #     };
-        #   };
-        # };
+        background = {
+          chat = {
+            opts = {
+              # Enable ALL background chat interactions?
+              enabled = false; # default: false
+            };
+          };
+        };
 
         # CHAT INTERACTION -------------------------------------------------------
         chat = {
