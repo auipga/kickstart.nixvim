@@ -50,6 +50,11 @@ in
       interactions = {
         # BACKGROUND INTERACTION -------------------------------------------------
         background = {
+          adapter = "lms";
+          # adapter = {
+          #   name = "lms"; # default: copilot
+          #   model = "[must not be unset]"; # default: gpt-4.1
+          # };
           chat = {
             # INFO: this is enabled by default:
             # - interactions.background.builtin.chat_make_title
