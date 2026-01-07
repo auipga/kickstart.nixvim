@@ -183,7 +183,10 @@ in
             # '';
           };
         };
-      };
+      }
+        // (import ./codecompanion/rules/hardware.nix)
+        // (import ./codecompanion/rules/network.nix)
+        // (import ./codecompanion/rules/nix.nix);
 
       display = {
         action_palette = {
