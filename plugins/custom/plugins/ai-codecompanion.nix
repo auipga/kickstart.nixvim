@@ -48,6 +48,7 @@ in
       };
 
       interactions = {
+        # BACKGROUND INTERACTION -------------------------------------------------
         # background = { # like olimorris
         #   chat = {
         #     opts = {
@@ -55,6 +56,8 @@ in
         #     };
         #   };
         # };
+
+        # CHAT INTERACTION -------------------------------------------------------
         chat = {
           adapter = "lms";
           # adapter = {
@@ -73,6 +76,8 @@ in
             # auto_tool_mode.modes.n = "g."; # default: gta (overlaps gt for 'next tab')
           };
         };
+
+        # INLINE INTERACTION -----------------------------------------------------
         inline = {
           adapter = "lms";
           # adapter = {
@@ -84,6 +89,8 @@ in
             # reject_change.modes.n = ""; # default: gr
           };
         };
+
+        # CMD INTERACTION --------------------------------------------------------
         cmd = {
           adapter = "lms";
           # adapter = {
@@ -93,6 +100,7 @@ in
         };
       };
 
+      # PROMPT LIBRARIES ---------------------------------------------------------
       prompt_library = {
         # Run `:CodeCompanionActions refresh` to apply changes without nvim restart
         markdown = {
@@ -104,6 +112,7 @@ in
       # // import ./ai-codecompanion-prompts.nix
       ;
 
+      # RULES -------------------------------------------------------------------
       rules = {
         opts = {
           chat = {
@@ -133,6 +142,7 @@ in
         // (import ./codecompanion/rules/network.nix)
         // (import ./codecompanion/rules/nix.nix);
 
+      # DISPLAY OPTIONS ----------------------------------------------------------
       display = {
         action_palette = {
           provider = "default";
@@ -148,6 +158,8 @@ in
               cursorline = true; # default: false
             };
           };
+
+          # Chat buffer options --------------------------------------------------
           auto_scroll = false; # default: true
           intro_message = ""; # default: "Welcome to CodeCompanion ✨! Press ? for options"
           show_settings = false; # Show LLM settings at the top of the chat buffer?
