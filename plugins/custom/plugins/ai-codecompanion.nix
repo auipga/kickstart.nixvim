@@ -102,36 +102,6 @@ in
         ];
       };
 
-      display = {
-        action_palette = {
-          provider = "default";
-          opts = {
-            show_preset_actions = true; # Show the default actions in the action palette?
-            show_preset_prompts = true; # Show the default prompt library in the action palette?
-          };
-        };
-        chat = {
-          window = {
-            layout = "vertical"; # float|vertical*|horizontal|buffer
-            opts = {
-              cursorline = true; # default: false
-            };
-          };
-          auto_scroll = false; # default: true
-          intro_message = ""; # default: "Welcome to CodeCompanion ✨! Press ? for options"
-          show_settings = false; # Show LLM settings at the top of the chat buffer?
-          start_in_insert_mode = false; # Open the chat buffer in insert mode?
-        };
-        diff = {
-          enabled = true;
-          close_chat_at = 200; # default: 240, Close an open chat buffer if the total columns of your display are less than...
-          # layout = "vertical"; # vertical*|horizontal split for default provider
-          inline.layout = "float"; # default: non_float
-          # opts = [ "internal" "filler" "closeoff" "algorithm:patience" "followwrap" "linematch:120" ];
-          # provider = "default"; # default*|mini_diff
-        };
-      };
-
       interactions = {
         chat = {
           adapter = "lms";
@@ -297,6 +267,36 @@ in
             };
           };
           is_preset = true;
+        };
+      };
+
+      display = {
+        action_palette = {
+          provider = "default";
+          opts = {
+            show_preset_actions = true; # Show the default actions in the action palette?
+            show_preset_prompts = true; # Show the default prompt library in the action palette?
+          };
+        };
+        chat = {
+          window = {
+            layout = "vertical"; # float|vertical*|horizontal|buffer
+            opts = {
+              cursorline = true; # default: false
+            };
+          };
+          auto_scroll = false; # default: true
+          intro_message = ""; # default: "Welcome to CodeCompanion ✨! Press ? for options"
+          show_settings = false; # Show LLM settings at the top of the chat buffer?
+          start_in_insert_mode = false; # Open the chat buffer in insert mode?
+        };
+        diff = {
+          enabled = true;
+          close_chat_at = 200; # default: 240, Close an open chat buffer if the total columns of your display are less than...
+          # layout = "vertical"; # vertical*|horizontal split for default provider
+          inline.layout = "float"; # default: non_float
+          # opts = [ "internal" "filler" "closeoff" "algorithm:patience" "followwrap" "linematch:120" ];
+          # provider = "default"; # default*|mini_diff
         };
       };
     };
