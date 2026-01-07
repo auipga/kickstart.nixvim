@@ -51,6 +51,8 @@ in
         # BACKGROUND INTERACTION -------------------------------------------------
         background = {
           chat = {
+            # INFO: this is enabled by default:
+            # - interactions.background.builtin.chat_make_title
             opts = {
               # Enable ALL background chat interactions?
               enabled = false; # default: false
