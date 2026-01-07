@@ -33,8 +33,6 @@ in
           # Show all available model choices for the selected adapter?
           show_model_choices = true; # default: true
         };
-        # TODO: use GPG instead env var (https://github.com/olimorris/codecompanion.nvim/discussions/601)
-        # TODO: use pass?
         openai.__raw  = builtins.readFile ./adapters/http/openai.lua;
         gemini.__raw  = builtins.readFile ./adapters/http/gemini.lua;
         lms.__raw     = builtins.readFile ./adapters/http/lmstudio.lua;
