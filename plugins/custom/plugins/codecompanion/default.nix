@@ -28,8 +28,10 @@ in
       };
       adapters.http = {
         opts = {
-          show_presets = false; # default: true; show all available adapters?
-          show_model_choices = true; # default: true; show all available model choices for the selected adapter?
+          # Show all available adapters?
+          show_presets = false; # default: true
+          # Show all available model choices for the selected adapter?
+          show_model_choices = true; # default: true
         };
         # TODO: use GPG instead env var (https://github.com/olimorris/codecompanion.nvim/discussions/601)
         # TODO: use pass?
