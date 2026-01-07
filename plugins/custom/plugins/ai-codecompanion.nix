@@ -153,6 +153,8 @@ in
             show_preset_actions = true; # default: true
             # Show the default prompt library in the action palette?
             show_preset_prompts = true; # default: true
+            # Show the preset rules in the action palette?
+            show_preset_rules = true; # default: true
           };
         };
         chat = {
