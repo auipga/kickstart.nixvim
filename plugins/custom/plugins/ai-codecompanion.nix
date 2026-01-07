@@ -19,7 +19,11 @@ in
     ];
 
     plugins.codecompanion.settings = {
-      adapters.acp.opts.show_presets = false;
+      adapters.acp = {
+        opts = {
+          show_presets = false;
+        };
+      };
       adapters.http = {
         opts = {
           show_presets = false; # default: true; show all available adapters?
