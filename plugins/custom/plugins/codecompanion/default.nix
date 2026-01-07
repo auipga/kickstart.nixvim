@@ -73,6 +73,19 @@ in
           #   model = "[must not be unset]";
           # };
           roles.llm.__raw = ''function(adapter) return adapter.formatted_name .. " (" .. adapter.model.name .. ")" end'';
+          # tools = {
+          #   web_search = {
+          #     opts = {
+          #       adapter = ""; # default: tavily
+          #     };
+          #   };
+          # };
+          # variables = {
+          ## buffer, lsp, viewport
+          # };
+          # slash_commands = {
+          ## buffer, compact, fetch (jina), quickfix, file, help, image, rules, mode (acp only), now, symbols, terminal
+          # };
           opts = {
             # system_prompt = ""; moved here
             completion_provider = "cmp"; # blink|cmp|coc default: default (will try in order)
