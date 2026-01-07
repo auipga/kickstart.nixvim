@@ -167,6 +167,7 @@ in
       # DISPLAY OPTIONS ----------------------------------------------------------
       display = {
         action_palette = {
+          # Remember: I only like default here
           provider = "default"; # telescope|fzf_lua|mini_pick|snacks|default*
           opts = {
             # Show the default actions in the action palette?
