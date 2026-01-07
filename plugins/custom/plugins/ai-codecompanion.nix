@@ -18,6 +18,8 @@ in
       { name = "codecompanion"; }
     ];
 
+    # default config.lua:
+    # https://github.com/olimorris/codecompanion.nvim/blob/main/lua/codecompanion/config.lua
     plugins.codecompanion.settings = {
       adapters.acp = {
         opts = {
