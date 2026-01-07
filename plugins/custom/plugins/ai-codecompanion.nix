@@ -134,10 +134,11 @@ in
 
       interactions = {
         chat = {
-          adapter = {
-            name = "lms";
-            # model = "";
-          };
+          adapter = "lms";
+          # adapter = {
+          #   name = "lms";
+          #   model = "[must not be unset]";
+          # };
           roles.llm.__raw = ''function(adapter) return adapter.formatted_name end'';
           opts = {
             # system_prompt = ""; moved here
@@ -151,20 +152,22 @@ in
           };
         };
         inline = {
-          adapter = {
-            name = "lms";
-            # model = "";
-          };
+          adapter = "lms";
+          # adapter = {
+          #   name = "lms";
+          #   model = "[must not be unset]";
+          # };
           keymaps = {
             # accept_change.modes.n = ""; # default: ga
             # reject_change.modes.n = ""; # default: gr
           };
         };
         cmd = {
-          adapter = {
-            name = "lms";
-            # model = "";
-          };
+          adapter = "lms";
+          # adapter = {
+          #   name = "lms";
+          #   model = "[must not be unset]";
+          # };
         };
         # background = { # like olimorris
         #   chat = {
