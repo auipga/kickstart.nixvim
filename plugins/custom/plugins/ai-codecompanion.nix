@@ -109,7 +109,7 @@ in
           #   name = "lms";
           #   model = "[must not be unset]";
           # };
-          roles.llm.__raw = ''function(adapter) return adapter.formatted_name end'';
+          roles.llm.__raw = ''function(adapter) return adapter.formatted_name .. " (" .. adapter.model.name .. ")" end'';
           opts = {
             # system_prompt = ""; moved here
             completion_provider = "cmp"; # blink*|cmp|coc|default
