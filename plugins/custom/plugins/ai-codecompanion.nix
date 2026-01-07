@@ -183,7 +183,8 @@ in
           provider = "inline"; # mini_diff|split|inline*
           provider_opts = {
             inline = {
-              layout = "float"; # default: non_float
+              # Where to display the diff
+              layout = "float"; # float|buffer
             };
             split = {
               close_chat_at = 200; # default: 240, Close an open chat buffer if the total columns of your display are less than...
