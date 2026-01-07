@@ -1,6 +1,6 @@
 { lib, ... }:
 let
-  mapP = import ../../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
+  mapP = import ../../../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
 in
 {
   programs.nixvim = {
@@ -33,10 +33,10 @@ in
         };
         # TODO: use GPG instead env var (https://github.com/olimorris/codecompanion.nvim/discussions/601)
         # TODO: use pass?
-        openai.__raw  = builtins.readFile ./codecompanion/adapters/http/openai.lua;
-        gemini.__raw  = builtins.readFile ./codecompanion/adapters/http/gemini.lua;
-        lms.__raw     = builtins.readFile ./codecompanion/adapters/http/lmstudio.lua;
-        ollama.__raw  = builtins.readFile ./codecompanion/adapters/http/ollama.lua;
+        openai.__raw  = builtins.readFile ./adapters/http/openai.lua;
+        gemini.__raw  = builtins.readFile ./adapters/http/gemini.lua;
+        lms.__raw     = builtins.readFile ./adapters/http/lmstudio.lua;
+        ollama.__raw  = builtins.readFile ./adapters/http/ollama.lua;
       };
 
       context = {
@@ -117,7 +117,7 @@ in
           }'';
         };
       }
-      # // import ./ai-codecompanion-prompts.nix
+      # // import ./prompts.nix
       ;
 
       # RULES -------------------------------------------------------------------
@@ -147,9 +147,9 @@ in
           };
         };
       }
-        // (import ./codecompanion/rules/hardware.nix)
-        // (import ./codecompanion/rules/network.nix)
-        // (import ./codecompanion/rules/nix.nix);
+        // (import ./rules/hardware.nix)
+        // (import ./rules/network.nix)
+        // (import ./rules/nix.nix);
 
       # DISPLAY OPTIONS ----------------------------------------------------------
       display = {

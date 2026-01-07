@@ -23,9 +23,9 @@ in
     ./plugins/custom/plugins/_.nix
     ./plugins/custom/plugins/ai-chatgpt.nix
     ./plugins/custom/plugins/ai-copilot.nix
-    ./plugins/custom/plugins/ai-codecompanion.nix
-    ./plugins/custom/plugins/ai-codecompanion-history.nix
-    ./plugins/custom/plugins/ai-codecompanion-vectorcode.nix
+    ./plugins/custom/plugins/codecompanion/default.nix
+    ./plugins/custom/plugins/codecompanion/extensions/history.nix
+    ./plugins/custom/plugins/codecompanion/extensions/vectorcode.nix
     ./plugins/custom/plugins/ai-vectorcode.nix
     ./plugins/custom/plugins/auto-session.nix
     ./plugins/custom/plugins/dial.nix
