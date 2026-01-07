@@ -52,7 +52,8 @@ in
         # background = { # like olimorris
         #   chat = {
         #     opts = {
-        #       enabled = true;
+        #       # Enable ALL background chat interactions?
+        #       enabled = true; # default: false
         #     };
         #   };
         # };
@@ -67,7 +68,7 @@ in
           roles.llm.__raw = ''function(adapter) return adapter.formatted_name .. " (" .. adapter.model.name .. ")" end'';
           opts = {
             # system_prompt = ""; moved here
-            completion_provider = "cmp"; # blink*|cmp|coc|default
+            completion_provider = "cmp"; # blink|cmp|coc default: default (will try in order)
           };
           keymaps = {
             send.modes.i = [ "<C-CR>" "<C-s>" ];
@@ -116,7 +117,8 @@ in
       rules = {
         opts = {
           chat = {
-            enabled = true; # Automatically add memory to new chat buffers?
+            # Automatically add memory to new chat buffers?
+            enabled = true; # default: false
             # autoload.__raw = ''
             #   function()
             #     local cwd = vim.fn.getcwd()
@@ -145,10 +147,12 @@ in
       # DISPLAY OPTIONS ----------------------------------------------------------
       display = {
         action_palette = {
-          provider = "default";
+          provider = "default"; # telescope|fzf_lua|mini_pick|snacks|default*
           opts = {
-            show_preset_actions = true; # Show the default actions in the action palette?
-            show_preset_prompts = true; # Show the default prompt library in the action palette?
+            # Show the default actions in the action palette?
+            show_preset_actions = true; # default: true
+            # Show the default prompt library in the action palette?
+            show_preset_prompts = true; # default: true
           };
         };
         chat = {
@@ -162,8 +166,8 @@ in
           # Chat buffer options --------------------------------------------------
           auto_scroll = false; # default: true
           intro_message = ""; # default: "Welcome to CodeCompanion ✨! Press ? for options"
-          show_settings = false; # Show LLM settings at the top of the chat buffer?
-          start_in_insert_mode = false; # Open the chat buffer in insert mode?
+          show_settings = false; # default: false; Show LLM settings at the top of the chat buffer?
+          start_in_insert_mode = false; # default: false; Open the chat buffer in insert mode?
         };
         diff = {
           enabled = true;
