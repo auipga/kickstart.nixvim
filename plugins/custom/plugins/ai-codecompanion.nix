@@ -180,6 +180,7 @@ in
         };
         diff = {
           enabled = true;
+          # provider = "default"; # default*|mini_diff
           provider_opts = {
             inline = {
               layout = "float"; # default: non_float
@@ -190,7 +191,6 @@ in
               # opts = [ "internal" "filler" "closeoff" "algorithm:patience" "followwrap" "linematch:120" ];
             };
           };
-          # provider = "default"; # default*|mini_diff
         };
       };
     };
