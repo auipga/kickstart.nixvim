@@ -148,18 +148,16 @@ in
         # };
       };
 
-      # prompt_library = {
-      #   markdown = {
-      #     dirs.__raw = ''{
-      #       vim.fn.getcwd() .. "/.prompts",
-      #       "~/.dotfiles/.config/prompts",
-      #     }'';
-      #   };
-      # };
-
-/*
-      prompt_library = import ./ai-codecompanion-prompts.nix;
-*/
+      prompt_library = {
+        # Run `:CodeCompanionActions refresh` to apply changes without nvim restart
+        markdown = {
+          dirs.__raw = ''{
+            vim.fn.getcwd() .. "/.prompts",
+          }'';
+        };
+      }
+      # // import ./ai-codecompanion-prompts.nix
+      ;
 
       rules = {
         opts = {
