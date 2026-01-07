@@ -225,7 +225,10 @@ in
     # Suggested Plugin Workflow
     # https://codecompanion.olimorris.dev/getting-started.html#suggested-plugin-workflow
     # Expand 'cc' into 'CodeCompanion' in the command line
-    extraConfigLua = "vim.cmd([[cab cc CodeCompanion]])";
+    extraConfigLua = ''
+      vim.cmd([[cab cc  CodeCompanion]])
+      vim.cmd([[cab ccc CodeCompanionCmd]])
+    '';
     keymaps = [
       (mapP [ "<leader>."  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" ]  ])
       (mapP [ "<M-.>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" "i" ]  ])
