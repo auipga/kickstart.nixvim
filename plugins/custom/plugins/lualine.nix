@@ -39,6 +39,22 @@
         lualine_c = [ "filename" ];
         lualine_x.__raw = ''
           {
+            -- show indicator while recording a macro
+            {
+              function()
+                local rec = vim.fn.reg_recording()
+                if rec ~= "" then
+                  return "REC @" .. rec
+                end
+
+                return ""
+              end,
+              cond = function()
+                return vim.fn.reg_recording() ~= ""
+              end,
+              color = { fg = "#ffa064" },
+            },
+
             -- ./auto-session.nix
             function()
               return require("auto-session.lib").current_session_name(true)
