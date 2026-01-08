@@ -39,14 +39,18 @@
         lualine_c = [ "filename" ];
         lualine_x.__raw = ''
           {
+            -- ./auto-session.nix
             function()
               return require("auto-session.lib").current_session_name(true)
             end,
+
+            -- ./ai-vectorcode.nix
             -- TODO: make vectorcode lualine work
             -- see https://github.com/Davidyz/VectorCode/blob/main/docs/neovim/README.md#status-line-component
             -- require("vectorcode.integrations").lualine({
             --   show_job_count = true, -- default: false
             -- }),
+
             "lsp_status",
             -- "encoding",
             -- "fileformat",
