@@ -57,7 +57,7 @@
 
             -- ./auto-session.nix
             function()
-              return require("auto-session.lib").current_session_name(true)
+              return require("auto-session.lib").current_session_name(true):gsub("branch: ", "")
             end,
 
             -- ./ai-vectorcode.nix
