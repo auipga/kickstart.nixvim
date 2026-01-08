@@ -45,7 +45,7 @@ let
           query_cb = require("vectorcode.utils").make_surrounding_lines_cb(-1),
           run_on_register = false,
         },
-        async_backend = "default", -- or "lsp"
+        async_backend = "default", -- default|lsp
         exclude_this = true,
         n_query = 1,
         notify = true,
