@@ -228,6 +228,15 @@ in
         # ./extensions/history.nix
         # ./extensions/vectorcode.nix
       };
+
+      # GENERAL OPTIONS ----------------------------------------------------------
+      opts = {
+        log_level = "ERROR"; # TRACE|DEBUG|ERROR*|INFO
+        # Delay in milliseconds between cmd tools
+        job_start_delay = 1500; # default: 1500
+        # Delay in milliseconds before auto-submitting the chat buffer
+        submit_delay = 2000; # default: 2000
+      };
     };
 
     # Suggested Plugin Workflow
