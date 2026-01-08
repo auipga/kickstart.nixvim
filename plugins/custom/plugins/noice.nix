@@ -40,6 +40,13 @@ in
       }
     ];
 
+    # Integrations
+    plugins.lualine.settings = {
+      sections = {
+        # lualine_x see ./lualine.nix
+      };
+    };
+
     # Optional dependencies:
     # plugins.nui.enable = true;
     # https://github.com/rcarriga/nvim-notify/
