@@ -39,18 +39,6 @@
         lualine_c = [ "filename" ];
         lualine_x.__raw = ''
           {
-            -- ./noice.nix
-            {
-              require("noice").api.status.command.get,
-              cond = require("noice").api.status.command.has,
-              color = { fg = "#ff9e64" },
-            },
-            {
-              require("noice").api.status.mode.get,
-              cond = require("noice").api.status.mode.has,
-              color = { fg = "#0f9e64" },
-            },
-
             -- ./auto-session.nix
             function()
               return require("auto-session.lib").current_session_name(true)
