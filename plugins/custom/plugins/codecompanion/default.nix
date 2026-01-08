@@ -220,6 +220,14 @@ in
           layout = "vertical"; # vertical*|horizontal|buffer
         };
       };
+
+      # EXTENSIONS ------------------------------------------------------
+      extensions = {
+        # import nix files in ./extensions/
+        # currently integrated:
+        # ./extensions/history.nix
+        # ./extensions/vectorcode.nix
+      };
     };
 
     # Suggested Plugin Workflow
