@@ -25,6 +25,7 @@ in
     ./plugins/custom/plugins/ai-copilot.nix
     ./plugins/custom/plugins/codecompanion/default.nix
     ./plugins/custom/plugins/codecompanion/extensions/history.nix
+    ./plugins/custom/plugins/codecompanion/extensions/spinner.nix
     ./plugins/custom/plugins/codecompanion/extensions/vectorcode.nix
     ./plugins/custom/plugins/ai-vectorcode.nix
     ./plugins/custom/plugins/auto-session.nix
