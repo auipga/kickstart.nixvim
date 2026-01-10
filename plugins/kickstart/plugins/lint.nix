@@ -40,7 +40,6 @@
       };
     };
 
-    # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
     autoGroups = {
       lint = {
         clear = true;

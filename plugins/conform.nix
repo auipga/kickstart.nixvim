@@ -5,8 +5,6 @@ in
 {
   programs.nixvim = {
     # Dependencies
-    #
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html#extrapackages
     extraPackages = with pkgs; [
       # Used to format Lua code
       stylua
@@ -43,7 +41,6 @@ in
       };
     };
 
-    # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
       (mapR [ "<leader>f"  ''
           function()

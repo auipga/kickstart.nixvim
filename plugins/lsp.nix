@@ -23,7 +23,6 @@ in
       settings.progress.display.skip_history = false; # default: true
     };
 
-    # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
     autoGroups = {
       "kickstart-lsp-attach" = {
         clear = true;

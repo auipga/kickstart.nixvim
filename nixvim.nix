@@ -72,7 +72,6 @@ in
       };
     };
 
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
     globals = {
       # Set <space> as the leader key
       # See `:help mapleader`
@@ -98,7 +97,6 @@ in
     # [[ Setting options ]]
     # See `:help vim.opt`
     #  For more options, you can see `:help option-list`
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html#opts
     opts = {
       # Show line numbers
       number = true;
@@ -168,7 +166,6 @@ in
 
     # [[ Basic Keymaps ]]
     #  See `:help vim.keymap.set()`
-    # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
       # Clear highlights on search when pressing <Esc> in normal mode
       (map [ "<Esc>"  "<cmd>nohlsearch<CR>"  "Clear highlights on search"      ])
@@ -197,7 +194,6 @@ in
       (map [ "<m-q>"       "<Cmd>qa<CR>"  "Quit"       [ "n" "i" ]  { noremap = true; silent = true; }  ])
     ];
 
-    # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
     autoGroups = {
       kickstart-highlight-yank = {
         clear = true;
@@ -206,7 +202,6 @@ in
 
     # [[ Basic Autocommands ]]
     #  See `:help lua-guide-autocommands`
-    # https://nix-community.github.io/nixvim/NeovimOptions/autoCmd/index.html
     autoCmd = [
       # Highlight when yanking (copying) text
       #  See `:help vim.highlight.on_yank()`
@@ -233,8 +228,6 @@ in
       };
     };
 
-    # The line beneath this is called `modeline`. See `:help modeline`
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html#extraconfigluapost
     extraConfigLuaPost = ''
       -- vim: ts=2 sts=2 sw=2 et
     '';

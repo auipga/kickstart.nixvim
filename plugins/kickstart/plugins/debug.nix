@@ -46,7 +46,6 @@ in
 
     # Add your own debuggers here
 
-    # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
       # Basic debugging keymaps, feel free to change to your liking!
       (mapP  [ "<F5>"       "<cmd>DapContinue<CR>"          "Start/Continue"     ])

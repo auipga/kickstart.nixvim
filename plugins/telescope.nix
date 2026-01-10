@@ -84,7 +84,6 @@ in
       };
     };
 
-    # https://nix-community.github.io/nixvim/keymaps/index.html
     keymaps = [
       # Slightly advanced example of overriding default behavior and theme
         # You can pass additional configuration to Telescope to change the theme, layout, etc.

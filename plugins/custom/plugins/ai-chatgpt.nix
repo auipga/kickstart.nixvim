@@ -10,7 +10,6 @@ in
     plugins.chatgpt.settings.api_key_cmd = "cat ${config.home.homeDirectory}/.config/sops-nix/secrets/api-keys/work/OPENAI";
 
     # https://github.com/jackMort/ChatGPT.nvim/#whichkey-plugin-mappings
-    # https://nix-community.github.io/nixvim/keymaps/index.html
     # Add these to your whichkey plugin mappings for convenient binds
     keymaps = [
       (map [ "<leader>cc"  "<cmd>ChatGPT<CR>"                               "[C]hatGPT"                                 ])
