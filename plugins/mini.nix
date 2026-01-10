@@ -96,7 +96,7 @@
 
         # Pick anything
         # https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-pick.md
-        pick = {};
+        # pick = {};
 
         # Manage and expand snippets
         # https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-snippets.md
