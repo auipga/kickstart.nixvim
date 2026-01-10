@@ -143,9 +143,9 @@
     # default behavior. For example, here we set the section for
     # cursor location to LINE:COLUMN
     extraConfigLua = ''
-      require('mini.statusline').section_location = function()
-        return '%2l:%-2v'
-      end
+      -- require('mini.statusline').section_location = function()
+      --   return '%2l:%-2v'
+      -- end
     '';
   };
 }
