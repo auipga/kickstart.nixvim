@@ -47,7 +47,7 @@
         # Automatic highlighting of word under cursor
         # https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-cursorword.md
         cursorword = {
-          delay = 100;
+          delay = 500;
         };
 
         # Highlight patterns in text
