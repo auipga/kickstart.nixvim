@@ -123,7 +123,7 @@
         #   highlight_duration = 1500;
         #   n_lines = 100; # 20
         # };
-        # replaces surround.nvim # see ./custom/plugins/testing.nix
+        # replaces surround.nvim # see ./custom/plugins/surround.nix
 
         # Simple and easy statusline.
         #  You could remove this setup call if you don't like it,
