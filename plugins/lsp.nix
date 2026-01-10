@@ -55,7 +55,7 @@ in
         # };
         # ...etc. See `https://nix-community.github.io/nixvim/plugins/lsp` for a list of pre-configured LSPs
         #
-        # Some languages (like typscript) have entire language plugins that can be useful:
+        # Some languages (like typescript) have entire language plugins that can be useful:
         #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html`
         #
         # But for many setups the LSP (`tsserver`) will work just fine
