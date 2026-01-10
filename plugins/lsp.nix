@@ -65,7 +65,7 @@ in
         # };
 
         lua_ls = {
-          enable = false;
+          enable = true;
 
           # cmd = {
           # };
