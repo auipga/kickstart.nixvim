@@ -23,7 +23,7 @@ function()
         -- Ministral-3-8B-Instruct-2512 :
         -- default = "mistralai_ministral-3-8b-instruct-2512@q8_0"; -- bartowski 9.89 GB, 8.5 GBV Top Choice
         -- default = "mistralai_ministral-3-8b-instruct-2512@q4_k_s"; -- bartowski 5.81 GB
-        default = "ministral-3-8b-instruct-2512@q4_k_m"; -- unsloth 6.91 GB, 5.2 GBV Speed Choice (Optimized for lowest latency)
+        -- default = "ministral-3-8b-instruct-2512@q4_k_m"; -- unsloth 6.91 GB, 5.2 GBV Speed Choice (Optimized for lowest latency)
         -- default = "ministral-3-8b-instruct-2512@q4_k_s"; -- unsloth 6.67 GB
       },
     },
