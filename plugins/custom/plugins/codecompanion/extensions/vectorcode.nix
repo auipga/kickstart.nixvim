@@ -1,4 +1,8 @@
 {
+  imports = [
+    ../../vectorcode.nix
+  ];
+
   programs.nixvim = {
     # Integrate VectorCode into CodeCompanion
     # https://github.com/Davidyz/VectorCode/blob/main/docs/neovim/README.md#olimorriscodecompanionnvim
