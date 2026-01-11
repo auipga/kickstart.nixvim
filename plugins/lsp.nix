@@ -52,6 +52,8 @@ in
         #   enable = true;
         # };
 
+        # https://github.com/luals/lua-language-server
+        # https://nix-community.github.io/nixvim/plugins/lsp/servers/lua_ls/index.html
         lua_ls = {
           enable = true;
 
