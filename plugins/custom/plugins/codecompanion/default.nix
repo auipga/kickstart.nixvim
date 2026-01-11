@@ -257,11 +257,13 @@ in
     '';
     keymaps = [
       (mapP [ "<leader>."  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" ]  ])
-      (mapP [ "<M-.>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" "i" ]  ])
+      (mapP [ "<m-u>"      "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" "i" ]  ]) # good for dvorak+hrm
+      (mapP [ "<m-p>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" "i" ]  ]) # good for dvorak+hrm
+      (mapP [ "<m-y>"      "<cmd>CodeCompanionSummaries<cr>"     "Summaries"          [ "n" "v" "i" ]  ]) # good for dvorak+hrm
       (mapP [ "ga"         "<cmd>CodeCompanionChat Add<cr>"      "Add selection to Chat"  [ "v" ]  ])
 
-      (mapP [ "<C-A>"  ''require("codecompanion").inline_accept_word()''  "Accept Word"   [ "i" ]  ])
-      (mapP [ "<C-L>"  ''require("codecompanion").inline_accept_line()''  "Accept Line"   [ "i" ]  ])
+      # (mapP [ "<C-A>"  ''require("codecompanion").inline_accept_word()''  "Accept Word"   [ "i" ]  ])
+      # (mapP [ "<C-L>"  ''require("codecompanion").inline_accept_line()''  "Accept Line"   [ "i" ]  ])
     ];
 
     # Integrations
