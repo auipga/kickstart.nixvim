@@ -12,6 +12,11 @@
         installCargo = true;
         installRustc = true;
       };
+
+      # https://github.com/crisidev/bacon-ls
+      # https://nix-community.github.io/nixvim/plugins/lsp/servers/bacon_ls/index.html
+      # bacon_ls.enable = true;
+      # bacon_ls.package = ...;
     };
 
     plugins.treesitter = {
