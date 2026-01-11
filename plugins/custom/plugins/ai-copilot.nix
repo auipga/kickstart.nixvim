@@ -1,6 +1,6 @@
 {
   programs.nixvim = {
-    plugins.copilot-lua.enable = !true; # preferable over official copilot-vim
+    plugins.copilot-lua.enable = false; # preferable over official copilot-vim
     # setup:
     # :Copilot auth
     #
@@ -21,17 +21,17 @@
     };
 
     # https://nix-community.github.io/nixvim/plugins/lsp/servers/copilot/index.html
-    # plugins.lsp.servers.copilot.enable = true;
+    plugins.lsp.servers.copilot.enable = false;
 
-    # plugins.copilot-cmp.enable = true; # 22 KiB
+    plugins.copilot-cmp.enable = false; # 22 KiB
 
     # https://github.com/Davidyz/VectorCode/wiki/Neovim-Integrations#copilotc-nvimcopilotchatnvim
-    # plugins.copilot-chat.enable = true; # 367 KiB
+    plugins.copilot-chat.enable = false; # 367 KiB
 
-    # plugins.blink-cmp.enable = true; # 5.1 MiB
+    plugins.blink-cmp.enable = false; # 5.1 MiB
 
-    # plugins.blink-cmp-copilot.enable = true; # 88.7 KiB
+    plugins.blink-cmp-copilot.enable = false; # 88.7 KiB
 
-    # plugins.blink-copilot.enable = true; # 24.0 KiB
+    plugins.blink-copilot.enable = false; # 24.0 KiB
   };
 }
