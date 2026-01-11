@@ -57,8 +57,8 @@ let
           notify = true,
           timeout_ms = 5000,
           on_setup = {
-            update = false, -- set to true to enable update when `setup` is called.
-            lsp = false,
+            update = false, -- default: false; run `vectorcode update` on startup
+            lsp = false, -- default: false; try to start the LSP server on startup
           },
           sync_log_env_var = false,
         }
