@@ -70,6 +70,10 @@ in
             # };
           };
         };
+
+        # https://github.com/bash-lsp/bash-language-server
+        # https://nix-community.github.io/nixvim/plugins/lsp/servers/bashls/index.html
+        bashls.enable = true;
       };
 
       keymaps = {
