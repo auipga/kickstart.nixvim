@@ -72,7 +72,14 @@ in
           #   name = "lms";
           #   model = "[must not be unset]";
           # };
-          roles.llm.__raw = ''function(adapter) return adapter.formatted_name .. " (" .. (adapter.model and adapter.model.name or "n/a") .. ")" end'';
+          roles.llm.__raw = ''
+            function(adapter)
+              return string.format("%s (%s)",
+                adapter.formatted_name,
+                adapter.model and adapter.model.name or "n/a"
+              )
+            end
+          '';
           # tools = {
           #   web_search = {
           #     opts = {
