@@ -57,10 +57,10 @@ in
         lua_ls = {
           enable = true;
 
-          # cmd = {
-          # };
-          # filetypes = {
-          # };
+          # cmd = [
+          # ];
+          # filetypes = [
+          # ];
           settings = {
             completion = {
               callSnippet = "Replace";
