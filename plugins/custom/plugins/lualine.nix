@@ -60,7 +60,7 @@
               return require("auto-session.lib").current_session_name(true):gsub("branch: ", "")
             end,
 
-            -- ./ai-vectorcode.nix
+            -- ./vectorcode.nix
             -- see https://github.com/Davidyz/VectorCode/blob/main/docs/neovim/README.md#status-line-component
             -- function()
             --   return require("vectorcode.integrations").lualine({
