@@ -160,7 +160,7 @@ in
       foldlevelstart = 99;
 
       # show filename as window title
-      title = true;
+      title = false;
     };
 
     # [[ Basic Keymaps ]]
