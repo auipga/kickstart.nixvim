@@ -11,6 +11,8 @@ in
     ];
 
     extraConfigLua = ''
+      local plugin = "Autorun Project Tool"
+
       local function project_tool_detect()
         local cwd = vim.fn.getcwd()
         if cwd:match("zmk") then
@@ -51,17 +53,17 @@ in
       function project_tool_run_once()
         local tool = project_tool_detect()
         if not tool then
-          vim.notify("No matching project tool detected.")
+          vim.notify("No matching project tool detected.", vim.log.levels.WARN, { title = plugin })
           return
         end
         vim.cmd("TermExec cmd='" .. tool.cmd .. "'")
-        vim.notify("Running " .. tool.name .. "...")
+        vim.notify("Running " .. tool.name .. "...", vim.log.levels.INFO, { title = plugin })
       end
 
       function project_tool_toggle_autorun()
         local tool = project_tool_detect()
         if not tool then
-          vim.notify("No matching project tool detected.")
+          vim.notify("No matching project tool detected.", vim.log.levels.WARN, { title = plugin })
           return
         end
 
@@ -69,7 +71,7 @@ in
         if pcall(vim.api.nvim_get_autocmds, { group = "AutorunProjectTool" }) then
           -- disable it
           vim.api.nvim_del_augroup_by_name("AutorunProjectTool")
-          vim.notify("Auto " .. tool.name .. " disabled.")
+          vim.notify("Auto " .. tool.name .. " disabled.", vim.log.levels.INFO, { title = plugin })
         else
           -- enable it
           vim.api.nvim_create_autocmd("BufWritePost", {
@@ -79,7 +81,7 @@ in
               vim.cmd("TermExec cmd='" .. tool.cmd .. "'")
             end,
           })
-          vim.notify("Auto " .. tool.name .. " enabled.")
+          vim.notify("Auto " .. tool.name .. " enabled.", vim.log.levels.INFO, { title = plugin })
         end
       end
     '';
