@@ -12,6 +12,7 @@ in
 
     extraConfigLua = ''
       local plugin = "Autorun Project Tool"
+      local group = "AutorunProjectTool"
 
       local function project_tool_detect()
         local cwd = vim.fn.getcwd()
@@ -68,14 +69,14 @@ in
         end
 
         -- already enabled?
-        if pcall(vim.api.nvim_get_autocmds, { group = "AutorunProjectTool" }) then
+        if pcall(vim.api.nvim_get_autocmds, { group = group }) then
           -- disable it
-          vim.api.nvim_del_augroup_by_name("AutorunProjectTool")
+          vim.api.nvim_del_augroup_by_name(group)
           vim.notify("Auto " .. tool.name .. " disabled.", vim.log.levels.INFO, { title = plugin })
         else
           -- enable it
           vim.api.nvim_create_autocmd("BufWritePost", {
-            group = vim.api.nvim_create_augroup("AutorunProjectTool", { clear = true }),
+            group = vim.api.nvim_create_augroup(group, { clear = true }),
             pattern = tool.pattern,
             callback = function()
               vim.cmd("TermExec cmd='" .. tool.cmd .. "'")
