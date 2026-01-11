@@ -51,6 +51,18 @@ in
       }
     ];
 
+    # Dependencies:
+    plugins.treesitter = {
+      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; lib.mkAfter [
+        vim
+        regex
+        lua
+        bash
+        markdown
+        markdown_inline
+      ];
+    };
+
     # Optional dependencies:
     # plugins.nui.enable = true;
     # https://github.com/rcarriga/nvim-notify/
