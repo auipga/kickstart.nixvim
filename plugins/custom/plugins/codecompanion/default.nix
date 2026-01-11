@@ -140,6 +140,7 @@ in
             # Automatically add memory to new chat buffers?
             enabled = true; # default: false
             # autoload.__raw = ''
+            #   ---@return string|string[]
             #   function()
             #     local cwd = vim.fn.getcwd()
             #     if cwd:match("zmk") then
