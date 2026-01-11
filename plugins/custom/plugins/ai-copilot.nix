@@ -20,6 +20,9 @@
       };
     };
 
+    # https://nix-community.github.io/nixvim/plugins/lsp/servers/copilot/index.html
+    # plugins.lsp.servers.copilot.enable = true;
+
     # plugins.copilot-cmp.enable = true; # 22 KiB
 
     # https://github.com/Davidyz/VectorCode/wiki/Neovim-Integrations#copilotc-nvimcopilotchatnvim
