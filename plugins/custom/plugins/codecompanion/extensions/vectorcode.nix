@@ -11,7 +11,7 @@
     plugins.codecompanion.settings = {
       extensions.vectorcode.enabled = true;
 
-      # Setup: add to context.providers in ./ai-codecompanion.nix
+      # Setup: add to context.providers in ../default.nix
       # { name = "vectorcode"; opts = { top_k = 15; }; }
     };
   };
