@@ -24,11 +24,11 @@
       settings = {
         nil = {
           formatting.command = [ "nixfmt" ]; # default: "nixpkgs-fmt"
-#          nixpkgs = {
-#            # Ensures Nixpkgs schema support (autocomplete for `programs.` and others)
-#            useRegistry = true;
-#            registry = { nixpkgs = "nixpkgs"; };
-#          };
+          # nixpkgs = {
+          #   # Ensures Nixpkgs schema support (autocomplete for `programs.` and others)
+          #   useRegistry = true;
+          #   registry = { nixpkgs = "nixpkgs"; };
+          # };
         };
         rootPatterns = [ "flake.nix" ];
       };
