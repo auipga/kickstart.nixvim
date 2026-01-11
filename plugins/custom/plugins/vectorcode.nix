@@ -55,7 +55,7 @@ let
           exclude_this = true,
           n_query = 1,
           notify = true,
-          timeout_ms = 30000,
+          timeout_ms = 5000,
           on_setup = {
             update = false, -- set to true to enable update when `setup` is called.
             lsp = false,
