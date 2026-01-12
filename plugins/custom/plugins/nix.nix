@@ -1,3 +1,4 @@
+{ config, lib, osConfig, pkgs, ... }:
 {
   programs.nixvim = {
     # https://github.com/figsoda/nix-develop.nvim
@@ -15,6 +16,25 @@
     # https://github.com/nix-community/nixd
     # https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.txt#nixd
     plugins.lsp.servers.nixd.enable = true;
+    plugins.lsp.servers.nixd = {
+      cmd = [
+        (lib.getExe config.programs.nixvim.plugins.lsp.servers.nixd.package)
+        "--log=error" # error|info|debug|verbose
+        "--inlay-hints=true" # default: true
+        "--semantic-tokens=true" # default: false
+      ];
+      settings = {
+        nixpkgs.expr =
+          "(builtins.getFlake (toString ./.)).inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}";
+        options.nixos.expr =
+          "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.${osConfig.networking.hostName}.options";
+        options.home-manager.expr =
+          "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.${osConfig.networking.hostName}.options.home-manager.users.type.getSubOptions []";
+        formatting = {
+          command = [ "nixfmt" ];
+        };
+      };
+    };
 
     # https://github.com/oxalica/nil
     # https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.txt#nil_ls
