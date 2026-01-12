@@ -5,11 +5,11 @@ in
 {
   programs.nixvim = {
     # https://github.com/OliverChao/telescope-picker-list.nvim/
-    extraPlugins = [
-      (pkgs.vimUtils.buildVimPlugin {
+    extraPlugins = with pkgs; [
+      (vimUtils.buildVimPlugin {
         pname = "telescope-picker-list";
         version = "2025-02-07";
-        src = pkgs.fetchFromGitHub {
+        src = fetchFromGitHub {
           owner = "OliverChao";
           repo = "telescope-picker-list.nvim";
           rev = "205f0525f1cf3e5988d792e2ed1a4b347e770c4f";

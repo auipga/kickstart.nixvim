@@ -6,11 +6,11 @@ in
   programs.nixvim = {
     # A neovim plugin that lets you easily create Telescope pickers from arbitrary console commands
     # https://github.com/axkirillov/easypick.nvim
-    extraPlugins = [
-      (pkgs.vimUtils.buildVimPlugin {
+    extraPlugins = with pkgs; [
+      (vimUtils.buildVimPlugin {
         pname = "easypick";
         version = "0.6.0"; # Apr 26, 2025
-        src = pkgs.fetchFromGitHub {
+        src = fetchFromGitHub {
           owner = "axkirillov";
           repo = "easypick.nvim";
           rev = "e623b38a0d8fb96446dd8dd3f38ccb545e1810a8";

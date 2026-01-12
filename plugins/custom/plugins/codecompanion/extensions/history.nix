@@ -7,8 +7,8 @@ in
     # A history management extension for codecompanion AI chat plugin
     # that enables saving, browsing and restoring chat sessions.
     # https://github.com/ravitemer/codecompanion-history.nvim
-    extraPlugins = [
-      pkgs.vimPlugins.codecompanion-history-nvim
+    extraPlugins = with pkgs; [
+      vimPlugins.codecompanion-history-nvim
     ];
 
     # Requirements

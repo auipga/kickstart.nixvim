@@ -2,7 +2,7 @@
 let
   # generate zsh completions
   vectorcodeCompletion = pkgs.runCommand "vectorcode-zsh-completion" {
-    nativeBuildInputs = [ pkgs.vectorcode ];
+    nativeBuildInputs = with pkgs; [ vectorcode ];
   } ''
     mkdir -p $out
     vectorcode --print-completion zsh > $out/_vectorcode
@@ -12,15 +12,15 @@ let
   programs.nixvim = {
     # Easily (and programmatically) inject task-relevant context from the project into the prompt
     # https://github.com/Davidyz/VectorCode/tree/main/docs/neovim
-    extraPlugins = [
-      # pkgs.vimPlugins.vectorcode-nvim # latest 0.7.19 (01.12.2025)
-      pkgs.vimPlugins.vectorcode-nvim # only 0.7.19 for now (21.12.2025) see https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vectorcode-nvim
+    extraPlugins = with pkgs; [
+      # vimPlugins.vectorcode-nvim # latest 0.7.19 (01.12.2025)
+      vimPlugins.vectorcode-nvim # only 0.7.19 for now (21.12.2025) see https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=vectorcode-nvim
 
       /*
-      (pkgs.vimUtils.buildVimPlugin {
+      (vimUtils.buildVimPlugin {
         pname = "vectorcode.nvim";
         version = "0.7.20";
-        src = pkgs.fetchFromGitHub {
+        src = fetchFromGitHub {
           owner = "Davidyz";
           repo = "VectorCode";
           tag = "0.7.20";
