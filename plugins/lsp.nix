@@ -10,7 +10,8 @@ in
 {
   programs.nixvim = {
     # Allows extra capabilities providied by nvim-cmp
-    # https://nix-community.github.io/nixvim/plugins/cmp-nvim-lsp.html
+    # https://github.com/hrsh7th/cmp-nvim-lsp/
+    # https://nix-community.github.io/nixvim/plugins/cmp-nvim-lsp/index.html
     plugins.cmp-nvim-lsp = {
       enable = true;
     };
