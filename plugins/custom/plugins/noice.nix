@@ -72,8 +72,8 @@ in
     # https://nix-community.github.io/nixvim/plugins/notify/index.html
     plugins.notify.enable = true;
     plugins.notify.settings = {
-      render = "wrapped-default"; # default: default
-      stages = "fade"; # default: fade_in_slide_out
+      render = "wrapped-default"; # default|minimal|simple|compact|wrapped-compact|wrapped-default
+      stages = "fade"; # fade_in_slide_out|fade|slide|static
     };
     # plugins.telescope.enable = true;
     # plugins.cmp.enable = true;
