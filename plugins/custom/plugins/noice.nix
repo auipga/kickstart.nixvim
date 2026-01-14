@@ -32,6 +32,9 @@ in
         presets = {
           lsp_doc_border = true;
         };
+
+        # alternative to fidget
+        lsp.progress.enabled = true; # default: true
       };
 
     keymaps = [
