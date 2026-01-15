@@ -1,4 +1,4 @@
-{ lib, ...}:
+{ config, lib, pkgs, ... }:
 let
   map = import ../../../lib/mkKeymap.nix { prefix = "[N]oice "; };
 in
