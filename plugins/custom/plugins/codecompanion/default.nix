@@ -202,6 +202,7 @@ in
         };
         diff = {
           enabled = true;
+          # NOTE: stay with the defaults (inline provider + float layout). The others feel less good.
           provider = "inline"; # mini_diff|split|inline*
           provider_opts = {
             # Options for inline diff provider
