@@ -204,10 +204,12 @@ in
           enabled = true;
           provider = "inline"; # mini_diff|split|inline*
           provider_opts = {
+            # Options for inline diff provider
             inline = {
               # Where to display the diff
-              layout = "float"; # float|buffer
+              layout = "float"; # float*|buffer
             };
+            # Options for the split provider
             split = {
               close_chat_at = 200; # default: 240, Close an open chat buffer if the total columns of your display are less than...
               layout = "vertical"; # vertical*|horizontal split for default provider
