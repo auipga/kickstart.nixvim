@@ -74,7 +74,7 @@ in
     # plugins.nui.enable = true;
     # https://github.com/rcarriga/nvim-notify/
     # https://nix-community.github.io/nixvim/plugins/notify/index.html
-    plugins.notify.enable = true;
+    plugins.notify.enable = false;
     plugins.notify.settings = {
       render = "wrapped-default"; # default|minimal|simple|compact|wrapped-compact|wrapped-default
       stages = "fade"; # fade_in_slide_out|fade|slide|static
