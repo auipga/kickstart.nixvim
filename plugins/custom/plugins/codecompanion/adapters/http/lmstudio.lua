@@ -5,7 +5,7 @@ function()
     env = { url = "http://localhost:1234", },
     schema = {
       model = {
-        -- default = "",
+        default = "ministral-3-8b-instruct-2512@q4_k_m",
       },
     },
   })
