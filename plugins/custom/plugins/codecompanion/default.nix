@@ -80,13 +80,14 @@ in
               )
             end
           '';
-          # tools = {
-          #   web_search = {
-          #     opts = {
-          #       adapter = ""; # default: tavily
-          #     };
-          #   };
-          # };
+          tools = {
+            # for reference and later use:
+            # web_search = {
+            #   opts = {
+            #     adapter = ""; # default: tavily
+            #   };
+            # };
+          };
           # variables = {
           ## buffer, lsp, viewport
           # };
