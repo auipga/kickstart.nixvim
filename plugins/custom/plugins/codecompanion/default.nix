@@ -295,6 +295,10 @@ in
           icon = "󰷊 ";
           highlight = "Normal";
         };
+        var = {
+          icon = "󰌕 ";
+          highlight = "Normal";
+        };
       };
     };
   };
