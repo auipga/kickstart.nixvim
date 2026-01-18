@@ -238,6 +238,7 @@ in
         # import nix files in ./extensions/
         # currently integrated:
         # ./extensions/history.nix
+        # ./extensions/mcp-hub.nix
         # ./extensions/spinner.nix
         # ./extensions/vectorcode.nix
       };
