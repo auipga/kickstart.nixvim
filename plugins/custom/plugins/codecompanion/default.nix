@@ -99,10 +99,23 @@ in
             completion_provider = "cmp"; # blink|cmp|coc default: default (will try in order)
           };
           keymaps = {
-            send.modes.i = [ "<C-CR>" "<C-s>" ];
-            # regenerate.modes.n = "g,"; # default: gr (overlaps gr_ for lsp stuff)
-            # codeblock.modes.n = "gC"; # default: gc (overlaps gcc for 'toggle comment')
-            # auto_tool_mode.modes.n = "g."; # default: gta (overlaps gt for 'next tab')
+            # just prepare to change gr
+            #regenerate.modes.n = "gr"; # default: gr (overlaps gr_ for lsp stuff)
+
+            # ga sends selection to the chat, creating an empty codeblock feels more related than change_adapter
+            codeblock.modes.n = "ga"; # default: gc (overlaps gcc for 'toggle comment')
+
+            # gm for change [m]odel
+            change_adapter.modes.n = "g<space>"; # default: ga
+
+            # z for folding
+            fold_code.modes.n = "gz"; # default: gf (overlaps gf for 'goto file')
+
+            # just prepare to change gty
+            #yolo_mode.modes.n = "gty"; # default: gty (overlaps gt for 'next tab')
+
+            # gf is vims default for goto_file
+            goto_file_under_cursor.modes.n = "gf"; # default: gR
           };
         };
 
