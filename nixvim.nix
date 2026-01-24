@@ -23,6 +23,7 @@ in
     ./plugins/custom/plugins/_.nix
     ./plugins/custom/plugins/ai-chatgpt.nix
     ./plugins/custom/plugins/ai-copilot.nix
+    ./plugins/custom/plugins/ale.nix
     ./plugins/custom/plugins/codecompanion/default.nix
     ./plugins/custom/plugins/codecompanion/extensions/history.nix
     ./plugins/custom/plugins/codecompanion/extensions/mcp-hub.nix
