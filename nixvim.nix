@@ -204,7 +204,7 @@ in
     #  See `:help lua-guide-autocommands`
     autoCmd = [
       # Highlight when yanking (copying) text
-      #  See `:help vim.highlight.on_yank()`
+      #  See `:help vim.hl.on_yank()`
       {
         event = [ "TextYankPost" ];
         desc = "Highlight when yanking (copying) text";
