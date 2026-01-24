@@ -165,6 +165,13 @@ in
       title = false;
     };
 
+    diagnostic.settings = {
+      # Show virtual line diagnostics
+      virtual_lines = true;
+      # Only show virtual line diagnostics for the current cursor line
+      # virtual_lines.current_line = true;
+    };
+
     # [[ Basic Keymaps ]]
     #  See `:help vim.keymap.set()`
     keymaps = [
