@@ -11,8 +11,8 @@ in
       settings = {
         ShortIndicators = true; # default: 0
         WindowLayout = 2; # default: 1
-        SplitWidth = 40; # default: 30 or 24 (with ShortIndicators)
-        DiffpanelHeight = 20;
+        # SplitWidth = 40; # default: 30 or 24 (with ShortIndicators)
+        # DiffpanelHeight = 20; # default: 10
         SetFocusWhenToggle = true; # default 0
         DiffCommand = "diff"; # default: diff
       };
