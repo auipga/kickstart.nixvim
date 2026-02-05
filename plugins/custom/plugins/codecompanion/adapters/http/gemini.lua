@@ -1,6 +1,6 @@
 function()
   return require("codecompanion.adapters").extend("gemini", {
-    env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/api-keys/work/GEMINI" },
+    env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/api-keys/GEMINI" },
     schema = {
       model       = { default = "gemini-2.5-flash" },
       max_tokens  = { default = 2048 },
