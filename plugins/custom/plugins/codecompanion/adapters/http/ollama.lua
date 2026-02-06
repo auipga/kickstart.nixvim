@@ -4,7 +4,7 @@ function()
     name = "ollama",
     formatted_name = "ollama",
     schema = {
-      model       = { default = "mistral:7b-instruct-v0.3-q4_K_M" },
+      model       = { default = "ministral-3:3b" },
       num_ctx     = { default = 16384 },
       think       = { default = false },
       keep_alive  = { default = "5m" },
