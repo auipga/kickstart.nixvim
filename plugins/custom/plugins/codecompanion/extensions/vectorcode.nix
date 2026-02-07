@@ -10,6 +10,8 @@
     # Configure the extension
     plugins.codecompanion.settings = {
       extensions.vectorcode.enabled = true;
+      extensions.vectorcode.opts.prompt_library = {
+      };
 
       # Setup: add to context.providers in ../default.nix
       # { name = "vectorcode"; opts = { top_k = 15; }; }
