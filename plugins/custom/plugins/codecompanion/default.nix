@@ -300,6 +300,10 @@ in
           icon = "󰘓 ";
           highlight = "Normal";
         };
+        group = {
+          icon = " ";
+          highlight = "Normal";
+        };
         tool = {
           icon = " ";
           highlight = "Normal";
