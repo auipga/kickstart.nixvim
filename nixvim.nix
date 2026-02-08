@@ -193,8 +193,8 @@ in
       # (map [ "<C-k>"  "<C-w><C-k>"  "Move focus to the upper window"  ])
 
       # exit insert mode without <Esc> (https://github.com/omerxx/dotfiles/blob/c52df4/nvim/lua/config/keymaps.lua)
-      (map [ "jj"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
-      (map [ "jk"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
+      # (map [ "jj"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
+      # (map [ "jk"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
 
       # for convenience:
       (map [ "<C-s>"       "<Esc><Cmd>w<CR>"   "Save file"  [ "n" "i" ]  { noremap = true; silent = true; }  ])
