@@ -30,6 +30,7 @@ in
     ./plugins/custom/plugins/codecompanion/extensions/spinner.nix
     ./plugins/custom/plugins/codecompanion/extensions/vectorcode.nix
     ./plugins/custom/plugins/auto-session.nix
+    ./plugins/custom/plugins/cmp-ai.nix
     ./plugins/custom/plugins/dial.nix
     # ./plugins/custom/plugins/easypick.nix
     ./plugins/custom/plugins/lazygit.nix
