@@ -34,6 +34,7 @@ in
     ./plugins/custom/plugins/dial.nix
     # ./plugins/custom/plugins/easypick.nix
     ./plugins/custom/plugins/lazygit.nix
+    ./plugins/custom/plugins/llama.nix
     ./plugins/custom/plugins/lualine.nix
     ./plugins/custom/plugins/nix.nix
     ./plugins/custom/plugins/noice.nix
