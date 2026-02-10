@@ -148,6 +148,7 @@ in
         markdown = {
           dirs.__raw = ''{
             vim.fn.getcwd() .. "/.prompts",
+            "~/dev/prompts/CodeCompanion"
           }'';
         };
       }
