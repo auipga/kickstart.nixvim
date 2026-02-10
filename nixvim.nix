@@ -169,7 +169,7 @@ in
 
     diagnostic.settings = {
       # Show virtual line diagnostics
-      virtual_lines = true;
+      # virtual_lines = true;
       # Only show virtual line diagnostics for the current cursor line
       # virtual_lines.current_line = true;
     };
