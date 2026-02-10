@@ -10,7 +10,7 @@ function()
       think       = { default = false },
       keep_alive  = { default = "5m" },
       max_tokens  = { default = 2000 },
-      temperature = { default = 0.2 },
+      temperature = { default = 0.1 },
       top_p       = { default = 0.95 },
     },
     tools = {
