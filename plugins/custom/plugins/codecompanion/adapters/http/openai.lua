@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: miss-name
 function()
   return require("codecompanion.adapters").extend("openai", {
     env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/api-keys/work/OPENAI" },

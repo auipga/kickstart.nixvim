@@ -1,4 +1,5 @@
 -- TODO: https://codecompanion.olimorris.dev/extending/adapters#function-calling-tool-use
+---@diagnostic disable-next-line: miss-name
 function()
   return require("codecompanion.adapters").extend("ollama", {
     name = "ollama",

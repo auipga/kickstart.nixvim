@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: miss-name
 function()
   return require("codecompanion.adapters").extend("gemini", {
     env = { api_key = "cmd:cat $HOME/.config/sops-nix/secrets/api-keys/GEMINI" },

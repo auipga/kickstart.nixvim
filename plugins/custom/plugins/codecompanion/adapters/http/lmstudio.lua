@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: miss-name
 function()
   return require("codecompanion.adapters").extend("openai_compatible", {
     name = "lmstudio",
