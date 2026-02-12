@@ -36,7 +36,7 @@ in
     ./plugins/custom/plugins/lazygit.nix
     ./plugins/custom/plugins/llama.nix
     ./plugins/custom/plugins/lualine.nix
-    ./plugins/custom/plugins/nix.nix
+    ./plugins/custom/plugins/nix/default.nix
     ./plugins/custom/plugins/noice.nix
     ./plugins/custom/plugins/obsidian.nix
     # ./plugins/custom/plugins/php.nix # directly imported by home-manager/modules/coding-php.nix
