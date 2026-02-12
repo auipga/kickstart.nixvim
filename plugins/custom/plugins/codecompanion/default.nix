@@ -37,6 +37,7 @@ in
         gemini.__raw  = builtins.readFile ./adapters/http/gemini.lua;
         lms.__raw     = builtins.readFile ./adapters/http/lmstudio.lua;
         ollama.__raw  = builtins.readFile ./adapters/http/ollama.lua;
+        llama-cpp.__raw = builtins.readFile ./adapters/http/llama-cpp.lua;
       };
 
       context = {
