@@ -1,4 +1,4 @@
-{ lib, mcp-hub, mcphub-nvim, ... } :
+{ lib, pkgs, mcp-hub, ... } :
 let
   map = import ../../../lib/mkKeymap.nix { };
 in
@@ -10,7 +10,7 @@ in
   programs.nixvim = {
     # An MCP client that seamlessly integrates MCP servers into your editing workflow
     # https://github.com/ravitemer/mcphub.nvim
-    extraPlugins = [ mcphub-nvim ];
+    extraPlugins = with pkgs.vimPlugins; [ mcphub-nvim ];
 
     # Configuration
     plugins.codecompanion.luaConfig.pre = lib.mkAfter ''
