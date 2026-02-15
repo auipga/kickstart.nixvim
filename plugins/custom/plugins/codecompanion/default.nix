@@ -1,6 +1,11 @@
 { lib, ... }:
 let
   mapP = import ../../../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
+  defaultAdapter = "lms"; # openai|gemini|lms|ollama|llama-cpp
+  # defaultAdapter = {
+  #   name = "lms"; # openai|gemini|lms|ollama|llama-cpp
+  #   model = "[must not be unset]";
+  # };
 in
 {
   programs.nixvim = {
@@ -51,11 +56,7 @@ in
       interactions = {
         # BACKGROUND INTERACTION -------------------------------------------------
         background = {
-          adapter = "lms";
-          # adapter = {
-          #   name = "lms"; # default: copilot
-          #   model = "[must not be unset]"; # default: gpt-4.1
-          # };
+          adapter = defaultAdapter;
           chat = {
             # INFO: this is enabled by default:
             # - interactions.background.builtin.chat_make_title
@@ -68,11 +69,7 @@ in
 
         # CHAT INTERACTION -------------------------------------------------------
         chat = {
-          adapter = "lms";
-          # adapter = {
-          #   name = "lms";
-          #   model = "[must not be unset]";
-          # };
+          adapter = defaultAdapter;
           roles.llm.__raw = ''
             function(adapter)
               return string.format("%s (%s)",
@@ -122,11 +119,7 @@ in
 
         # INLINE INTERACTION -----------------------------------------------------
         inline = {
-          adapter = "lms";
-          # adapter = {
-          #   name = "lms";
-          #   model = "[must not be unset]";
-          # };
+          adapter = defaultAdapter;
           keymaps = {
             # accept_change.modes.n = ""; # default: ga
             # reject_change.modes.n = ""; # default: gr
@@ -135,11 +128,7 @@ in
 
         # CMD INTERACTION --------------------------------------------------------
         cmd = {
-          adapter = "lms";
-          # adapter = {
-          #   name = "lms";
-          #   model = "[must not be unset]";
-          # };
+          adapter = defaultAdapter;
         };
       };
 
