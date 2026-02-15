@@ -34,7 +34,7 @@ in
           augend.hexcolor.new{                   -- #1A1A1A, #eeFEFE, #55Ff00 #1fF0a0 #909090
             case = "prefer_upper", -- upper|prefer_upper|prefer_lower|lower
           },
-          require("dial_comment_enum").new({ cyclic = false }),
+          require("dial_comment_enum").new({ cyclic = true }),
           -- cp ../../../lua/dial_comment_enum.lua
           -- to ~/.config/nvim/lua/dial_comment_enum.lua
         },
