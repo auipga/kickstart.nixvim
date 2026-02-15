@@ -1,7 +1,7 @@
 { lib, ... }:
 let
   mapP = import ../../../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
-  defaultAdapter = "lms"; # openai|gemini|lms|ollama|llama-cpp
+  defaultAdapter = "llama-cpp"; # open-ai|gemini|lms|ollama|llama-cpp
   # defaultAdapter = {
   #   name = "lms"; # openai|gemini|lms|ollama|llama-cpp
   #   model = "[must not be unset]";
