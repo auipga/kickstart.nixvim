@@ -260,10 +260,7 @@ in
     # Suggested Plugin Workflow
     # https://codecompanion.olimorris.dev/getting-started.html#suggested-plugin-workflow
     # Expand 'cc' into 'CodeCompanion' in the command line
-    extraConfigLua = ''
-      vim.cmd([[cab cc  CodeCompanion]])
-      vim.cmd([[cab ccc CodeCompanionCmd]])
-    '';
+    extraConfigLua = "vim.cmd([[cab cc CodeCompanion]])";
     keymaps = [
       (mapP [ "<leader>."  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" ]  ])
       (mapP [ "<m-u>"      "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" "i" ]  ]) # good for dvorak+hrm
