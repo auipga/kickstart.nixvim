@@ -7,6 +7,7 @@ let
 in
 {
   imports = [
+    ./integrations.nix
     ./keymaps.nix
   ];
 
@@ -263,41 +264,5 @@ in
     # https://codecompanion.olimorris.dev/getting-started.html#suggested-plugin-workflow
     # Expand 'cc' into 'CodeCompanion' in the command line
     extraConfigLua = "vim.cmd([[cab cc CodeCompanion]])";
-
-
-    # Integrations
-    plugins.lualine.settings = {
-      options.ignore_focus = lib.mkAfter [ "codecompanion" ];
-    };
-    plugins.render-markdown.settings = {
-      # Replace tags with icons:
-      # Nerdfont icons:  󰈔   󰈤 󰘓  󰈙   󰈠 󰈞 󱝴 󱅷 
-      html.tag = {
-        file = {
-          icon = "󰈙 ";
-          highlight = "Normal";
-        };
-        rules = {
-          icon = "󰘓 ";
-          highlight = "Normal";
-        };
-        group = {
-          icon = " ";
-          highlight = "Normal";
-        };
-        tool = {
-          icon = " ";
-          highlight = "Normal";
-        };
-        buf = {
-          icon = "󰷊 ";
-          highlight = "Normal";
-        };
-        var = {
-          icon = "󰌕 ";
-          highlight = "Normal";
-        };
-      };
-    };
   };
 }
