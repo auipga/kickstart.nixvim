@@ -1,6 +1,4 @@
-{ lib, ... }:
 let
-  mapP = import ../../../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
   defaultAdapter = "llama-cpp"; # open-ai|gemini|lms|ollama|llama-cpp
   # defaultAdapter = {
   #   name = "lms"; # openai|gemini|lms|ollama|llama-cpp
@@ -8,6 +6,10 @@ let
   # };
 in
 {
+  imports = [
+    ./keymaps.nix
+  ];
+
   programs.nixvim = {
     # AI-powered coding, seamlessly in Neovim
     # https://github.com/olimorris/codecompanion.nvim/
@@ -261,16 +263,7 @@ in
     # https://codecompanion.olimorris.dev/getting-started.html#suggested-plugin-workflow
     # Expand 'cc' into 'CodeCompanion' in the command line
     extraConfigLua = "vim.cmd([[cab cc CodeCompanion]])";
-    keymaps = [
-      (mapP [ "<leader>."  "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" ]  ])
-      (mapP [ "<m-u>"      "<cmd>CodeCompanionChat Toggle<cr>"   "Toggle Chat"        [ "n" "v" "i" ]  ]) # good for dvorak+hrm
-      (mapP [ "<m-p>"      "<cmd>CodeCompanionActions<cr>"       "Actions"            [ "n" "v" "i" ]  ]) # good for dvorak+hrm
-      (mapP [ "<m-y>"      "<cmd>CodeCompanionSummaries<cr>"     "Summaries"          [ "n" "v" "i" ]  ]) # good for dvorak+hrm
-      (mapP [ "ga"         "<cmd>CodeCompanionChat Add<cr>"      "Add selection to Chat"  [ "v" ]  ])
 
-      # (mapP [ "<C-A>"  ''require("codecompanion").inline_accept_word()''  "Accept Word"   [ "i" ]  ])
-      # (mapP [ "<C-L>"  ''require("codecompanion").inline_accept_line()''  "Accept Line"   [ "i" ]  ])
-    ];
 
     # Integrations
     plugins.lualine.settings = {
