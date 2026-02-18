@@ -17,15 +17,6 @@ in
     # https://nix-community.github.io/nixvim/plugins/codecompanion/index.html
     plugins.codecompanion.enable = true;
 
-    # Optional but recommended runtime deps:
-    plugins.treesitter.enable = true;
-    plugins.telescope.enable = true; # for slash-command pickers
-    plugins.cmp.enable = true; # if you’d like to complete slash commands
-
-    plugins.cmp.settings.sources = [
-      { name = "codecompanion"; }
-    ];
-
     # default config.lua:
     # https://github.com/olimorris/codecompanion.nvim/blob/main/lua/codecompanion/config.lua
     plugins.codecompanion.settings = {
