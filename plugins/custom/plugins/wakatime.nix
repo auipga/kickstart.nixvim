@@ -5,6 +5,7 @@
     plugins.wakatime.enable = true;
     # Setup:
     # :WakaTimeApiKey<cr>
+    # TODO: add key to wakatime.cfg home file via sops
     # https://wakatime.com/settings/account
   };
 }
