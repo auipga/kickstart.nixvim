@@ -21,6 +21,7 @@
           ];
         };
       };
+      # TODO: use this for mcp, surrealdb and all others too
 
       # Setup: add to context.providers in ../default.nix
       # { name = "vectorcode"; opts = { top_k = 15; }; }
