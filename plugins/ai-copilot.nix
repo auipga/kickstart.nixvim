@@ -1,6 +1,6 @@
 {
   programs.nixvim = {
-    plugins.copilot-lua.enable = false; # preferable over official copilot-vim
+    plugins.copilot-lua.enable = true; # preferable over official copilot-vim
     # setup:
     # :Copilot auth
     #

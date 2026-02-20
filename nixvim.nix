@@ -21,8 +21,8 @@ in
     ./plugins/neo-tree.nix
 
     ./plugins/_.nix
-    ./plugins/ai-chatgpt.nix
-    ./plugins/ai-copilot.nix
+    # ./plugins/ai-chatgpt.nix
+    # ./plugins/ai-copilot.nix
     ./plugins/ale.nix
     ./plugins/codecompanion/default.nix
     ./plugins/codecompanion/extensions/history.nix
