@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... } :
+{ config, lib, pkgs, ... }:
 let
   # generate zsh completions
   vectorcodeCompletion = pkgs.runCommand "vectorcode-zsh-completion" {
@@ -7,7 +7,7 @@ let
     mkdir -p $out
     vectorcode --print-completion zsh > $out/_vectorcode
   '';
-  in
+in
 {
   programs.nixvim = {
     # Easily (and programmatically) inject task-relevant context from the project into the prompt

@@ -1,8 +1,8 @@
 {
   programs.nixvim = {
+    # https://github.com/folke/snacks.nvim
+    # https://nix-community.github.io/nixvim/plugins/snacks/settings/index.html
     plugins.snacks = {
-      # https://github.com/folke/snacks.nvim
-      # https://nix-community.github.io/nixvim/plugins/snacks/settings/index.html
       enable = true;
       settings = {
         notifier = {
