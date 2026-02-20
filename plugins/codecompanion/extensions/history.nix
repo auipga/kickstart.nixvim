@@ -1,6 +1,6 @@
 { pkgs, ... } :
 let
-  map = import ../../../lib/mkKeymap.nix { extraOpts = { noremap = true; silent = true; }; };
+  kmap = import ../../../lib/mkKeymap.nix { extraOpts = { noremap = true; silent = true; }; };
 in
 {
   programs.nixvim = {
@@ -36,7 +36,7 @@ in
     };
 
     keymaps = [
-     (map  [ "<leader>sa"  "<cmd>CodeCompanionHistory<cr>"  "[S]earch [A]I History"  ])
+     (kmap  [ "<leader>sa"  "<cmd>CodeCompanionHistory<cr>"  "[S]earch [A]I History"  ])
     ];
   };
 }

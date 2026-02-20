@@ -1,5 +1,5 @@
 #let
-#  map = import ../lib/mkKeymap.nix { };
+#  kmap = import ../lib/mkKeymap.nix { };
 #in
 {
   programs.nixvim = {
@@ -14,10 +14,10 @@
 
 #    keymaps = [
 # TODO: this will override t = tnext/tprevious, T = tlast/trewind
-#      (map [ "]t"  "<cmd>lua require('todo-comments').jump_next()<CR>"  "Next todo comment" ])
-#      (map [ "[t"  "<cmd>lua require('todo-comments').jump_prev()<CR>"  "Previous todo comment" ])
-#      (map [ "]T"  "<cmd>lua require('todo-comments').jump_next({keywords = { \"ERROR\", \"WARNING\" }})<CR>"  "Next error/warning comment" ])
-#      (map [ "[T"  "<cmd>lua require('todo-comments').jump_prev({keywords = { \"ERROR\", \"WARNING\" }})<CR>"  "Previous error/warning comment" ])
+#      (kmap [ "]t"  "<cmd>lua require('todo-comments').jump_next()<CR>"  "Next todo comment" ])
+#      (kmap [ "[t"  "<cmd>lua require('todo-comments').jump_prev()<CR>"  "Previous todo comment" ])
+#      (kmap [ "]T"  "<cmd>lua require('todo-comments').jump_next({keywords = { \"ERROR\", \"WARNING\" }})<CR>"  "Next error/warning comment" ])
+#      (kmap [ "[T"  "<cmd>lua require('todo-comments').jump_prev({keywords = { \"ERROR\", \"WARNING\" }})<CR>"  "Previous error/warning comment" ])
 #    ];
   };
 }

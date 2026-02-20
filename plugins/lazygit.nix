@@ -1,6 +1,6 @@
 # see home-manager/modules/coding/lazygit.nix
 let
-  map = import ../lib/mkKeymap.nix { };
+  kmap = import ../lib/mkKeymap.nix { };
 in
 {
   programs.nixvim = {
@@ -9,7 +9,7 @@ in
     plugins.lazygit.enable = true;
 
     keymaps = [
-      (map [ "<m-g>"       "<cmd>LazyGitCurrentFile<CR>"  "LazyGitCurrentFile"  ])
+      (kmap [ "<m-g>"       "<cmd>LazyGitCurrentFile<CR>"  "LazyGitCurrentFile"  ])
     ];
   };
 }

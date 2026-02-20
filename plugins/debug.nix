@@ -1,6 +1,6 @@
 let
-  mapP = import ../lib/mkKeymap.nix { prefix = "Debug: "; };
-  mapPR = import ../lib/mkKeymap.nix { prefix = "Debug: "; raw = true; };
+  kmapP = import ../lib/mkKeymap.nix { prefix = "Debug: "; };
+  kmapPR = import ../lib/mkKeymap.nix { prefix = "Debug: "; raw = true; };
 in
 {
   programs.nixvim = {
@@ -48,19 +48,19 @@ in
 
     keymaps = [
       # Basic debugging keymaps, feel free to change to your liking!
-      (mapP  [ "<F5>"       "<cmd>DapContinue<CR>"          "Start/Continue"     ])
-      (mapP  [ "<F1>"       "<cmd>DapStepInto<CR>"          "Step Into"          ])
-      (mapP  [ "<F2>"       "<cmd>DapStepOver<CR>"          "Step Over"          ])
-      (mapP  [ "<F3>"       "<cmd>DapStepOut<CR>"           "Step Out"           ])
-      (mapP  [ "<leader>b"  "<cmd>DapToggleBreakpoint<CR>"  "Toggle [b]reakpoint"  ])
-      (mapPR [ "<leader>B"  ''
+      (kmapP  [ "<F5>"       "<cmd>DapContinue<CR>"          "Start/Continue"     ])
+      (kmapP  [ "<F1>"       "<cmd>DapStepInto<CR>"          "Step Into"          ])
+      (kmapP  [ "<F2>"       "<cmd>DapStepOver<CR>"          "Step Over"          ])
+      (kmapP  [ "<F3>"       "<cmd>DapStepOut<CR>"           "Step Out"           ])
+      (kmapP  [ "<leader>b"  "<cmd>DapToggleBreakpoint<CR>"  "Toggle [b]reakpoint"  ])
+      (kmapPR [ "<leader>B"  ''
           function()
             require('dap').set_breakpoint(vim.fn.input '[B]reakpoint condition: ')
           end
         ''  "Set Breakpoint" ])
       # Toggle to see last session result. Without this, you can't see session output
       # in case of unhandled exception.
-      (mapPR [ "<F7>"  ''
+      (kmapPR [ "<F7>"  ''
           function()
             require('dapui').toggle()
           end

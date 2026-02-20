@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  mapR = import ../lib/mkKeymap.nix { raw = true; };
+  kmapR = import ../lib/mkKeymap.nix { raw = true; };
 in
 {
   programs.nixvim = {
@@ -42,13 +42,13 @@ in
     };
 
     keymaps = [
-      (mapR [ "<leader>f"  ''
+      (kmapR [ "<leader>f"  ''
           function()
             require('conform').format { async = true, lsp_fallback = true }
           end
         ''  "[F]ormat buffer"  ])
       # TODO: make it work
-      (mapR [ "<leader>f"  ''
+      (kmapR [ "<leader>f"  ''
           function()
             require("conform").format {
               range = {

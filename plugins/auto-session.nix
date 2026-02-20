@@ -1,5 +1,5 @@
 let
-  mapP = import ../lib/mkKeymap.nix { prefix = "Session "; };
+  kmapP = import ../lib/mkKeymap.nix { prefix = "Session "; };
 in
 {
   programs.nixvim = {
@@ -35,10 +35,10 @@ in
     };
 
     keymaps = [
-      (mapP [ "<leader>ww"  "<cmd>AutoSession search<CR>"         "Search..."          ])
-      (mapP [ "<leader>wW"  "<cmd>AutoSession save<CR>"           "Save / [W]rite"     ])
-      (mapP [ "<leader>wa"  "<cmd>AutoSession toggle<CR>"         "Toggle [a]utosave"  ])
-      (mapP [ "<leader>wx"  "<cmd>AutoSession purgeOrphaned<CR>"  "Remove orphaned"    ])
+      (kmapP [ "<leader>ww"  "<cmd>AutoSession search<CR>"         "Search..."          ])
+      (kmapP [ "<leader>wW"  "<cmd>AutoSession save<CR>"           "Save / [W]rite"     ])
+      (kmapP [ "<leader>wa"  "<cmd>AutoSession toggle<CR>"         "Toggle [a]utosave"  ])
+      (kmapP [ "<leader>wx"  "<cmd>AutoSession purgeOrphaned<CR>"  "Remove orphaned"    ])
     ];
 
     plugins.which-key.settings.spec = [

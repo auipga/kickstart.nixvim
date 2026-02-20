@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  map = import ../lib/mkKeymap.nix { };
+  kmap = import ../lib/mkKeymap.nix { };
 in
 {
   programs.nixvim = {
@@ -55,9 +55,9 @@ in
     '';
 
     keymaps = [
-      (map [ "<leader>se"  "<cmd>Easypick<cr>"            "[S]earch [E]asypick"      ])
-      (map [ "<leader>el"  "<cmd>Easypick ls<cr>"         "[E]asypick [l]s"          ])
-      (map [ "<leader>ec"  "<cmd>Easypick conflicts<cr>"  "[E]asypick [c]onflicts"   ])
+      (kmap [ "<leader>se"  "<cmd>Easypick<cr>"            "[S]earch [E]asypick"      ])
+      (kmap [ "<leader>el"  "<cmd>Easypick ls<cr>"         "[E]asypick [l]s"          ])
+      (kmap [ "<leader>ec"  "<cmd>Easypick conflicts<cr>"  "[E]asypick [c]onflicts"   ])
     ];
 
     plugins.which-key.settings.spec = [

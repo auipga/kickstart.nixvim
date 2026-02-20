@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  map = import ../lib/mkKeymap.nix { prefix = "[N]oice "; };
+  kmap = import ../lib/mkKeymap.nix { prefix = "[N]oice "; };
 in
 {
   programs.nixvim = {
@@ -42,12 +42,12 @@ in
       };
 
     keymaps = [
-      (map [ "<leader>nn" "<cmd>Noice<CR>"            ""    ]) # same as 'history'
-      (map [ "<leader>nh" "<cmd>Noice history<CR>"    "[H]istory"    ])
-      (map [ "<leader>nl" "<cmd>Noice last<CR>"       "[L]ast"       ])
-      (map [ "<leader>nd" "<cmd>Noice dismiss<CR>"    "[D]ismiss"    ])
-      (map [ "<leader>nt" "<cmd>Noice telescope<CR>"  "[T]elescope"  ])
-      (map [ "<leader>ne" "<cmd>Noice errors<CR>"     "[E]rrors"     ])
+      (kmap [ "<leader>nn" "<cmd>Noice<CR>"            ""    ]) # same as 'history'
+      (kmap [ "<leader>nh" "<cmd>Noice history<CR>"    "[H]istory"    ])
+      (kmap [ "<leader>nl" "<cmd>Noice last<CR>"       "[L]ast"       ])
+      (kmap [ "<leader>nd" "<cmd>Noice dismiss<CR>"    "[D]ismiss"    ])
+      (kmap [ "<leader>nt" "<cmd>Noice telescope<CR>"  "[T]elescope"  ])
+      (kmap [ "<leader>ne" "<cmd>Noice errors<CR>"     "[E]rrors"     ])
     ];
 
     plugins.which-key.settings.spec = [

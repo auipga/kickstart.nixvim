@@ -1,5 +1,5 @@
 let
-  map = import ../lib/mkKeymap.nix { };
+  kmap = import ../lib/mkKeymap.nix { };
 in
 {
   programs.nixvim = {
@@ -15,7 +15,7 @@ in
     };
 
     keymaps = [
-      (map [ "<leader>tc"  "<cmd>TSContext toggle<CR>"  "[T]oggle [C]ontext"  ])
+      (kmap [ "<leader>tc"  "<cmd>TSContext toggle<CR>"  "[T]oggle [C]ontext"  ])
     ];
   };
 }

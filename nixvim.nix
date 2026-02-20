@@ -1,6 +1,6 @@
 { lib, config, ... }:
 let
-  map = import ./lib/mkKeymap.nix { };
+  kmap = import ./lib/mkKeymap.nix { };
 in
 {
   imports = [
@@ -178,30 +178,30 @@ in
     #  See `:help vim.keymap.set()`
     keymaps = [
       # Clear highlights on search when pressing <Esc> in normal mode
-      (map [ "<Esc>"  "<cmd>nohlsearch<CR>"  "Clear highlights on search"      ])
+      (kmap [ "<Esc>"  "<cmd>nohlsearch<CR>"  "Clear highlights on search"      ])
       # Disable arrow keys in normal mode
-      # (map [ "<left>"   "<cmd>echo 'Use h to move!!'<CR>"  ])
-      # (map [ "<right>"  "<cmd>echo 'Use l to move!!'<CR>"  ])
-      # (map [ "<up>"     "<cmd>echo 'Use k to move!!'<CR>"  ])
-      # (map [ "<down>"   "<cmd>echo 'Use j to move!!'<CR>"  ])
+      # (kmap [ "<left>"   "<cmd>echo 'Use h to move!!'<CR>"  ])
+      # (kmap [ "<right>"  "<cmd>echo 'Use l to move!!'<CR>"  ])
+      # (kmap [ "<up>"     "<cmd>echo 'Use k to move!!'<CR>"  ])
+      # (kmap [ "<down>"   "<cmd>echo 'Use j to move!!'<CR>"  ])
 
       # Keybinds to make split navigation easier.
       #  Use CTRL+<hjkl> to switch between windows
       #
       #  See `:help wincmd` for a list of all window commands
-      # (map [ "<C-h>"  "<C-w><C-h>"  "Move focus to the left window"   ])
-      # (map [ "<C-l>"  "<C-w><C-l>"  "Move focus to the right window"  ])
-      # (map [ "<C-j>"  "<C-w><C-j>"  "Move focus to the lower window"  ])
-      # (map [ "<C-k>"  "<C-w><C-k>"  "Move focus to the upper window"  ])
+      # (kmap [ "<C-h>"  "<C-w><C-h>"  "Move focus to the left window"   ])
+      # (kmap [ "<C-l>"  "<C-w><C-l>"  "Move focus to the right window"  ])
+      # (kmap [ "<C-j>"  "<C-w><C-j>"  "Move focus to the lower window"  ])
+      # (kmap [ "<C-k>"  "<C-w><C-k>"  "Move focus to the upper window"  ])
 
       # exit insert mode without <Esc> (https://github.com/omerxx/dotfiles/blob/c52df4/nvim/lua/config/keymaps.lua)
-      # (map [ "jj"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
-      # (map [ "jk"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
+      # (kmap [ "jj"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
+      # (kmap [ "jk"  "<Esc>"  "Exit insert mode"  "i" { noremap = true; silent = true; } ])
 
       # for convenience:
-      (map [ "<C-s>"       "<Esc><Cmd>w<CR>"   "Save file"  [ "n" "i" ]  { noremap = true; silent = true; }  ])
-      (map [ "<C-s><C-s>"  "<Esc><Cmd>wa<CR>"  "Save all"   [ "n" "i" ]  { noremap = true; silent = true; }  ])
-      (map [ "<m-q>"       "<Cmd>qa<CR>"       "Quit"       [ "n" "i" ]  { noremap = true; silent = true; }  ])
+      (kmap [ "<C-s>"       "<Esc><Cmd>w<CR>"   "Save file"  [ "n" "i" ]  { noremap = true; silent = true; }  ])
+      (kmap [ "<C-s><C-s>"  "<Esc><Cmd>wa<CR>"  "Save all"   [ "n" "i" ]  { noremap = true; silent = true; }  ])
+      (kmap [ "<m-q>"       "<Cmd>qa<CR>"       "Quit"       [ "n" "i" ]  { noremap = true; silent = true; }  ])
     ];
 
     autoGroups = {

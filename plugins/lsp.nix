@@ -4,7 +4,7 @@ let
   #
   # In this case, we create a function that lets us more easily define mappings.
   # It sets the mode, buffer and description for us each time.
-  map = import ../lib/mkKeymap.nix { prefix = "LSP: "; };
+  kmap = import ../lib/mkKeymap.nix { prefix = "LSP: "; };
   mkPluginKeymaps = import ../lib/mkPluginKeymap.nix { };
 in
 {
@@ -90,22 +90,22 @@ in
           # Jump to the definition of the word under your cusor.
           #  This is where a variable was first declared, or where a function is defined, etc.
           #  To jump back, press <C-t>.
-          (map [ "gd"          "<cmd>Telescope lsp_definitions<cr>"                "[G]oto [D]efinition"      ])
+          (kmap [ "gd"          "<cmd>Telescope lsp_definitions<cr>"                "[G]oto [D]efinition"      ])
           # Find references for the word under your cursor.
-          (map [ "gR"          "<cmd>Telescope lsp_references<cr>"                 "[G]oto [R]eferences"      ])
+          (kmap [ "gR"          "<cmd>Telescope lsp_references<cr>"                 "[G]oto [R]eferences"      ])
           # Jump to the implementation of the word under your cursor.
           #  Useful when your language has ways of declaring types without an actual implementation.
-          (map [ "gI"          "<cmd>Telescope lsp_implementations<cr>"            "[G]oto [I]mplementation"  ])
+          (kmap [ "gI"          "<cmd>Telescope lsp_implementations<cr>"            "[G]oto [I]mplementation"  ])
           # Jump to the type of the word under your cursor.
           #  Useful when you're not sure what type a variable is and you want to see
           #  the definition of its *type*, not where it was *defined*.
-          (map [ "<leader>D"   "<cmd>Telescope lsp_type_definitions<cr>"           "Type [D]efinition"        ])
+          (kmap [ "<leader>D"   "<cmd>Telescope lsp_type_definitions<cr>"           "Type [D]efinition"        ])
           # Fuzzy find all the symbols in your current document.
           #  Symbols are things like variables, functions, types, etc.
-          (map [ "<leader>ds"  "<cmd>Telescope lsp_document_symbols<cr>"           "[D]ocument [S]ymbols"     ])
+          (kmap [ "<leader>ds"  "<cmd>Telescope lsp_document_symbols<cr>"           "[D]ocument [S]ymbols"     ])
           # Fuzzy find all the symbols in your current workspace.
           #  Similar to document symbols, except searches over your entire project.
-          (map [ "<leader>ws"  "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>"  "[W]orkspace [S]ymbols"    ])
+          (kmap [ "<leader>ws"  "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>"  "[W]orkspace [S]ymbols"    ])
         ];
 
         lspBuf = mkPluginKeymaps [

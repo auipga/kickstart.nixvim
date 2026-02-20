@@ -1,6 +1,6 @@
 { lib, ... }:
 let
-  map = import ../lib/mkKeymap.nix { };
+  kmap = import ../lib/mkKeymap.nix { };
 in
 {
   programs.nixvim = {
@@ -19,7 +19,7 @@ in
     };
 
     keymaps = [
-      (map [ "<leader>tu"  "<cmd>UndotreeToggle<CR>"  "[T]oggle [U]ndotree"  ])
+      (kmap [ "<leader>tu"  "<cmd>UndotreeToggle<CR>"  "[T]oggle [U]ndotree"  ])
     ];
 
     # Integrations

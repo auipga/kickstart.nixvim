@@ -1,7 +1,7 @@
 let
-  mapR = import ../lib/mkKeymap.nix { raw = true; };
-  mapP = import ../lib/mkKeymap.nix { prefix = "[S]earch "; };
-  mapPR = import ../lib/mkKeymap.nix { prefix = "[S]earch "; raw = true; };
+  kmapR = import ../lib/mkKeymap.nix { raw = true; };
+  kmapP = import ../lib/mkKeymap.nix { prefix = "[S]earch "; };
+  kmapPR = import ../lib/mkKeymap.nix { prefix = "[S]earch "; raw = true; };
   mkPluginKeymaps = import ../lib/mkPluginKeymap.nix { descInOptions = true; };
 in
 {
@@ -87,7 +87,7 @@ in
     keymaps = [
       # Slightly advanced example of overriding default behavior and theme
         # You can pass additional configuration to Telescope to change the theme, layout, etc.
-      (mapR [ "<leader>/" ''
+      (kmapR [ "<leader>/" ''
           function()
             require('telescope.builtin').current_buffer_fuzzy_find(
               require('telescope.themes').get_dropdown {
@@ -98,7 +98,7 @@ in
           end
         ''  "[/] Fuzzily search in current buffer"  ])
         # It's also possible to pass additional configuration options.
-      (mapPR [ "<leader>s/"
+      (kmapPR [ "<leader>s/"
         #  See `:help telescope.builtin.live_grep()` for information about particular keys
         ''
           function()
@@ -109,7 +109,7 @@ in
           end
         ''  "[/] in Open Files"  ])
       # Shortcut for searching your Nixvim configuration files
-      (mapPR [ "<leader>snv" ''
+      (kmapPR [ "<leader>snv" ''
           function()
             require('telescope.builtin').find_files {
               cwd = "$HOME/nixos-config/kickstart.nixvim/"
@@ -117,7 +117,7 @@ in
           end
         ''  "[N]ix[v]im files"  ])
       # Shortcut for searching your NixOS configuration files
-      (mapPR [ "<leader>sno" ''
+      (kmapPR [ "<leader>sno" ''
           function()
             require('telescope.builtin').find_files {
               cwd = "$HOME/nixos-config/",
@@ -130,7 +130,7 @@ in
           end
       ''  "[N]ix[O]S files"  ])
       # Shortcut for searching your home-manager configuration files
-      (mapPR [ "<leader>snh" ''
+      (kmapPR [ "<leader>snh" ''
           function()
             require('telescope.builtin').find_files {
               cwd = "$HOME/nixos-config/home-manager",
@@ -138,7 +138,7 @@ in
           end
         ''  "[N]ixOS [h]ome-manager files"  ])
        # Shortcut for searching vim_options
-       (mapP  [ "<leader>so"  "<cmd>Telescope vim_options<cr>"  "vim_[o]ptions"  ])
+       (kmapP  [ "<leader>so"  "<cmd>Telescope vim_options<cr>"  "vim_[o]ptions"  ])
     ];
 
     plugins.which-key.settings.spec = [

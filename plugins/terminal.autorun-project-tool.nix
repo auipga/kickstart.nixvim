@@ -1,13 +1,13 @@
 let
-  map = import ../lib/mkKeymap.nix { };
+  kmap = import ../lib/mkKeymap.nix { };
 in
 {
   programs.nixvim = {
     # run a command on each save while the tool is enabled
     # to be replaced with overseer? See https://github.com/stevearc/overseer.nvim
     keymaps = [
-      (map [ "<leader>ta"  ":lua project_tool_toggle_autorun()<CR>"  "[T]oggle [a]utorun project tool"  ])
-      (map [ "<leader>tr"  ":lua project_tool_run_once()<CR>"        "[T]ool [r]un once" ])
+      (kmap [ "<leader>ta"  ":lua project_tool_toggle_autorun()<CR>"  "[T]oggle [a]utorun project tool"  ])
+      (kmap [ "<leader>tr"  ":lua project_tool_run_once()<CR>"        "[T]ool [r]un once" ])
     ];
 
     extraConfigLua = ''

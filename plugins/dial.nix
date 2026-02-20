@@ -1,5 +1,5 @@
 let
-  mapR = import ../lib/mkKeymap.nix { raw = true; extraOpts = { noremap = true; }; };
+  kmapR = import ../lib/mkKeymap.nix { raw = true; extraOpts = { noremap = true; }; };
 in
 {
   programs.nixvim = {
@@ -42,8 +42,8 @@ in
     '';
 
     keymaps = [
-      (mapR [ "<C-a>"  ''require("dial.map").inc_normal()''  "Increment"  ])
-      (mapR [ "<C-x>"  ''require("dial.map").dec_normal()''  "Decrement"  ])
+      (kmapR [ "<C-a>"  ''require("dial.map").inc_normal()''  "Increment"  ])
+      (kmapR [ "<C-x>"  ''require("dial.map").dec_normal()''  "Decrement"  ])
     ];
   };
 }

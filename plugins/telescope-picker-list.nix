@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  map = import ../lib/mkKeymap.nix { };
+  kmap = import ../lib/mkKeymap.nix { };
 in
 {
   programs.nixvim = {
@@ -75,7 +75,7 @@ in
     };
 
     keymaps = [
-      (map [ "<leader>ss" "<cmd>Telescope picker_list picker_list<cr>" "[S]earch Telescope Pickers" ])
+      (kmap [ "<leader>ss" "<cmd>Telescope picker_list picker_list<cr>" "[S]earch Telescope Pickers" ])
     ];
   };
 }

@@ -1,6 +1,6 @@
 { lib, ... }:
 let
-  map = import ../lib/mkKeymap.nix { };
+  kmap = import ../lib/mkKeymap.nix { };
 in
 {
   programs.nixvim = {
@@ -23,8 +23,8 @@ in
     };
 
     keymaps = [
-      (map [ "\\"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
-      (map [ "<F4>"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
+      (kmap [ "\\"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
+      (kmap [ "<F4>"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
     ];
 
     # Integrations
