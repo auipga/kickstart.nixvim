@@ -1,4 +1,4 @@
-{ pkgs, ... } :
+{ pkgs, ... }:
 let
   kmap = import ../../../lib/mkKeymap.nix { extraOpts = { noremap = true; silent = true; }; };
 in
@@ -36,7 +36,7 @@ in
     };
 
     keymaps = [
-     (kmap  [ "<leader>sa"  "<cmd>CodeCompanionHistory<cr>"  "[S]earch [A]I History"  ])
+      (kmap [ "<leader>sa"  "<cmd>CodeCompanionHistory<cr>"  "[S]earch [A]I History"  ])
     ];
   };
 }
