@@ -18,7 +18,7 @@
         # "man"
         # "mason"
         # "mundo"
-        # "neo-tree"       # see ../../kickstart/plugins/neo-tree.nix
+        # "neo-tree"       # see ./neo-tree.nix
         # "nerdtree"
         # "nvim-dap-ui"
         # "nvim-tree"

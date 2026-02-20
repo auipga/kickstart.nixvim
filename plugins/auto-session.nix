@@ -1,5 +1,5 @@
 let
-  mapP = import ../../../lib/mkKeymap.nix { prefix = "Session "; };
+  mapP = import ../lib/mkKeymap.nix { prefix = "Session "; };
 in
 {
   programs.nixvim = {

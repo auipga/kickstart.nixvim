@@ -1,6 +1,6 @@
 { lib, pkgs, mcp-hub, ... } :
 let
-  map = import ../../../lib/mkKeymap.nix { };
+  map = import ../lib/mkKeymap.nix { };
 in
 {
   # A centralized manager for Model Context Protocol (MCP) servers with dynamic server management and monitoring

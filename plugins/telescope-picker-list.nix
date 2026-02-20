@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  map = import ../../../lib/mkKeymap.nix { };
+  map = import ../lib/mkKeymap.nix { };
 in
 {
   programs.nixvim = {

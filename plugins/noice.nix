@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  map = import ../../../lib/mkKeymap.nix { prefix = "[N]oice "; };
+  map = import ../lib/mkKeymap.nix { prefix = "[N]oice "; };
 in
 {
   programs.nixvim = {

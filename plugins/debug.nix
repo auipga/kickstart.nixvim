@@ -1,6 +1,6 @@
 let
-  mapP = import ../../../lib/mkKeymap.nix { prefix = "Debug: "; };
-  mapPR = import ../../../lib/mkKeymap.nix { prefix = "Debug: "; raw = true; };
+  mapP = import ../lib/mkKeymap.nix { prefix = "Debug: "; };
+  mapPR = import ../lib/mkKeymap.nix { prefix = "Debug: "; raw = true; };
 in
 {
   programs.nixvim = {

@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  map = import ../../../lib/mkKeymap.nix { prefix = "[C]hatGPT: "; };
+  map = import ../lib/mkKeymap.nix { prefix = "[C]hatGPT: "; };
 in
 {
   programs.nixvim = {

@@ -1,5 +1,5 @@
 let
-  mapR = import ../../../lib/mkKeymap.nix { raw = true; extraOpts = { noremap = true; }; };
+  mapR = import ../lib/mkKeymap.nix { raw = true; extraOpts = { noremap = true; }; };
 in
 {
   programs.nixvim = {
@@ -35,7 +35,7 @@ in
             case = "prefer_upper", -- upper|prefer_upper|prefer_lower|lower
           },
           require("dial_comment_enum").new({ cyclic = true }),
-          -- cp ../../../lua/dial_comment_enum.lua
+          -- cp ../lua/dial_comment_enum.lua
           -- to ~/.config/nvim/lua/dial_comment_enum.lua
         },
       }

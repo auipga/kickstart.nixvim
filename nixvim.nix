@@ -14,47 +14,47 @@ in
     ./plugins/mini.nix
     ./plugins/treesitter.nix
 
-    # ./plugins/kickstart/plugins/debug.nix # directly imported by home-manager/modules/coding-rust.nix and coding-php.nix
-    ./plugins/kickstart/plugins/indent-blankline.nix
-    ./plugins/kickstart/plugins/lint.nix
-    ./plugins/kickstart/plugins/autopairs.nix
-    ./plugins/kickstart/plugins/neo-tree.nix
+    # ./plugins/debug.nix # directly imported by home-manager/modules/coding-rust.nix and coding-php.nix
+    ./plugins/indent-blankline.nix
+    ./plugins/lint.nix
+    ./plugins/autopairs.nix
+    ./plugins/neo-tree.nix
 
-    ./plugins/custom/plugins/_.nix
-    ./plugins/custom/plugins/ai-chatgpt.nix
-    ./plugins/custom/plugins/ai-copilot.nix
-    ./plugins/custom/plugins/ale.nix
-    ./plugins/custom/plugins/codecompanion/default.nix
-    ./plugins/custom/plugins/codecompanion/extensions/history.nix
-    ./plugins/custom/plugins/codecompanion/extensions/mcp-hub.nix
-    ./plugins/custom/plugins/codecompanion/extensions/spinner.nix
-    ./plugins/custom/plugins/codecompanion/extensions/vectorcode.nix
-    ./plugins/custom/plugins/auto-session.nix
-    # ./plugins/custom/plugins/cmp-ai.nix
-    ./plugins/custom/plugins/dial.nix
-    # ./plugins/custom/plugins/easypick.nix
-    ./plugins/custom/plugins/lazygit.nix
-    ./plugins/custom/plugins/llama.nix
-    ./plugins/custom/plugins/lualine.nix
-    ./plugins/custom/plugins/nix/default.nix
-    ./plugins/custom/plugins/noice.nix
-    ./plugins/custom/plugins/obsidian.nix
-    # ./plugins/custom/plugins/php.nix # directly imported by home-manager/modules/coding-php.nix
-    ./plugins/custom/plugins/render-markdown.nix
-    ./plugins/custom/plugins/repeat.nix
-    # ./plugins/custom/plugins/rust.nix # directly imported by home-manager/modules/coding-rust.nix
-    ./plugins/custom/plugins/snacks.nix
-    ./plugins/custom/plugins/surround.nix
-    ./plugins/custom/plugins/telescope-picker-list.nix
-    ./plugins/custom/plugins/terminal.nix
-    ./plugins/custom/plugins/terminal.autorun-project-tool.nix
-    ./plugins/custom/plugins/treesitter-autotag.nix
-    ./plugins/custom/plugins/treesitter-context.nix
-    ./plugins/custom/plugins/treesitter-textobjects.nix
-    ./plugins/custom/plugins/trouble.nix
-    ./plugins/custom/plugins/undotree.nix
-    ./plugins/custom/plugins/wakatime.nix
-    ./plugins/custom/plugins/testing.nix
+    ./plugins/_.nix
+    ./plugins/ai-chatgpt.nix
+    ./plugins/ai-copilot.nix
+    ./plugins/ale.nix
+    ./plugins/codecompanion/default.nix
+    ./plugins/codecompanion/extensions/history.nix
+    ./plugins/codecompanion/extensions/mcp-hub.nix
+    ./plugins/codecompanion/extensions/spinner.nix
+    ./plugins/codecompanion/extensions/vectorcode.nix
+    ./plugins/auto-session.nix
+    # ./plugins/cmp-ai.nix
+    ./plugins/dial.nix
+    # ./plugins/easypick.nix
+    ./plugins/lazygit.nix
+    ./plugins/llama.nix
+    ./plugins/lualine.nix
+    ./plugins/nix/default.nix
+    ./plugins/noice.nix
+    ./plugins/obsidian.nix
+    # ./plugins/php.nix # directly imported by home-manager/modules/coding-php.nix
+    ./plugins/render-markdown.nix
+    ./plugins/repeat.nix
+    # ./plugins/rust.nix # directly imported by home-manager/modules/coding-rust.nix
+    ./plugins/snacks.nix
+    ./plugins/surround.nix
+    ./plugins/telescope-picker-list.nix
+    ./plugins/terminal.nix
+    ./plugins/terminal.autorun-project-tool.nix
+    ./plugins/treesitter-autotag.nix
+    ./plugins/treesitter-context.nix
+    ./plugins/treesitter-textobjects.nix
+    ./plugins/trouble.nix
+    ./plugins/undotree.nix
+    ./plugins/wakatime.nix
+    ./plugins/testing.nix
   ];
 
   programs.nixvim = {

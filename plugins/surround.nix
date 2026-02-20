@@ -5,6 +5,6 @@
     # https://nix-community.github.io/nixvim/plugins/vim-surround/index.html
     plugins.vim-surround.enable = true;
     # is repeatable through ./repeat.nix
-    # replaces mini.surround ../../mini.nix
+    # replaces mini.surround ./mini.nix
   };
 }

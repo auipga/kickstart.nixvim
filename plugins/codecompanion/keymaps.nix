@@ -1,5 +1,5 @@
 let
-  mapP = import ../../../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
+  mapP = import ../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
 in
 {
   programs.nixvim = {
