@@ -21,20 +21,20 @@ in
     ./plugins/neo-tree.nix
 
     ./plugins/_.nix
-    # ./plugins/chatgpt.nix
-    # ./plugins/copilot.nix
+    # ./plugins/chatgpt.nix # 🤖
+    # ./plugins/copilot.nix # 🤖
     ./plugins/ale.nix
-    ./plugins/codecompanion/default.nix
+    ./plugins/codecompanion/default.nix # 🤖
     ./plugins/codecompanion/extensions/history.nix
     ./plugins/codecompanion/extensions/mcp-hub.nix
     ./plugins/codecompanion/extensions/spinner.nix
     ./plugins/codecompanion/extensions/vectorcode.nix
     ./plugins/auto-session.nix
-    # ./plugins/cmp-ai.nix
+    # ./plugins/cmp-ai.nix # 🤖
     ./plugins/dial.nix
     # ./plugins/easypick.nix
     ./plugins/lazygit.nix
-    ./plugins/llama.nix
+    ./plugins/llama.nix # 🤖
     ./plugins/lualine.nix
     ./plugins/nix/default.nix
     ./plugins/noice.nix
