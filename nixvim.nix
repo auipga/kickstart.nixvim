@@ -9,20 +9,20 @@ in
     ./plugins/telescope.nix
     ./plugins/lsp.nix
     ./plugins/conform.nix
-    ./plugins/nvim-cmp.nix
+    ./plugins/cmp.nix
     ./plugins/todo-comments.nix
     ./plugins/mini.nix
     ./plugins/treesitter.nix
 
-    # ./plugins/debug.nix # directly imported by home-manager/modules/coding-rust.nix and coding-php.nix
+    # ./modules/debug.nix # directly imported by home-manager/modules/coding/languages/rust.nix and php.nix
     ./plugins/indent-blankline.nix
     ./plugins/lint.nix
     ./plugins/autopairs.nix
     ./plugins/neo-tree.nix
 
     ./plugins/_.nix
-    # ./plugins/ai-chatgpt.nix
-    # ./plugins/ai-copilot.nix
+    # ./plugins/chatgpt.nix
+    # ./plugins/copilot.nix
     ./plugins/ale.nix
     ./plugins/codecompanion/default.nix
     ./plugins/codecompanion/extensions/history.nix
@@ -39,22 +39,22 @@ in
     ./plugins/nix/default.nix
     ./plugins/noice.nix
     ./plugins/obsidian.nix
-    # ./plugins/php.nix # directly imported by home-manager/modules/coding-php.nix
+    # ./modules/php.nix # directly imported by home-manager/modules/coding/languages/php.nix
     ./plugins/render-markdown.nix
     ./plugins/repeat.nix
-    # ./plugins/rust.nix # directly imported by home-manager/modules/coding-rust.nix
+    # ./modules/rust.nix # directly imported by home-manager/modules/coding/languages/rust.nix
     ./plugins/snacks.nix
     ./plugins/surround.nix
     ./plugins/telescope-picker-list.nix
-    ./plugins/terminal.nix
-    ./plugins/terminal.autorun-project-tool.nix
+    ./plugins/toggleterm.nix
+    ./custom/terminal.autorun-project-tool.nix
     ./plugins/treesitter-autotag.nix
     ./plugins/treesitter-context.nix
     ./plugins/treesitter-textobjects.nix
     ./plugins/trouble.nix
     ./plugins/undotree.nix
     ./plugins/wakatime.nix
-    ./plugins/testing.nix
+    ./modules/testing.nix
   ];
 
   programs.nixvim = {
