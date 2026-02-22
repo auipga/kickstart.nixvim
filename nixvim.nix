@@ -4,57 +4,6 @@ let
 in
 {
   imports = [
-    ./plugins/gitsigns.nix
-    ./plugins/which-key.nix
-    ./plugins/telescope.nix
-    ./plugins/lsp.nix
-    ./plugins/conform.nix
-    ./plugins/cmp.nix
-    ./plugins/todo-comments.nix
-    ./plugins/mini.nix
-    ./plugins/treesitter.nix
-
-    # ./modules/debug.nix # directly imported by home-manager/modules/coding/languages/rust.nix and php.nix
-    ./plugins/indent-blankline.nix
-    ./plugins/lint.nix
-    ./plugins/autopairs.nix
-    ./plugins/neo-tree.nix
-
-    ./plugins/_.nix
-    # ./plugins/chatgpt.nix # 🤖
-    # ./plugins/copilot.nix # 🤖
-    ./plugins/ale.nix
-    ./plugins/codecompanion/default.nix # 🤖
-    ./plugins/codecompanion/extensions/history.nix
-    ./plugins/codecompanion/extensions/mcp-hub.nix
-    ./plugins/codecompanion/extensions/spinner.nix
-    ./plugins/codecompanion/extensions/vectorcode.nix
-    ./plugins/auto-session.nix
-    # ./plugins/cmp-ai.nix # 🤖
-    ./plugins/dial.nix
-    # ./plugins/easypick.nix
-    ./plugins/lazygit.nix
-    ./plugins/llama.nix # 🤖
-    ./plugins/lualine.nix
-    ./plugins/nix/default.nix
-    ./plugins/noice.nix
-    ./plugins/obsidian.nix
-    # ./modules/php.nix # directly imported by home-manager/modules/coding/languages/php.nix
-    ./plugins/render-markdown.nix
-    ./plugins/repeat.nix
-    # ./modules/rust.nix # directly imported by home-manager/modules/coding/languages/rust.nix
-    ./plugins/snacks.nix
-    ./plugins/surround.nix
-    ./plugins/telescope-picker-list.nix
-    ./plugins/toggleterm.nix
-    ./custom/terminal.autorun-project-tool.nix
-    ./plugins/treesitter-autotag.nix
-    ./plugins/treesitter-context.nix
-    ./plugins/treesitter-textobjects.nix
-    ./plugins/trouble.nix
-    ./plugins/undotree.nix
-    ./plugins/wakatime.nix
-    ./modules/testing.nix
   ];
 
   programs.nixvim = {
