@@ -4,6 +4,57 @@ let
 in
 {
   imports = [
+    ./custom/terminal.autorun-project-tool.nix
+
+    # ./modules/debug.nix # directly imported by home-manager/modules/coding/languages/rust.nix and php.nix
+    # ./modules/php.nix # directly imported by home-manager/modules/coding/languages/php.nix
+    # ./modules/rust.nix # directly imported by home-manager/modules/coding/languages/rust.nix
+    ./modules/testing.nix
+
+    ./plugins/_.nix
+    ./plugins/ale.nix
+    ./plugins/auto-session.nix
+    ./plugins/autopairs.nix
+    # ./plugins/chatgpt.nix # 🤖
+    ./plugins/cmp.nix
+    # ./plugins/cmp-ai.nix # 🤖
+    ./plugins/codecompanion/default.nix # 🤖
+    ./plugins/codecompanion/extensions/history.nix
+    ./plugins/codecompanion/extensions/mcp-hub.nix
+    ./plugins/codecompanion/extensions/spinner.nix
+    ./plugins/codecompanion/extensions/vectorcode.nix
+    ./plugins/conform.nix
+    # ./plugins/copilot.nix # 🤖
+    ./plugins/dial.nix
+    # ./plugins/easypick.nix
+    ./plugins/gitsigns.nix
+    ./plugins/indent-blankline.nix
+    ./plugins/lazygit.nix
+    ./plugins/lint.nix
+    ./plugins/llama.nix # 🤖
+    ./plugins/lsp.nix
+    ./plugins/lualine.nix
+    ./plugins/mini.nix
+    ./plugins/neo-tree.nix
+    ./plugins/nix/default.nix
+    ./plugins/noice.nix
+    ./plugins/obsidian.nix
+    ./plugins/render-markdown.nix
+    ./plugins/repeat.nix
+    ./plugins/snacks.nix
+    ./plugins/surround.nix
+    ./plugins/telescope.nix
+    ./plugins/telescope-picker-list.nix
+    ./plugins/todo-comments.nix
+    ./plugins/toggleterm.nix
+    ./plugins/treesitter-autotag.nix
+    ./plugins/treesitter-context.nix
+    ./plugins/treesitter-textobjects.nix
+    ./plugins/treesitter.nix
+    ./plugins/trouble.nix
+    ./plugins/undotree.nix
+    ./plugins/wakatime.nix
+    ./plugins/which-key.nix
   ];
 
   programs.nixvim = {
