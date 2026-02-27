@@ -199,6 +199,10 @@ in
         };
         diff = {
           enabled = true;
+          word_highlights = {
+            additions = true; # default: true
+            deletions = true; # default: true
+          };
         };
         inline = {
           # If the inline prompt creates a new buffer, how should we display this?
