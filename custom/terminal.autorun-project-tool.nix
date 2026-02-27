@@ -19,7 +19,7 @@ in
         if cwd:match("zmk") then
           return {
             name = "just build",
-            cmd = "just build hillside52_left",
+            cmd = "just build hillside52_right && just flash hillside52 right",
             pattern = "*.keymap,*.dtsi,*.conf,*.yml"
           }
         elseif vim.fn.filereadable(cwd .. "/Cargo.toml") == 1 then
