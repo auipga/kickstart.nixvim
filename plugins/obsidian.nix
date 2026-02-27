@@ -12,6 +12,10 @@
           path = "~/Documents/obsidian/default";
         }
         {
+          name = "second-brain";
+          path = "~/Documents/obsidian/second-brain";
+        }
+        {
           name = "GIN";
           path = "~/Documents/obsidian/GIN";
         }
