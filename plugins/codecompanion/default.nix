@@ -80,7 +80,7 @@ in
             #   };
             # };
           };
-          # variables = {
+          # editor_context = {
           ## buffer, lsp, viewport
           # };
           # slash_commands = {
@@ -143,8 +143,6 @@ in
       rules = {
         opts = {
           chat = {
-            # Automatically add memory to new chat buffers?
-            enabled = true; # default: false
             # autoload.__raw = ''
             #   ---@return string|string[]
             #   function()
@@ -201,29 +199,6 @@ in
         };
         diff = {
           enabled = true;
-          # NOTE: stay with the defaults (inline provider + float layout). The others feel less good.
-          provider = "inline"; # mini_diff|split|inline*
-          provider_opts = {
-            # Options for inline diff provider
-            inline = {
-              # Where to display the diff
-              layout = "float"; # float*|buffer
-            };
-            # Options for the split provider
-            split = {
-              close_chat_at = 200; # default: 240, Close an open chat buffer if the total columns of your display are less than...
-              layout = "vertical"; # vertical*|horizontal split for default provider
-              # opts = [
-              #   "internal"
-              #   "filler"
-              #   "closeoff"
-              #   "algorithm:histogram" # https://adamj.eu/tech/2024/01/18/git-improve-diff-histogram
-              #   "indent-heuristic" # https://blog.k-nut.eu/better-git-diffs
-              #   "followwrap"
-              #   "linematch:120"
-              # ];
-            };
-          };
         };
         inline = {
           # If the inline prompt creates a new buffer, how should we display this?
