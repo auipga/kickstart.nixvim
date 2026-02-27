@@ -187,7 +187,7 @@ in
         };
         chat = {
           window = {
-            layout = "vertical"; # float|vertical*|horizontal|buffer
+            layout = "vertical"; # float|vertical*|horizontal|tab|buffer
             opts = {
               cursorline = true; # default: false
             };
@@ -227,7 +227,7 @@ in
         };
         inline = {
           # If the inline prompt creates a new buffer, how should we display this?
-          layout = "vertical"; # vertical*|horizontal|buffer
+          layout = "vertical"; # vertical*|horizontal|tab|buffer
         };
       };
 
