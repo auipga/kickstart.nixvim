@@ -10,6 +10,7 @@ in
 
     keymaps = [
       (kmap [ "<m-g>"       "<cmd>LazyGitCurrentFile<CR>"  "LazyGitCurrentFile"  ])
+      (kmap [ "<Leader>g"   "<cmd>LazyGit<CR>"             "LazyGit"             ])
     ];
   };
 }
