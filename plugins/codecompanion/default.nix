@@ -244,6 +244,13 @@ in
       # GENERAL OPTIONS ----------------------------------------------------------
       opts = {
         log_level = "ERROR"; # TRACE|DEBUG|ERROR*|INFO
+        # Enable per-project configuration?
+        per_project_config.enabled = true;
+        # Files in the cwd that contain project configuration
+        per_project_config.files = [
+        ];
+        per_project_config.paths = {
+        };
         # Delay in milliseconds before auto-submitting the chat buffer
         submit_delay = 500; # default: 500
       };
