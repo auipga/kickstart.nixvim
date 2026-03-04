@@ -1,5 +1,5 @@
 let
-  defaultAdapter = "llama-cpp"; # open-ai|gemini|lms|ollama|llama-cpp
+  defaultAdapter = "openai"; # openai|gemini|lms|ollama|llama-cpp
   # defaultAdapter = {
   #   name = "lms"; # openai|gemini|lms|ollama|llama-cpp
   #   model = "[must not be unset]";
