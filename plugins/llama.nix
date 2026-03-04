@@ -1,7 +1,7 @@
-{ osConfig, pkgs, ... }:
+{ pkgs, ... }:
 let
-  port = toString osConfig.services.llama-cpp.port; # default: 8012
-  host = if osConfig.services.llama-cpp.openFirewall then "pc" else "127.0.0.1"; # default: "127.0.0.1"
+  port = "8012";
+  host = "pc"; # default: "127.0.0.1"
 in
 {
   programs.nixvim = {
