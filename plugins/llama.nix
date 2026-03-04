@@ -15,7 +15,7 @@ in
         -- show_info = 2, -- 0|1|2*  0 - disabled, 1 - statusline, 2 - inline
         -- show_prompt = false, -- default: true
         -- show_message = true, -- default: true
-        -- auto_fim = false, -- default: true
+        auto_fim = false, -- default: true
         -- enable_at_startup = false, -- default: true
       }
     '';
