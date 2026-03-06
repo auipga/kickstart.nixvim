@@ -37,6 +37,7 @@ in
         lms.__raw     = builtins.readFile ./adapters/http/lmstudio.lua;
         ollama.__raw  = builtins.readFile ./adapters/http/ollama.lua;
         llama-cpp.__raw = builtins.readFile ./adapters/http/llama-cpp.lua;
+        inception.__raw = builtins.readFile ./adapters/http/inception.lua;
       };
 
       context = {
