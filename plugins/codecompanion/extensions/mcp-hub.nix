@@ -29,7 +29,8 @@
 
           #### MCP Resources
           # Convert MCP resources to #variables for prompts
-          make_vars = true; # default: true
+          make_vars = false; # default: true
+          # enable again once this is merged: https://github.com/ravitemer/mcphub.nvim/pull/279
 
           #### MCP Prompts
           # Add MCP prompts as /slash commands
