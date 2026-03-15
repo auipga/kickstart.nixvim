@@ -1,6 +1,6 @@
 {
-  nix = {
-    description = "nixos-config and nixvim";
+  nixos = {
+    description = "nixos-config";
     enabled.__raw = ''
       function()
         -- Don't show this group unless in a specific dir
@@ -10,6 +10,12 @@
     # parser = "CodeCompanion";
     files = [
       ".codecompanion/rules/nix.md"
+    ];
+    is_preset = true;
+  };
+  nixvim = {
+    description = "nixvim";
+    files = [
       ".codecompanion/rules/nixvim.md"
     ];
     is_preset = true;
