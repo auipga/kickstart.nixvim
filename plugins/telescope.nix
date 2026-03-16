@@ -112,7 +112,7 @@ in
       (kmapPR [ "<leader>snv" ''
           function()
             require('telescope.builtin').find_files {
-              cwd = "$HOME/nixos-config/kickstart.nixvim/"
+              cwd = "$HOME/git/me/nixos-config/kickstart.nixvim/"
             }
           end
         ''  "[N]ix[v]im files"  ])
@@ -120,7 +120,7 @@ in
       (kmapPR [ "<leader>sno" ''
           function()
             require('telescope.builtin').find_files {
-              cwd = "$HOME/nixos-config/",
+              cwd = "$HOME/git/me/nixos-config/",
               find_command = {
                 "fd", "--type", "f",
                 "--exclude", "home-manager",
@@ -133,7 +133,7 @@ in
       (kmapPR [ "<leader>snh" ''
           function()
             require('telescope.builtin').find_files {
-              cwd = "$HOME/nixos-config/home-manager",
+              cwd = "$HOME/git/me/nixos-config/home-manager",
             }
           end
         ''  "[N]ixOS [h]ome-manager files"  ])
