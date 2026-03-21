@@ -6,6 +6,8 @@
       options.ignore_focus = lib.mkAfter [ "codecompanion" ];
     };
     plugins.render-markdown.settings = {
+      file_types = [ "codecompanion" ];
+
       # Replace tags with icons:
       # Nerdfont icons:  󰈔   󰈤 󰘓  󰈙   󰈠 󰈞 󱝴 󱅷 
       html.tag = {
