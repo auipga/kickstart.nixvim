@@ -11,6 +11,23 @@ in
       enable = true;
 
       settings = {
+        sources = [
+          "filesystem"
+          "buffers"
+          "git_status"
+          "document_symbols"
+        ];
+
+        source_selector = {
+          winbar = true; # default: false
+          sources = [
+            { source = "filesystem"; }
+            { source = "buffers"; }
+            { source = "git_status"; }
+            { source = "document_symbols"; }
+          ];
+        };
+
         filesystem = {
           filtered_items = {
             hide_dotfiles = false; # default: true
