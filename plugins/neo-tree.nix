@@ -11,6 +11,8 @@ in
       enable = true;
 
       settings = {
+        sort_case_insensitive = true; # default: false
+
         sources = [
           "filesystem"
           "buffers"
