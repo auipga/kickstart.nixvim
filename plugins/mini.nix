@@ -92,7 +92,7 @@
         # Minimal and fast autopairs
         # https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-pairs.md
         # pairs = {};
-        # INFO: replaced by ../plugins/kickstart/plugins/autopairs.nix
+        # INFO: replaced by ../plugins/autopairs.nix
 
         # Pick anything
         # https://github.com/nvim-mini/mini.nvim/blob/main/readmes/mini-pick.md
