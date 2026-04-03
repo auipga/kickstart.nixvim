@@ -48,6 +48,7 @@ in
     keymaps = [
       (kmap [ "\\"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
       (kmap [ "<F4>"  "<cmd>Neotree reveal<cr>"  "NeoTree reveal"  ])
+      (kmap [ "<leader>g"  "<cmd>Neotree float git_status<CR>"  "NeoTree / Git"  ])
     ];
 
     # Integrations
