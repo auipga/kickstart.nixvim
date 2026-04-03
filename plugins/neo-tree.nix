@@ -12,6 +12,10 @@ in
 
       settings = {
         filesystem = {
+          filtered_items = {
+            hide_dotfiles = false; # default: true
+          };
+
           window = {
             mappings = {
               "\\" = "close_window";
