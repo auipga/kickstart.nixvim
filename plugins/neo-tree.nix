@@ -33,6 +33,9 @@ in
         filesystem = {
           filtered_items = {
             hide_dotfiles = false; # default: true
+            never_show = [
+              ".git"
+            ];
           };
 
           window = {
