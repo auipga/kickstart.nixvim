@@ -88,7 +88,19 @@ in
           ## buffer, compact, fetch (jina), quickfix, file, help, image, rules, mode (acp only), now, symbols, terminal
           # };
           opts = {
-            # system_prompt = ""; moved here
+            system_prompt.__raw = ''
+              function(ctx)
+                local prompt = ctx.default_system_prompt
+                if ctx.adapter.formatted_name == "InceptionLabs" then
+                  prompt = prompt
+                    .. "\n\nWhen including Markdown tables in your"
+                    .. " response, ensure each table row fits within"
+                    .. " 80 characters total (including pipes and"
+                    .. " spacing) so they render without wrapping."
+                end
+                return prompt
+              end
+            '';
             completion_provider = "cmp"; # blink|cmp|coc default: default (will try in order)
           };
           keymaps = {
