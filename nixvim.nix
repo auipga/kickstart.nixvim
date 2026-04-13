@@ -67,7 +67,7 @@ in
       catppuccin = {
         enable = true;
         settings = {
-          flavour = config.catppuccin.flavor;
+          flavour = "mocha";
           transparent_background = true;
           no_italic = true; # concerns comments and conditionals
           dim_inactive.enabled = false;
