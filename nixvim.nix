@@ -22,7 +22,7 @@ in
     ./plugins/codecompanion/extensions/history.nix
     ./plugins/codecompanion/extensions/mcp-hub.nix
     ./plugins/codecompanion/extensions/spinner.nix
-    ./plugins/codecompanion/extensions/vectorcode.nix
+    # ./plugins/codecompanion/extensions/vectorcode.nix
     ./plugins/conform.nix
     # ./plugins/copilot.nix # 🤖
     ./plugins/dial.nix
