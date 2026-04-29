@@ -15,9 +15,13 @@ in
         -- set sessionoptions+=winpos,folds
       '';
       settings = {
+        allowed_dirs = [
+          "~/git/*/*"
+        ];
         suppressed_dirs = [
           "~/"
-          "~/dev"
+          "~/git/"
+          "~/git/*"
           "~/Downloads"
           "/"
         ];
