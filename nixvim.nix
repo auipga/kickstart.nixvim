@@ -16,6 +16,7 @@ in
     ./plugins/ale.nix
     ./plugins/auto-session.nix
     ./plugins/autopairs.nix
+    ./plugins/bufferline.nix
     # ./plugins/chatgpt.nix # 🤖
     ./plugins/cmp.nix
     # ./plugins/cmp-ai.nix # 🤖
