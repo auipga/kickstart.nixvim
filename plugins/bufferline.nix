@@ -11,20 +11,26 @@ in
 
       settings = {
         options = {
-          mode = "buffers";
+          mode = "tabs"; # tabs|buffers
           diagnostics = "nvim_lsp";
           always_show_bufferline = true;
-          show_buffer_close_icons = true;
+          show_buffer_close_icons = false;
           show_close_icon = false;
           separator_style = "slant";
+          hover = {
+            enabled = true;
+            delay = 200;
+            reveal = ["close"];
+          };
+
         };
       };
     };
 
     keymaps = [
-      (kmap [ "<S-h>" "<cmd>BufferLineCyclePrev<cr>" "Previous buffer" ])
-      (kmap [ "<S-l>" "<cmd>BufferLineCycleNext<cr>" "Next buffer" ])
-      (kmap [ "<leader>bp" "<cmd>BufferLinePick<cr>" "Pick buffer" ])
+      (kmap [ "<S-Left>"   "<cmd>BufferLineCyclePrev<cr>" "Previous buffer" ])
+      (kmap [ "<S-Right>"  "<cmd>BufferLineCycleNext<cr>" "Next buffer" ])
+      (kmap [ "<leader>bp" "<cmd>BufferLinePick<cr>"      "Pick buffer" ])
       (kmap [ "<leader>bP" "<cmd>BufferLinePickClose<cr>" "Pick buffer to close" ])
     ];
   };
