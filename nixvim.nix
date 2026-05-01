@@ -169,10 +169,9 @@ in
     };
 
     diagnostic.settings = {
-      # Show virtual line diagnostics
-      # virtual_lines = true;
-      # Only show virtual line diagnostics for the current cursor line
-      # virtual_lines.current_line = true;
+      signs = false; # default: true
+      # virtual_lines.current_line = false; # default: false
+      # virtual_text = false; # default: false
     };
 
     # [[ Basic Keymaps ]]
