@@ -6,10 +6,10 @@ in
   imports = [
     ./custom/terminal.autorun-project-tool.nix
 
-    # ./modules/debug.nix  # directly imported by home-manager/modules/coding/languages/rust.nix and php.nix
+    # ./modules/debug.nix       # directly imported by home-manager/modules/coding/languages/rust.nix and php.nix
     # ./modules/javascript.nix  # directly imported by home-manager/modules/coding/languages/javascript.nix
-    # ./modules/php.nix    # directly imported by home-manager/modules/coding/languages/php.nix
-    # ./modules/rust.nix   # directly imported by home-manager/modules/coding/languages/rust.nix
+    # ./modules/php.nix         # directly imported by home-manager/modules/coding/languages/php.nix
+    # ./modules/rust.nix        # directly imported by home-manager/modules/coding/languages/rust.nix
     ./modules/performance.nix
     ./modules/testing.nix
 
