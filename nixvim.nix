@@ -209,6 +209,9 @@ in
       kickstart-highlight-yank = {
         clear = true;
       };
+      kickstart-markdown-diagnostics = {
+        clear = true;
+      };
     };
 
     # [[ Basic Autocommands ]]
@@ -223,6 +226,29 @@ in
         callback.__raw = ''
           function()
             vim.hl.on_yank()
+          end
+        '';
+      }
+      {
+        event = [ "FileType" ];
+        pattern = [ "markdown" "markdown.mdx" ];
+        desc = "Disable all Neovim diagnostics in Markdown buffers";
+        group = "kickstart-markdown-diagnostics";
+        callback.__raw = ''
+          function(args)
+            local bufnr = args.buf
+
+            -- Disable the diagnostic engine for Markdown buffers instead of
+            -- only hiding one presentation layer. This suppresses virtual text,
+            -- virtual lines, signs, underline, update_in_insert,
+            -- severity_sort, floats, and any other vim.diagnostic UI.
+            if vim.diagnostic.enable then
+              vim.diagnostic.enable(false, { bufnr = bufnr })
+            else
+              vim.diagnostic.disable(bufnr)
+            end
+
+            vim.diagnostic.reset(nil, bufnr)
           end
         '';
       }
