@@ -1,3 +1,4 @@
+# plugins/auto-session.nix
 let
   kmapP = import ../lib/mkKeymap.nix { prefix = "Session "; };
 in

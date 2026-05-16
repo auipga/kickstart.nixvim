@@ -1,3 +1,4 @@
+# plugins/treesitter-textobjects.nix
 {
   programs.nixvim = {
     # https://github.com/nvim-treesitter/nvim-treesitter-textobjects

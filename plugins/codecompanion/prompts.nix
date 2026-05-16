@@ -1,3 +1,4 @@
+# plugins/codecompanion/prompts.nix
 let
   constants = {
     SYSTEM_ROLE = "system";

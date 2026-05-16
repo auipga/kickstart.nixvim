@@ -1,3 +1,4 @@
+# plugins/toggleterm.nix
 { lib, ... }:
 let
   kmap = import ../lib/mkKeymap.nix { };

@@ -1,3 +1,4 @@
+# nixvim.nix
 { lib, config, ... }:
 let
   kmap = import ./lib/mkKeymap.nix { };

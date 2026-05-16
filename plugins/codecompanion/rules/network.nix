@@ -1,3 +1,4 @@
+# plugins/codecompanion/rules/network.nix
 {
   network = {
     description = "[my network]";

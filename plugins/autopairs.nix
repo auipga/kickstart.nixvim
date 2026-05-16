@@ -1,3 +1,4 @@
+# plugins/autopairs.nix
 {
   # Inserts matching pairs of parens, brackets, etc.
   # https://github.com/windwp/nvim-autopairs

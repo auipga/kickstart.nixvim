@@ -1,3 +1,4 @@
+# plugins/codecompanion/extensions/vectorcode.nix
 { pkgs, ... }:
 {
   imports = [

@@ -1,3 +1,4 @@
+# plugins/nix/default.nix
 {
   imports = [
     ./hmts.nix

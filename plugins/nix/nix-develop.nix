@@ -1,3 +1,4 @@
+# plugins/nix/nix-develop.nix
 {
   programs.nixvim = {
     # https://github.com/figsoda/nix-develop.nvim

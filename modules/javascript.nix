@@ -1,3 +1,4 @@
+# modules/javascript.nix
 { pkgs, ... }:
 {
   programs.nixvim = {

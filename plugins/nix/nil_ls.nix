@@ -1,3 +1,4 @@
+# plugins/nix/nil_ls.nix
 {
   programs.nixvim = {
     # https://github.com/oxalica/nil

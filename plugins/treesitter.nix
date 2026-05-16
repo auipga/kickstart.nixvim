@@ -1,3 +1,4 @@
+# plugins/treesitter.nix
 { pkgs, ... }:
 {
   programs.nixvim = {

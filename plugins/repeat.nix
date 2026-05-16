@@ -1,3 +1,4 @@
+# plugins/repeat.nix
 {
   programs.nixvim = {
     # https://github.com/tpope/vim-repeat/

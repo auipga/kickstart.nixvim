@@ -1,3 +1,4 @@
+# plugins/lazygit.nix
 # see home-manager/modules/coding/lazygit.nix
 let
   kmap = import ../lib/mkKeymap.nix { };

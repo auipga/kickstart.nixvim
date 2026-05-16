@@ -1,3 +1,4 @@
+# plugins/codecompanion/rules/nix.nix
 {
   nixos = {
     description = "nixos-config";

@@ -1,3 +1,4 @@
+# plugins/gitsigns.nix
 { config, ... }:
 let
   kmap = import ../lib/mkKeymap.nix { };

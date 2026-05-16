@@ -1,3 +1,4 @@
+# plugins/mcp-hub.nix
 { lib, pkgs, mcp-hub, ... } :
 let
   kmap = import ../lib/mkKeymap.nix { };

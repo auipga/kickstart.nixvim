@@ -1,3 +1,4 @@
+# plugins/chatgpt.nix
 { config, ... }:
 let
   kmap = import ../lib/mkKeymap.nix { prefix = "[C]hatGPT: "; };

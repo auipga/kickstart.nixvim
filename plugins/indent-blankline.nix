@@ -1,3 +1,4 @@
+# plugins/indent-blankline.nix
 {
   programs.nixvim = {
     # Add indentation guides even on blank lines

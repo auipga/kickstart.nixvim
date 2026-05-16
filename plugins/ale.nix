@@ -1,3 +1,4 @@
+# plugins/ale.nix
 { pkgs, ... }:
 {
   programs.nixvim = {

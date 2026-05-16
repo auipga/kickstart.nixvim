@@ -1,3 +1,4 @@
+# plugins/codecompanion/extensions/history.nix
 { pkgs, ... }:
 let
   kmap = import ../../../lib/mkKeymap.nix { extraOpts = { noremap = true; silent = true; }; };

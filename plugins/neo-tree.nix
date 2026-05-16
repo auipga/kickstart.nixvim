@@ -1,3 +1,4 @@
+# plugins/neo-tree.nix
 { lib, ... }:
 let
   kmap = import ../lib/mkKeymap.nix { };

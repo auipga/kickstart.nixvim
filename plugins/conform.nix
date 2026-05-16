@@ -1,3 +1,4 @@
+# plugins/conform.nix
 { pkgs, ... }:
 let
   kmapR = import ../lib/mkKeymap.nix { raw = true; };

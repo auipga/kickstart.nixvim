@@ -1,3 +1,4 @@
+# plugins/obsidian.nix
 {
   programs.nixvim = {
     # https://github.com/epwalsh/obsidian.nvim/

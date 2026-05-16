@@ -1,3 +1,4 @@
+# plugins/easypick.nix
 { pkgs, ... }:
 let
   kmap = import ../lib/mkKeymap.nix { };

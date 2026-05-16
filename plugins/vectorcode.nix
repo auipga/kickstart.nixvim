@@ -1,3 +1,4 @@
+# plugins/vectorcode.nix
 { config, lib, pkgs, ... }:
 let
   # generate zsh completions

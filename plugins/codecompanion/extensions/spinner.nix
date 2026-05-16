@@ -1,3 +1,4 @@
+# plugins/codecompanion/extensions/spinner.nix
 { pkgs, ... } :
 {
   programs.nixvim = {

@@ -1,3 +1,4 @@
+# plugins/lualine.nix
 {
   programs.nixvim = {
     # https://github.com/nvim-lualine/lualine.nvim

@@ -1,3 +1,4 @@
+# plugins/nix/hmts.nix
 {
   programs.nixvim = {
     # Custom treesitter queries for Home Manager nix files

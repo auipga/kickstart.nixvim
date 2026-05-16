@@ -1,3 +1,4 @@
+# plugins/trouble.nix
 { lib, ... }:
 {
   programs.nixvim = {

@@ -1,3 +1,4 @@
+# custom/terminal.autorun-project-tool.nix
 let
   kmap = import ../lib/mkKeymap.nix { };
 in

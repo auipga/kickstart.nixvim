@@ -1,3 +1,4 @@
+# plugins/todo-comments.nix
 let
   kmap = import ../lib/mkKeymap.nix { };
 in

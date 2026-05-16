@@ -1,3 +1,4 @@
+# plugins/dial.nix
 let
   kmapR = import ../lib/mkKeymap.nix { raw = true; extraOpts = { noremap = true; }; };
 in

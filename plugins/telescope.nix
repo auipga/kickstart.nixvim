@@ -1,3 +1,4 @@
+# plugins/telescope.nix
 let
   kmapR = import ../lib/mkKeymap.nix { raw = true; };
   kmapP = import ../lib/mkKeymap.nix { prefix = "[S]earch "; };

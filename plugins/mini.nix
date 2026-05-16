@@ -1,3 +1,4 @@
+# plugins/mini.nix
 {
   programs.nixvim = {
     # Collection of various small independent plugins/modules

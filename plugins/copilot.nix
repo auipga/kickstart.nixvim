@@ -1,3 +1,4 @@
+# plugins/copilot.nix
 {
   programs.nixvim = {
     plugins.copilot-lua.enable = true; # preferable over official copilot-vim

@@ -1,3 +1,4 @@
+# plugins/surround.nix
 {
   programs.nixvim = {
     # Delete/change/add parentheses/quotes/XML-tags/... with ease

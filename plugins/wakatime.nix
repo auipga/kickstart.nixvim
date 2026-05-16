@@ -1,3 +1,4 @@
+# plugins/wakatime.nix
 {
   programs.nixvim = {
     # https://github.com/wakatime/vim-wakatime/

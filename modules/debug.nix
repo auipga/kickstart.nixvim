@@ -1,3 +1,4 @@
+# modules/debug.nix
 let
   kmapP = import ../lib/mkKeymap.nix { prefix = "Debug: "; };
   kmapPR = import ../lib/mkKeymap.nix { prefix = "Debug: "; raw = true; };

@@ -1,3 +1,4 @@
+# plugins/codecompanion/keymaps.nix
 let
   kmapP = import ../../lib/mkKeymap.nix { prefix = "CodeCompanion "; extraOpts = { noremap = true; silent = true; }; };
 in

@@ -1,4 +1,4 @@
-# kickstart.nixvim/modules/performance.nix
+# modules/performance.nix
 {
   # Copied from https://github.com/suasuasuasuasua/nixvim/blob/main/config/user/performance.nix
   programs.nixvim = {

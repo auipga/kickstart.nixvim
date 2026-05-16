@@ -1,3 +1,4 @@
+# plugins/which-key.nix
 {
   programs.nixvim = {
     # Useful plugin to show you pending keybinds.

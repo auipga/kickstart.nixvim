@@ -1,3 +1,4 @@
+# plugins/codecompanion/integrations.nix
 { lib, ... }:
 {
   programs.nixvim = {

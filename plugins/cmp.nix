@@ -1,3 +1,4 @@
+# plugins/cmp.nix
 {
   programs.nixvim = {
     # https://nix-community.github.io/nixvim/plugins/friendly-snippets.html

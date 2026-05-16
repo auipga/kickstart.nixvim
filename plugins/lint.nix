@@ -1,3 +1,4 @@
+# plugins/lint.nix
 {
   programs.nixvim = {
     # Linting

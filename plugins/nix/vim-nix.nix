@@ -1,3 +1,4 @@
+# plugins/nix/vim-nix.nix
 {
   programs.nixvim = {
     # https://github.com/LnL7/vim-nix/

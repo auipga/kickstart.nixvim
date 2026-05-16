@@ -1,3 +1,4 @@
+# plugins/codecompanion/rules/hardware.nix
 {
   hardware = {
     description = "[my hardware]";

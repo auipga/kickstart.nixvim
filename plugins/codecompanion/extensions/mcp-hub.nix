@@ -1,3 +1,4 @@
+# plugins/codecompanion/extensions/mcp-hub.nix
 {
   imports = [
     # Install mcp-hub and mcphub-nvim

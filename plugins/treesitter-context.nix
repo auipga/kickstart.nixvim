@@ -1,3 +1,4 @@
+# plugins/treesitter-context.nix
 let
   kmap = import ../lib/mkKeymap.nix { };
 in

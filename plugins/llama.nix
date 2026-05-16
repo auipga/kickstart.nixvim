@@ -1,3 +1,4 @@
+# plugins/llama.nix
 { pkgs, ... }:
 let
   port = "8012";

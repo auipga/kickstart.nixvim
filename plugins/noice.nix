@@ -1,3 +1,4 @@
+# plugins/noice.nix
 { config, lib, pkgs, ... }:
 let
   kmap = import ../lib/mkKeymap.nix { prefix = "[N]oice "; };

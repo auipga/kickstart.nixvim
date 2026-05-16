@@ -1,3 +1,4 @@
+# plugins/nix/nixd.nix
 { config, lib, osConfig, pkgs, ... }:
 let
   system = pkgs.stdenv.hostPlatform.system;

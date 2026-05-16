@@ -1,3 +1,4 @@
+# plugins/treesitter-autotag.nix
 {
   programs.nixvim = {
     # Auto close and auto rename html tag (using treesitter)

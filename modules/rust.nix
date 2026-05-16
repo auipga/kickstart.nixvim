@@ -1,3 +1,4 @@
+# modules/rust.nix
 { lib, pkgs, ... }:
 {
   programs.nixvim = {

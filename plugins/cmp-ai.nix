@@ -1,3 +1,4 @@
+# plugins/cmp-ai.nix
 {
   programs.nixvim = {
     # https://github.com/tzachar/cmp-ai

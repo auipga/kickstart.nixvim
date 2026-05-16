@@ -1,3 +1,4 @@
+# plugins/snacks.nix
 {
   programs.nixvim = {
     # https://github.com/folke/snacks.nvim

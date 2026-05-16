@@ -1,3 +1,4 @@
+# modules/php.nix
 { pkgs, ... }:
 {
   programs.nixvim = {

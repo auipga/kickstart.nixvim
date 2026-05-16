@@ -1,3 +1,4 @@
+# plugins/codecompanion/default.nix
 let
   defaultAdapter = "openai"; # openai|gemini|lms|ollama|llama-cpp
   # defaultAdapter = {
