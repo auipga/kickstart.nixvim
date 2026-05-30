@@ -10,6 +10,7 @@ in
     # https://github.com/ravitemer/codecompanion-history.nvim
     extraPlugins = with pkgs; [
       vimPlugins.codecompanion-history-nvim
+      # TODO: use new module: https://github.com/nix-community/nixvim/pull/4319/changes
     ];
 
     # Requirements
