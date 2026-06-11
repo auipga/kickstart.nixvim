@@ -11,7 +11,7 @@ in
     # ./modules/javascript.nix  # directly imported by home-manager/modules/coding/languages/javascript.nix
     # ./modules/php.nix         # directly imported by home-manager/modules/coding/languages/php.nix
     # ./modules/rust.nix        # directly imported by home-manager/modules/coding/languages/rust.nix
-    ./modules/performance.nix
+    # ./modules/performance.nix
     ./modules/testing.nix
 
     ./plugins/_.nix
