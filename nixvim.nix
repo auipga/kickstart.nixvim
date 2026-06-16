@@ -63,6 +63,7 @@ in
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
+    nixpkgs.useGlobalPackages = true;
 
     # List installed colorschemes with `:Telescope colorscheme`.
     colorschemes = {
