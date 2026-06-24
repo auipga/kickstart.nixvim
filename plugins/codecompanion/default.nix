@@ -39,6 +39,7 @@ in
         ollama.__raw  = builtins.readFile ./adapters/http/ollama.lua;
         llama-cpp.__raw = builtins.readFile ./adapters/http/llama-cpp.lua;
         inception.__raw = builtins.readFile ./adapters/http/inception.lua;
+        openrouter.__raw = builtins.readFile ./adapters/http/openrouter.lua;
       };
 
       context = {
