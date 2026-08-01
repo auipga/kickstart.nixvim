@@ -10,12 +10,8 @@
 
       folding.enable = true;
 
-      indent = {
-        enable = true;
-        disable = [
-          "ruby"
-        ];
-      };
+      indent.enable = true;
+      indent.disable = [ "ruby" ];
 
       # Installing tree-sitter grammars from Nixpkgs (recommended)
       # https://nix-community.github.io/nixvim/plugins/treesitter/index.html#installing-tree-sitter-grammars-from-nixpkgs
