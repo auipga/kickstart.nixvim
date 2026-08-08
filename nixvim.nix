@@ -78,6 +78,7 @@ in
         };
       };
     };
+    plugins.telescope.highlightTheme = "Catppuccin Mocha";
 
     globals = {
       # Set <space> as the leader key
