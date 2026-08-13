@@ -17,6 +17,7 @@ in
         -- show_prompt = false, -- default: true
         -- show_message = true, -- default: true
         auto_fim = false, -- default: true
+        keymap_fim_trigger = "", -- disable <leader>llf in insert mode
         -- enable_at_startup = false, -- default: true
       }
     '';
