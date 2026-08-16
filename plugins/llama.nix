@@ -1,6 +1,7 @@
 # plugins/llama.nix
 { pkgs, ... }:
 let
+  kmap = import ../lib/mkKeymap.nix { };
   port = "8012";
   host = "pc"; # default: "127.0.0.1"
 in
@@ -28,5 +29,9 @@ in
         ring_chunk_size = 16, -- default: 64
       }
     '';
+
+    keymaps = [
+      (kmap [ "<leader>lll"  "<cmd>LlamaToggleAutoFim<CR>"  ])
+    ];
   };
 }
