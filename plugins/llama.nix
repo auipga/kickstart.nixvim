@@ -19,6 +19,13 @@ in
         auto_fim = false, -- default: true
         keymap_fim_trigger = "", -- disable <leader>llf in insert mode
         -- enable_at_startup = false, -- default: true
+
+        -- suggestion from gpt-5.6:
+        n_predict = 64, -- default: 128
+
+        -- based on hardware (Low-end with GPU) -- https://github.com/ggml-org/llama.cpp/pull/9787
+        ring_n_chunks   = 4, -- default: 16
+        ring_chunk_size = 16, -- default: 64
       }
     '';
   };
