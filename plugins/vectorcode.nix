@@ -1,5 +1,5 @@
 # plugins/vectorcode.nix
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 let
   # generate zsh completions
   vectorcodeCompletion = pkgs.runCommand "vectorcode-zsh-completion" {
@@ -70,11 +70,6 @@ in
   };
 
   programs.zsh.shellAliases.vc = "vectorcode";
-
-  programs.zsh.initContent = ''
-    # vectorcode completion
-    fpath=(${config.xdg.configHome}/zsh/completions $fpath)
-  '';
 
   # configure the program
   # for intel:
