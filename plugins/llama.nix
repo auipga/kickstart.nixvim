@@ -3,7 +3,7 @@
 let
   kmap = import ../lib/mkKeymap.nix { };
   port = "8012";
-  host = "pc"; # default: "127.0.0.1"
+  host = "pc"; # pc|laptop|deck|localhost default: "127.0.0.1"
 in
 {
   programs.nixvim = {
