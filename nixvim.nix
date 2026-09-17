@@ -40,7 +40,7 @@ in
     ./plugins/mini.nix
     ./plugins/neo-tree.nix
     ./plugins/nix/default.nix
-    ./plugins/noice.nix
+    # ./plugins/noice.nix
     ./plugins/obsidian.nix
     ./plugins/render-markdown.nix
     ./plugins/repeat.nix
